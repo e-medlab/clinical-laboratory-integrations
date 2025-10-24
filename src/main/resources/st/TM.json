@@ -1,0 +1,27 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "TM",
+  "url": "http://hl7.org/hapi-v2-parser/StructureDefinition/TM",
+  "name": "TM",
+  "status": "draft",
+  "kind": "logical",
+  "abstract": false,
+  "type": "time",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/time",
+  "derivation": "specialization",
+  "differential": {
+    "element": [ {
+      "id": "TM",
+      "path": "TM"
+    }, {
+      "id": "TM.xmlText",
+      "path": "TM.xmlText",
+      "representation": [ "xmlText" ],
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "time"
+      } ]
+    } ]
+  }
+}

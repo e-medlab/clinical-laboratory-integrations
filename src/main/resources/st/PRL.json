@@ -1,0 +1,39 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "PRL",
+  "url": "http://hl7.org/hapi-v2-parser/StructureDefinition/PRL",
+  "name": "PRL",
+  "status": "draft",
+  "kind": "logical",
+  "abstract": false,
+  "type": "PRL",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [ {
+      "id": "PRL.PRL--1",
+      "path": "PRL.PRL--1",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "PRL.PRL--2",
+      "path": "PRL.PRL--2",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "PRL.PRL--3",
+      "path": "PRL.PRL--3",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/TX"
+      } ]
+    } ]
+  }
+}

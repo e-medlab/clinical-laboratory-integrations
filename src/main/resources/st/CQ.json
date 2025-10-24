@@ -1,0 +1,31 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "CQ",
+  "url": "http://hl7.org/hapi-v2-parser/StructureDefinition/CQ",
+  "name": "CQ",
+  "status": "draft",
+  "kind": "logical",
+  "abstract": false,
+  "type": "CQ",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [ {
+      "id": "CQ.CQ--1",
+      "path": "CQ.CQ--1",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/NM"
+      } ]
+    }, {
+      "id": "CQ.CQ--2",
+      "path": "CQ.CQ--2",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    } ]
+  }
+}

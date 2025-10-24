@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ORU_R30 xmlns="urn:hl7-org:v2xml">
+    <MSH>
+        <MSH--1>|</MSH--1>
+        <MSH--2>^~\&amp;</MSH--2>
+        <MSH--3>
+            <HD--1>cobas Liat</HD--1>
+        </MSH--3>
+        <MSH--4>
+            <HD--1>Roche</HD--1>
+        </MSH--4>
+        <MSH--5>
+            <HD--1>Host</HD--1>
+        </MSH--5>
+        <MSH--6>
+            <HD--1>Healthcare Provider</HD--1>
+        </MSH--6>
+        <MSH--7>
+            <TS--1>20161103140106-0400</TS--1>
+        </MSH--7>
+        <MSH--9>
+            <MSG--1>ORU</MSG--1>
+            <MSG--2>R30</MSG--2>
+            <MSG--3>ORU_R30</MSG--3>
+        </MSH--9>
+        <MSH--10>dab465c5-517c-4ec8-b8fa-be8b35427672</MSH--10>
+        <MSH--11>
+            <PT--1>P</PT--1>
+        </MSH--11>
+        <MSH--12>
+            <VID--1>2.5</VID--1>
+        </MSH--12>
+        <MSH--18>UNICODE UTF-8</MSH--18>
+    </MSH>
+    <PID>
+        <PID--3>
+            <CX--1>Unknown</CX--1>
+        </PID--3>
+        <PID--5>
+            <XPN--1>
+                <FN--1>unknown</FN--1>
+            </XPN--1>
+        </PID--5>
+        <PID--8>U</PID--8>
+    </PID>
+    <ORC>
+        <ORC--1>NW</ORC--1>
+    </ORC>
+    <OBR>
+        <OBR--4>
+            <CE--1>Dummy description</CE--1>
+        </OBR--4>
+        <OBR--11>O</OBR--11>
+        <OBR--25>F</OBR--25>
+        <OBR--32>
+            <NDL--1>
+                <CNN--1>N/A</CNN--1>
+            </NDL--1>
+        </OBR--32>
+        <OBR--34>
+            <NDL--1>
+                <CNN--1>SERVICE</CNN--1>
+            </NDL--1>
+        </OBR--34>
+    </OBR>
+    <NTE>
+        <NTE--3>Run=00016;Device=M1-E-10063;Version=3.3.0.4027;Tube=0027E;TubeExp=2064-02-29;TubeLot=AAJ5</NTE--3>
+    </NTE>
+    <ORU_R30--OBSERVATION>
+        <OBX>
+            <OBX--2>NM</OBX--2>
+            <OBX--3>
+                <CE--1>Influenza A (CDFA)</CE--1>
+            </OBX--3>
+            <OBX--5>0</OBX--5>
+            <OBX--6>
+                <CE--1>0</CE--1>
+            </OBX--6>
+            <OBX--11>F</OBX--11>
+            <OBX--16>
+                <XCN--1>SERVICE</XCN--1>
+            </OBX--16>
+            <OBX--18>
+                <EI--1>f8:dc:7a:06:27:0c</EI--1>
+            </OBX--18>
+            <OBX--19>
+                <TS--1>20171014075501-0400</TS--1>
+            </OBX--19>
+        </OBX>
+        <NTE>
+            <NTE--1>1</NTE--1>
+            <NTE--3>empty</NTE--3>
+        </NTE>
+    </ORU_R30--OBSERVATION>
+    <ORU_R30--OBSERVATION>
+        <OBX>
+            <OBX--2>ST</OBX--2>
+            <OBX--3>
+                <CE--1>Influenza A (CDFA)</CE--1>
+            </OBX--3>
+            <OBX--5>Not Detected</OBX--5>
+            <OBX--11>F</OBX--11>
+        </OBX>
+    </ORU_R30--OBSERVATION>
+</ORU_R30>

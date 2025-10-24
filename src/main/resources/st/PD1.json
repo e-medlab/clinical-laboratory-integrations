@@ -1,0 +1,204 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "PD1",
+  "url": "http://hl7.org/hapi-v2-parser/StructureDefinition/PD1",
+  "name": "PD1",
+  "status": "draft",
+  "kind": "logical",
+  "abstract": false,
+  "type": "PD1",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [ {
+      "id": "PD1.PD1--1",
+      "path": "PD1.PD1--1",
+      "short": "Living Dependency",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "PD1.PD1--2",
+      "path": "PD1.PD1--2",
+      "short": "Living Arrangement",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "PD1.PD1--3",
+      "path": "PD1.PD1--3",
+      "short": "Patient Primary Facility",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XON"
+      } ]
+    }, {
+      "id": "PD1.PD1--4",
+      "path": "PD1.PD1--4",
+      "short": "Patient Primary Care Provider Name & ID No.",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XCN"
+      } ]
+    }, {
+      "id": "PD1.PD1--5",
+      "path": "PD1.PD1--5",
+      "short": "Student Indicator",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "PD1.PD1--6",
+      "path": "PD1.PD1--6",
+      "short": "Handicap",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "PD1.PD1--7",
+      "path": "PD1.PD1--7",
+      "short": "Living Will Code",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "PD1.PD1--8",
+      "path": "PD1.PD1--8",
+      "short": "Organ Donor Code",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "PD1.PD1--9",
+      "path": "PD1.PD1--9",
+      "short": "Separate Bill",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ID"
+      } ]
+    }, {
+      "id": "PD1.PD1--10",
+      "path": "PD1.PD1--10",
+      "short": "Duplicate Patient",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CX"
+      } ]
+    }, {
+      "id": "PD1.PD1--11",
+      "path": "PD1.PD1--11",
+      "short": "Publicity Code",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "PD1.PD1--12",
+      "path": "PD1.PD1--12",
+      "short": "Protection Indicator",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ID"
+      } ]
+    }, {
+      "id": "PD1.PD1--13",
+      "path": "PD1.PD1--13",
+      "short": "Protection Indicator Effective Date",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/DT"
+      } ]
+    }, {
+      "id": "PD1.PD1--14",
+      "path": "PD1.PD1--14",
+      "short": "Place of Worship",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XON"
+      } ]
+    }, {
+      "id": "PD1.PD1--15",
+      "path": "PD1.PD1--15",
+      "short": "Advance Directive Code",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "PD1.PD1--16",
+      "path": "PD1.PD1--16",
+      "short": "Immunization Registry Status",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "PD1.PD1--17",
+      "path": "PD1.PD1--17",
+      "short": "Immunization Registry Status Effective Date",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/DT"
+      } ]
+    }, {
+      "id": "PD1.PD1--18",
+      "path": "PD1.PD1--18",
+      "short": "Publicity Code Effective Date",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/DT"
+      } ]
+    }, {
+      "id": "PD1.PD1--19",
+      "path": "PD1.PD1--19",
+      "short": "Military Branch",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "PD1.PD1--20",
+      "path": "PD1.PD1--20",
+      "short": "Military Rank/Grade",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "PD1.PD1--21",
+      "path": "PD1.PD1--21",
+      "short": "Military Status",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    } ]
+  }
+}

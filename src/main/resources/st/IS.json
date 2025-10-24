@@ -1,0 +1,27 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "IS",
+  "url": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS",
+  "name": "IS",
+  "status": "draft",
+  "kind": "logical",
+  "abstract": false,
+  "type": "code",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/code",
+  "derivation": "specialization",
+  "differential": {
+    "element": [ {
+      "id": "IS",
+      "path": "IS"
+    }, {
+      "id": "IS.xmlText",
+      "path": "IS.xmlText",
+      "representation": [ "xmlText" ],
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "code"
+      } ]
+    } ]
+  }
+}

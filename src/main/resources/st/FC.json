@@ -1,0 +1,31 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "FC",
+  "url": "http://hl7.org/hapi-v2-parser/StructureDefinition/FC",
+  "name": "FC",
+  "status": "draft",
+  "kind": "logical",
+  "abstract": false,
+  "type": "FC",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [ {
+      "id": "FC.FC--1",
+      "path": "FC.FC--1",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "FC.FC--2",
+      "path": "FC.FC--2",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/TS"
+      } ]
+    } ]
+  }
+}

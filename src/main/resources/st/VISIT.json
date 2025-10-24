@@ -1,0 +1,31 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "VISIT",
+  "url": "http://hl7.org/hapi-v2-parser/StructureDefinition/VISIT",
+  "name": "VISIT",
+  "status": "draft",
+  "kind": "logical",
+  "abstract": false,
+  "type": "VISIT",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [ {
+      "id": "VISIT.VISIT--PV1",
+      "path": "VISIT.VISIT--PV1",
+      "min": 1,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/PV1"
+      } ]
+    }, {
+      "id": "VISIT.VISIT--PV2",
+      "path": "VISIT.VISIT--PV2",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/PV2"
+      } ]
+    } ]
+  }
+}

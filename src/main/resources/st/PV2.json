@@ -1,0 +1,456 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "PV2",
+  "url": "http://hl7.org/hapi-v2-parser/StructureDefinition/PV2",
+  "name": "PV2",
+  "status": "draft",
+  "kind": "logical",
+  "abstract": false,
+  "type": "PV2",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [ {
+      "id": "PV2.PV2--1",
+      "path": "PV2.PV2--1",
+      "short": "Prior Pending Location",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/PL"
+      } ]
+    }, {
+      "id": "PV2.PV2--2",
+      "path": "PV2.PV2--2",
+      "short": "Accommodation Code",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "PV2.PV2--3",
+      "path": "PV2.PV2--3",
+      "short": "Admit Reason",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "PV2.PV2--4",
+      "path": "PV2.PV2--4",
+      "short": "Transfer Reason",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "PV2.PV2--5",
+      "path": "PV2.PV2--5",
+      "short": "Patient Valuables",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "PV2.PV2--6",
+      "path": "PV2.PV2--6",
+      "short": "Patient Valuables Location",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "PV2.PV2--7",
+      "path": "PV2.PV2--7",
+      "short": "Visit User Code",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "PV2.PV2--8",
+      "path": "PV2.PV2--8",
+      "short": "Expected Admit Date/Time",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/TS"
+      } ]
+    }, {
+      "id": "PV2.PV2--9",
+      "path": "PV2.PV2--9",
+      "short": "Expected Discharge Date/Time",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/TS"
+      } ]
+    }, {
+      "id": "PV2.PV2--10",
+      "path": "PV2.PV2--10",
+      "short": "Estimated Length of Inpatient Stay",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/NM"
+      } ]
+    }, {
+      "id": "PV2.PV2--11",
+      "path": "PV2.PV2--11",
+      "short": "Actual Length of Inpatient Stay",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/NM"
+      } ]
+    }, {
+      "id": "PV2.PV2--12",
+      "path": "PV2.PV2--12",
+      "short": "Visit Description",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "PV2.PV2--13",
+      "path": "PV2.PV2--13",
+      "short": "Referral Source Code",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XCN"
+      } ]
+    }, {
+      "id": "PV2.PV2--14",
+      "path": "PV2.PV2--14",
+      "short": "Previous Service Date",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/DT"
+      } ]
+    }, {
+      "id": "PV2.PV2--15",
+      "path": "PV2.PV2--15",
+      "short": "Employment Illness Related Indicator",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ID"
+      } ]
+    }, {
+      "id": "PV2.PV2--16",
+      "path": "PV2.PV2--16",
+      "short": "Purge Status Code",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "PV2.PV2--17",
+      "path": "PV2.PV2--17",
+      "short": "Purge Status Date",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/DT"
+      } ]
+    }, {
+      "id": "PV2.PV2--18",
+      "path": "PV2.PV2--18",
+      "short": "Special Program Code",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "PV2.PV2--19",
+      "path": "PV2.PV2--19",
+      "short": "Retention Indicator",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ID"
+      } ]
+    }, {
+      "id": "PV2.PV2--20",
+      "path": "PV2.PV2--20",
+      "short": "Expected Number of Insurance Plans",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/NM"
+      } ]
+    }, {
+      "id": "PV2.PV2--21",
+      "path": "PV2.PV2--21",
+      "short": "Visit Publicity Code",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "PV2.PV2--22",
+      "path": "PV2.PV2--22",
+      "short": "Visit Protection Indicator",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ID"
+      } ]
+    }, {
+      "id": "PV2.PV2--23",
+      "path": "PV2.PV2--23",
+      "short": "Clinic Organization Name",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XON"
+      } ]
+    }, {
+      "id": "PV2.PV2--24",
+      "path": "PV2.PV2--24",
+      "short": "Patient Status Code",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "PV2.PV2--25",
+      "path": "PV2.PV2--25",
+      "short": "Visit Priority Code",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "PV2.PV2--26",
+      "path": "PV2.PV2--26",
+      "short": "Previous Treatment Date",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/DT"
+      } ]
+    }, {
+      "id": "PV2.PV2--27",
+      "path": "PV2.PV2--27",
+      "short": "Expected Discharge Disposition",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "PV2.PV2--28",
+      "path": "PV2.PV2--28",
+      "short": "Signature on File Date",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/DT"
+      } ]
+    }, {
+      "id": "PV2.PV2--29",
+      "path": "PV2.PV2--29",
+      "short": "First Similar Illness Date",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/DT"
+      } ]
+    }, {
+      "id": "PV2.PV2--30",
+      "path": "PV2.PV2--30",
+      "short": "Patient Charge Adjustment Code",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "PV2.PV2--31",
+      "path": "PV2.PV2--31",
+      "short": "Recurring Service Code",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "PV2.PV2--32",
+      "path": "PV2.PV2--32",
+      "short": "Billing Media Code",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ID"
+      } ]
+    }, {
+      "id": "PV2.PV2--33",
+      "path": "PV2.PV2--33",
+      "short": "Expected Surgery Date and Time",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/TS"
+      } ]
+    }, {
+      "id": "PV2.PV2--34",
+      "path": "PV2.PV2--34",
+      "short": "Military Partnership Code",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ID"
+      } ]
+    }, {
+      "id": "PV2.PV2--35",
+      "path": "PV2.PV2--35",
+      "short": "Military Non-Availability Code",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ID"
+      } ]
+    }, {
+      "id": "PV2.PV2--36",
+      "path": "PV2.PV2--36",
+      "short": "Newborn Baby Indicator",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ID"
+      } ]
+    }, {
+      "id": "PV2.PV2--37",
+      "path": "PV2.PV2--37",
+      "short": "Baby Detained Indicator",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ID"
+      } ]
+    }, {
+      "id": "PV2.PV2--38",
+      "path": "PV2.PV2--38",
+      "short": "Mode of Arrival Code",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "PV2.PV2--39",
+      "path": "PV2.PV2--39",
+      "short": "Recreational Drug Use Code",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "PV2.PV2--40",
+      "path": "PV2.PV2--40",
+      "short": "Admission Level of Care Code",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "PV2.PV2--41",
+      "path": "PV2.PV2--41",
+      "short": "Precaution Code",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "PV2.PV2--42",
+      "path": "PV2.PV2--42",
+      "short": "Patient Condition Code",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "PV2.PV2--43",
+      "path": "PV2.PV2--43",
+      "short": "Living Will Code",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "PV2.PV2--44",
+      "path": "PV2.PV2--44",
+      "short": "Organ Donor Code",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "PV2.PV2--45",
+      "path": "PV2.PV2--45",
+      "short": "Advance Directive Code",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "PV2.PV2--46",
+      "path": "PV2.PV2--46",
+      "short": "Patient Status Effective Date",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/DT"
+      } ]
+    }, {
+      "id": "PV2.PV2--47",
+      "path": "PV2.PV2--47",
+      "short": "Expected LOA Return Date/Time",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/TS"
+      } ]
+    }, {
+      "id": "PV2.PV2--48",
+      "path": "PV2.PV2--48",
+      "short": "Expected Pre-admission Testing Date/Time",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/TS"
+      } ]
+    }, {
+      "id": "PV2.PV2--49",
+      "path": "PV2.PV2--49",
+      "short": "Notify Clergy Code",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    } ]
+  }
+}

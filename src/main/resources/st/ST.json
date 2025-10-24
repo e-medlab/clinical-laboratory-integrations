@@ -1,0 +1,27 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ST",
+  "url": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST",
+  "name": "ST",
+  "status": "draft",
+  "kind": "logical",
+  "abstract": false,
+  "type": "string",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/string",
+  "derivation": "specialization",
+  "differential": {
+    "element": [ {
+      "id": "ST",
+      "path": "ST"
+    }, {
+      "id": "ST.xmlText",
+      "path": "ST.xmlText",
+      "representation": [ "xmlText" ],
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "string"
+      } ]
+    } ]
+  }
+}

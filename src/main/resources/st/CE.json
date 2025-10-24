@@ -1,0 +1,63 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "CE",
+  "url": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE",
+  "name": "CE",
+  "status": "draft",
+  "kind": "logical",
+  "abstract": false,
+  "type": "CE",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [ {
+      "id": "CE.CE--1",
+      "path": "CE.CE--1",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "CE.CE--2",
+      "path": "CE.CE--2",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "CE.CE--3",
+      "path": "CE.CE--3",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ID"
+      } ]
+    }, {
+      "id": "CE.CE--4",
+      "path": "CE.CE--4",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "CE.CE--5",
+      "path": "CE.CE--5",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "CE.CE--6",
+      "path": "CE.CE--6",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ID"
+      } ]
+    } ]
+  }
+}

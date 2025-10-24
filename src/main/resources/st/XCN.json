@@ -1,0 +1,199 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "XCN",
+  "url": "http://hl7.org/hapi-v2-parser/StructureDefinition/XCN",
+  "name": "XCN",
+  "status": "draft",
+  "kind": "logical",
+  "abstract": false,
+  "type": "XCN",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [ {
+      "id": "XCN.XCN--1",
+      "path": "XCN.XCN--1",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "XCN.XCN--2",
+      "path": "XCN.XCN--2",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/FN"
+      } ]
+    }, {
+      "id": "XCN.XCN--3",
+      "path": "XCN.XCN--3",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "XCN.XCN--4",
+      "path": "XCN.XCN--4",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "XCN.XCN--5",
+      "path": "XCN.XCN--5",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "XCN.XCN--6",
+      "path": "XCN.XCN--6",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "XCN.XCN--7",
+      "path": "XCN.XCN--7",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "XCN.XCN--8",
+      "path": "XCN.XCN--8",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "XCN.XCN--9",
+      "path": "XCN.XCN--9",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/HD"
+      } ]
+    }, {
+      "id": "XCN.XCN--10",
+      "path": "XCN.XCN--10",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ID"
+      } ]
+    }, {
+      "id": "XCN.XCN--11",
+      "path": "XCN.XCN--11",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "XCN.XCN--12",
+      "path": "XCN.XCN--12",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ID"
+      } ]
+    }, {
+      "id": "XCN.XCN--13",
+      "path": "XCN.XCN--13",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ID"
+      } ]
+    }, {
+      "id": "XCN.XCN--14",
+      "path": "XCN.XCN--14",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/HD"
+      } ]
+    }, {
+      "id": "XCN.XCN--15",
+      "path": "XCN.XCN--15",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ID"
+      } ]
+    }, {
+      "id": "XCN.XCN--16",
+      "path": "XCN.XCN--16",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "XCN.XCN--17",
+      "path": "XCN.XCN--17",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/DR"
+      } ]
+    }, {
+      "id": "XCN.XCN--18",
+      "path": "XCN.XCN--18",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ID"
+      } ]
+    }, {
+      "id": "XCN.XCN--19",
+      "path": "XCN.XCN--19",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/TS"
+      } ]
+    }, {
+      "id": "XCN.XCN--20",
+      "path": "XCN.XCN--20",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/TS"
+      } ]
+    }, {
+      "id": "XCN.XCN--21",
+      "path": "XCN.XCN--21",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "XCN.XCN--22",
+      "path": "XCN.XCN--22",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CWE"
+      } ]
+    }, {
+      "id": "XCN.XCN--23",
+      "path": "XCN.XCN--23",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CWE"
+      } ]
+    } ]
+  }
+}

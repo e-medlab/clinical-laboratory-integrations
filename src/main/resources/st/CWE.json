@@ -1,0 +1,87 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "CWE",
+  "url": "http://hl7.org/hapi-v2-parser/StructureDefinition/CWE",
+  "name": "CWE",
+  "status": "draft",
+  "kind": "logical",
+  "abstract": false,
+  "type": "CWE",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [ {
+      "id": "CWE.CWE--1",
+      "path": "CWE.CWE--1",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "CWE.CWE--2",
+      "path": "CWE.CWE--2",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "CWE.CWE--3",
+      "path": "CWE.CWE--3",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ID"
+      } ]
+    }, {
+      "id": "CWE.CWE--4",
+      "path": "CWE.CWE--4",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "CWE.CWE--5",
+      "path": "CWE.CWE--5",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "CWE.CWE--6",
+      "path": "CWE.CWE--6",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ID"
+      } ]
+    }, {
+      "id": "CWE.CWE--7",
+      "path": "CWE.CWE--7",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "CWE.CWE--8",
+      "path": "CWE.CWE--8",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "CWE.CWE--9",
+      "path": "CWE.CWE--9",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    } ]
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "FT",
+  "url": "http://hl7.org/hapi-v2-parser/StructureDefinition/FT",
+  "name": "FT",
+  "status": "draft",
+  "kind": "logical",
+  "abstract": false,
+  "type": "string",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/string",
+  "derivation": "specialization",
+  "differential": {
+    "element": [ {
+      "id": "FT",
+      "path": "FT"
+    }, {
+      "id": "FT.xmlText",
+      "path": "FT.xmlText",
+      "representation": [ "xmlText" ],
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "string"
+      } ]
+    } ]
+  }
+}

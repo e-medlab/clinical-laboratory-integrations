@@ -1,0 +1,483 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "PV1",
+  "url": "http://hl7.org/hapi-v2-parser/StructureDefinition/PV1",
+  "name": "PV1",
+  "status": "draft",
+  "kind": "logical",
+  "abstract": false,
+  "type": "PV1",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [ {
+      "id": "PV1.PV1--1",
+      "path": "PV1.PV1--1",
+      "short": "Set ID - PV1",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/SI"
+      } ]
+    }, {
+      "id": "PV1.PV1--2",
+      "path": "PV1.PV1--2",
+      "short": "Patient Class",
+      "min": 1,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "PV1.PV1--3",
+      "path": "PV1.PV1--3",
+      "short": "Assigned Patient Location",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/PL"
+      } ]
+    }, {
+      "id": "PV1.PV1--4",
+      "path": "PV1.PV1--4",
+      "short": "Admission Type",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "PV1.PV1--5",
+      "path": "PV1.PV1--5",
+      "short": "Preadmit Number",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CX"
+      } ]
+    }, {
+      "id": "PV1.PV1--6",
+      "path": "PV1.PV1--6",
+      "short": "Prior Patient Location",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/PL"
+      } ]
+    }, {
+      "id": "PV1.PV1--7",
+      "path": "PV1.PV1--7",
+      "short": "Attending Doctor",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XCN"
+      } ]
+    }, {
+      "id": "PV1.PV1--8",
+      "path": "PV1.PV1--8",
+      "short": "Referring Doctor",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XCN"
+      } ]
+    }, {
+      "id": "PV1.PV1--9",
+      "path": "PV1.PV1--9",
+      "short": "Consulting Doctor",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XCN"
+      } ]
+    }, {
+      "id": "PV1.PV1--10",
+      "path": "PV1.PV1--10",
+      "short": "Hospital Service",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "PV1.PV1--11",
+      "path": "PV1.PV1--11",
+      "short": "Temporary Location",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/PL"
+      } ]
+    }, {
+      "id": "PV1.PV1--12",
+      "path": "PV1.PV1--12",
+      "short": "Preadmit Test Indicator",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "PV1.PV1--13",
+      "path": "PV1.PV1--13",
+      "short": "Re-admission Indicator",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "PV1.PV1--14",
+      "path": "PV1.PV1--14",
+      "short": "Admit Source",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "PV1.PV1--15",
+      "path": "PV1.PV1--15",
+      "short": "Ambulatory Status",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "PV1.PV1--16",
+      "path": "PV1.PV1--16",
+      "short": "VIP Indicator",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "PV1.PV1--17",
+      "path": "PV1.PV1--17",
+      "short": "Admitting Doctor",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XCN"
+      } ]
+    }, {
+      "id": "PV1.PV1--18",
+      "path": "PV1.PV1--18",
+      "short": "Patient Type",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "PV1.PV1--19",
+      "path": "PV1.PV1--19",
+      "short": "Visit Number",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CX"
+      } ]
+    }, {
+      "id": "PV1.PV1--20",
+      "path": "PV1.PV1--20",
+      "short": "Financial Class",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/FC"
+      } ]
+    }, {
+      "id": "PV1.PV1--21",
+      "path": "PV1.PV1--21",
+      "short": "Charge Price Indicator",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "PV1.PV1--22",
+      "path": "PV1.PV1--22",
+      "short": "Courtesy Code",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "PV1.PV1--23",
+      "path": "PV1.PV1--23",
+      "short": "Credit Rating",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "PV1.PV1--24",
+      "path": "PV1.PV1--24",
+      "short": "Contract Code",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "PV1.PV1--25",
+      "path": "PV1.PV1--25",
+      "short": "Contract Effective Date",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/DT"
+      } ]
+    }, {
+      "id": "PV1.PV1--26",
+      "path": "PV1.PV1--26",
+      "short": "Contract Amount",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/NM"
+      } ]
+    }, {
+      "id": "PV1.PV1--27",
+      "path": "PV1.PV1--27",
+      "short": "Contract Period",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/NM"
+      } ]
+    }, {
+      "id": "PV1.PV1--28",
+      "path": "PV1.PV1--28",
+      "short": "Interest Code",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "PV1.PV1--29",
+      "path": "PV1.PV1--29",
+      "short": "Transfer to Bad Debt Code",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "PV1.PV1--30",
+      "path": "PV1.PV1--30",
+      "short": "Transfer to Bad Debt Date",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/DT"
+      } ]
+    }, {
+      "id": "PV1.PV1--31",
+      "path": "PV1.PV1--31",
+      "short": "Bad Debt Agency Code",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "PV1.PV1--32",
+      "path": "PV1.PV1--32",
+      "short": "Bad Debt Transfer Amount",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/NM"
+      } ]
+    }, {
+      "id": "PV1.PV1--33",
+      "path": "PV1.PV1--33",
+      "short": "Bad Debt Recovery Amount",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/NM"
+      } ]
+    }, {
+      "id": "PV1.PV1--34",
+      "path": "PV1.PV1--34",
+      "short": "Delete Account Indicator",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "PV1.PV1--35",
+      "path": "PV1.PV1--35",
+      "short": "Delete Account Date",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/DT"
+      } ]
+    }, {
+      "id": "PV1.PV1--36",
+      "path": "PV1.PV1--36",
+      "short": "Discharge Disposition",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "PV1.PV1--37",
+      "path": "PV1.PV1--37",
+      "short": "Discharged to Location",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/DLD"
+      } ]
+    }, {
+      "id": "PV1.PV1--38",
+      "path": "PV1.PV1--38",
+      "short": "Diet Type",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "PV1.PV1--39",
+      "path": "PV1.PV1--39",
+      "short": "Servicing Facility",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "PV1.PV1--40",
+      "path": "PV1.PV1--40",
+      "short": "Bed Status",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "PV1.PV1--41",
+      "path": "PV1.PV1--41",
+      "short": "Account Status",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "PV1.PV1--42",
+      "path": "PV1.PV1--42",
+      "short": "Pending Location",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/PL"
+      } ]
+    }, {
+      "id": "PV1.PV1--43",
+      "path": "PV1.PV1--43",
+      "short": "Prior Temporary Location",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/PL"
+      } ]
+    }, {
+      "id": "PV1.PV1--44",
+      "path": "PV1.PV1--44",
+      "short": "Admit Date/Time",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/TS"
+      } ]
+    }, {
+      "id": "PV1.PV1--45",
+      "path": "PV1.PV1--45",
+      "short": "Discharge Date/Time",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/TS"
+      } ]
+    }, {
+      "id": "PV1.PV1--46",
+      "path": "PV1.PV1--46",
+      "short": "Current Patient Balance",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/NM"
+      } ]
+    }, {
+      "id": "PV1.PV1--47",
+      "path": "PV1.PV1--47",
+      "short": "Total Charges",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/NM"
+      } ]
+    }, {
+      "id": "PV1.PV1--48",
+      "path": "PV1.PV1--48",
+      "short": "Total Adjustments",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/NM"
+      } ]
+    }, {
+      "id": "PV1.PV1--49",
+      "path": "PV1.PV1--49",
+      "short": "Total Payments",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/NM"
+      } ]
+    }, {
+      "id": "PV1.PV1--50",
+      "path": "PV1.PV1--50",
+      "short": "Alternate Visit ID",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CX"
+      } ]
+    }, {
+      "id": "PV1.PV1--51",
+      "path": "PV1.PV1--51",
+      "short": "Visit Indicator",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "PV1.PV1--52",
+      "path": "PV1.PV1--52",
+      "short": "Other Healthcare Provider",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XCN"
+      } ]
+    } ]
+  }
+}

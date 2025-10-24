@@ -1,0 +1,31 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "TS",
+  "url": "http://hl7.org/hapi-v2-parser/StructureDefinition/TS",
+  "name": "TS",
+  "status": "draft",
+  "kind": "logical",
+  "abstract": false,
+  "type": "TS",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [ {
+      "id": "TS.TS--1",
+      "path": "TS.TS--1",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/DTM"
+      } ]
+    }, {
+      "id": "TS.TS--2",
+      "path": "TS.TS--2",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ID"
+      } ]
+    } ]
+  }
+}

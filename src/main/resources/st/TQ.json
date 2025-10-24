@@ -1,0 +1,111 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "TQ",
+  "url": "http://hl7.org/hapi-v2-parser/StructureDefinition/TQ",
+  "name": "TQ",
+  "status": "draft",
+  "kind": "logical",
+  "abstract": false,
+  "type": "TQ",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [ {
+      "id": "TQ.TQ--1",
+      "path": "TQ.TQ--1",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CQ"
+      } ]
+    }, {
+      "id": "TQ.TQ--2",
+      "path": "TQ.TQ--2",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/RI"
+      } ]
+    }, {
+      "id": "TQ.TQ--3",
+      "path": "TQ.TQ--3",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "TQ.TQ--4",
+      "path": "TQ.TQ--4",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/TS"
+      } ]
+    }, {
+      "id": "TQ.TQ--5",
+      "path": "TQ.TQ--5",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/TS"
+      } ]
+    }, {
+      "id": "TQ.TQ--6",
+      "path": "TQ.TQ--6",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "TQ.TQ--7",
+      "path": "TQ.TQ--7",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "TQ.TQ--8",
+      "path": "TQ.TQ--8",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/TX"
+      } ]
+    }, {
+      "id": "TQ.TQ--9",
+      "path": "TQ.TQ--9",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ID"
+      } ]
+    }, {
+      "id": "TQ.TQ--10",
+      "path": "TQ.TQ--10",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/OSD"
+      } ]
+    }, {
+      "id": "TQ.TQ--11",
+      "path": "TQ.TQ--11",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "TQ.TQ--12",
+      "path": "TQ.TQ--12",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/NM"
+      } ]
+    } ]
+  }
+}

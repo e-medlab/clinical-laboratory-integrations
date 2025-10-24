@@ -1,0 +1,71 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "SPS",
+  "url": "http://hl7.org/hapi-v2-parser/StructureDefinition/SPS",
+  "name": "SPS",
+  "status": "draft",
+  "kind": "logical",
+  "abstract": false,
+  "type": "SPS",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [ {
+      "id": "SPS.SPS--1",
+      "path": "SPS.SPS--1",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CWE"
+      } ]
+    }, {
+      "id": "SPS.SPS--2",
+      "path": "SPS.SPS--2",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CWE"
+      } ]
+    }, {
+      "id": "SPS.SPS--3",
+      "path": "SPS.SPS--3",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/TX"
+      } ]
+    }, {
+      "id": "SPS.SPS--4",
+      "path": "SPS.SPS--4",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CWE"
+      } ]
+    }, {
+      "id": "SPS.SPS--5",
+      "path": "SPS.SPS--5",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CWE"
+      } ]
+    }, {
+      "id": "SPS.SPS--6",
+      "path": "SPS.SPS--6",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CWE"
+      } ]
+    }, {
+      "id": "SPS.SPS--7",
+      "path": "SPS.SPS--7",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CWE"
+      } ]
+    } ]
+  }
+}

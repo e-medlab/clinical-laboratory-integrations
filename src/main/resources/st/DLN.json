@@ -1,0 +1,39 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "DLN",
+  "url": "http://hl7.org/hapi-v2-parser/StructureDefinition/DLN",
+  "name": "DLN",
+  "status": "draft",
+  "kind": "logical",
+  "abstract": false,
+  "type": "DLN",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [ {
+      "id": "DLN.DLN--1",
+      "path": "DLN.DLN--1",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "DLN.DLN--2",
+      "path": "DLN.DLN--2",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "DLN.DLN--3",
+      "path": "DLN.DLN--3",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/DT"
+      } ]
+    } ]
+  }
+}

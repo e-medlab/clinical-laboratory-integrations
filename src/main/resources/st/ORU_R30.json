@@ -1,0 +1,95 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ORU_R30",
+  "url": "http://hl7.org/hapi-v2-parser/StructureDefinition/ORU_R30",
+  "name": "ORU_R30",
+  "status": "draft",
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/ORU_R30",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [ {
+      "id": "ORU_R30.MSH",
+      "path": "ORU_R30.MSH",
+      "min": 1,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/MSH"
+      } ]
+    }, {
+      "id": "ORU_R30.SFT",
+      "path": "ORU_R30.SFT",
+      "min": 0,
+      "max": "*",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/SFT"
+      } ]
+    }, {
+      "id": "ORU_R30.PID",
+      "path": "ORU_R30.PID",
+      "min": 1,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/PID"
+      } ]
+    }, {
+      "id": "ORU_R30.PD1",
+      "path": "ORU_R30.PD1",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/PD1"
+      } ]
+    }, {
+      "id": "ORU_R30.VISIT",
+      "path": "ORU_R30.VISIT",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/VISIT"
+      } ]
+    }, {
+      "id": "ORU_R30.ORC",
+      "path": "ORU_R30.ORC",
+      "min": 1,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ORC"
+      } ]
+    }, {
+      "id": "ORU_R30.OBR",
+      "path": "ORU_R30.OBR",
+      "min": 1,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/OBR"
+      } ]
+    }, {
+      "id": "ORU_R30.NTE",
+      "path": "ORU_R30.NTE",
+      "min": 0,
+      "max": "*",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/NTE"
+      } ]
+    }, {
+      "id": "ORU_R30.TIMING_QTY",
+      "path": "ORU_R30.TIMING_QTY",
+      "min": 0,
+      "max": "*",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/TIMING_QTY"
+      } ]
+    }, {
+      "id": "ORU_R30.OBSERVATION",
+      "path": "ORU_R30.OBSERVATION",
+      "min": 1,
+      "max": "*",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/OBSERVATION"
+      } ]
+    } ]
+  }
+}

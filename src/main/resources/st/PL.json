@@ -1,0 +1,103 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "PL",
+  "url": "http://hl7.org/hapi-v2-parser/StructureDefinition/PL",
+  "name": "PL",
+  "status": "draft",
+  "kind": "logical",
+  "abstract": false,
+  "type": "PL",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [ {
+      "id": "PL.PL--1",
+      "path": "PL.PL--1",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "PL.PL--2",
+      "path": "PL.PL--2",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "PL.PL--3",
+      "path": "PL.PL--3",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "PL.PL--4",
+      "path": "PL.PL--4",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/HD"
+      } ]
+    }, {
+      "id": "PL.PL--5",
+      "path": "PL.PL--5",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "PL.PL--6",
+      "path": "PL.PL--6",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "PL.PL--7",
+      "path": "PL.PL--7",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "PL.PL--8",
+      "path": "PL.PL--8",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "PL.PL--9",
+      "path": "PL.PL--9",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "PL.PL--10",
+      "path": "PL.PL--10",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/EI"
+      } ]
+    }, {
+      "id": "PL.PL--11",
+      "path": "PL.PL--11",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/HD"
+      } ]
+    } ]
+  }
+}

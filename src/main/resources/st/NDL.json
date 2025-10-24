@@ -1,0 +1,103 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "NDL",
+  "url": "http://hl7.org/hapi-v2-parser/StructureDefinition/NDL",
+  "name": "NDL",
+  "status": "draft",
+  "kind": "logical",
+  "abstract": false,
+  "type": "NDL",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [ {
+      "id": "NDL.NDL--1",
+      "path": "NDL.NDL--1",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CNN"
+      } ]
+    }, {
+      "id": "NDL.NDL--2",
+      "path": "NDL.NDL--2",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/TS"
+      } ]
+    }, {
+      "id": "NDL.NDL--3",
+      "path": "NDL.NDL--3",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/TS"
+      } ]
+    }, {
+      "id": "NDL.NDL--4",
+      "path": "NDL.NDL--4",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "NDL.NDL--5",
+      "path": "NDL.NDL--5",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "NDL.NDL--6",
+      "path": "NDL.NDL--6",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "NDL.NDL--7",
+      "path": "NDL.NDL--7",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/HD"
+      } ]
+    }, {
+      "id": "NDL.NDL--8",
+      "path": "NDL.NDL--8",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "NDL.NDL--9",
+      "path": "NDL.NDL--9",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "NDL.NDL--10",
+      "path": "NDL.NDL--10",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "NDL.NDL--11",
+      "path": "NDL.NDL--11",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    } ]
+  }
+}

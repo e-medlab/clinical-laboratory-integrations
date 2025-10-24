@@ -1,0 +1,141 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "TQ1",
+  "url": "http://hl7.org/hapi-v2-parser/StructureDefinition/TQ1",
+  "name": "TQ1",
+  "status": "draft",
+  "kind": "logical",
+  "abstract": false,
+  "type": "TQ1",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [ {
+      "id": "TQ1.TQ1--1",
+      "path": "TQ1.TQ1--1",
+      "short": "Set ID - TQ1",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/SI"
+      } ]
+    }, {
+      "id": "TQ1.TQ1--2",
+      "path": "TQ1.TQ1--2",
+      "short": "Quantity",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CQ"
+      } ]
+    }, {
+      "id": "TQ1.TQ1--3",
+      "path": "TQ1.TQ1--3",
+      "short": "Repeat Pattern",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/RPT"
+      } ]
+    }, {
+      "id": "TQ1.TQ1--4",
+      "path": "TQ1.TQ1--4",
+      "short": "Explicit Time",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/TM"
+      } ]
+    }, {
+      "id": "TQ1.TQ1--5",
+      "path": "TQ1.TQ1--5",
+      "short": "Relative Time and Units",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CQ"
+      } ]
+    }, {
+      "id": "TQ1.TQ1--6",
+      "path": "TQ1.TQ1--6",
+      "short": "Service Duration",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CQ"
+      } ]
+    }, {
+      "id": "TQ1.TQ1--7",
+      "path": "TQ1.TQ1--7",
+      "short": "Start date/time",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/TS"
+      } ]
+    }, {
+      "id": "TQ1.TQ1--8",
+      "path": "TQ1.TQ1--8",
+      "short": "End date/time",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/TS"
+      } ]
+    }, {
+      "id": "TQ1.TQ1--9",
+      "path": "TQ1.TQ1--9",
+      "short": "Priority",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CWE"
+      } ]
+    }, {
+      "id": "TQ1.TQ1--10",
+      "path": "TQ1.TQ1--10",
+      "short": "Condition text",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/TX"
+      } ]
+    }, {
+      "id": "TQ1.TQ1--11",
+      "path": "TQ1.TQ1--11",
+      "short": "Text instruction",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/TX"
+      } ]
+    }, {
+      "id": "TQ1.TQ1--12",
+      "path": "TQ1.TQ1--12",
+      "short": "Conjunction",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ID"
+      } ]
+    }, {
+      "id": "TQ1.TQ1--13",
+      "path": "TQ1.TQ1--13",
+      "short": "Occurrence duration",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CQ"
+      } ]
+    }, {
+      "id": "TQ1.TQ1--14",
+      "path": "TQ1.TQ1--14",
+      "short": "Total occurrence's",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/NM"
+      } ]
+    } ]
+  }
+}

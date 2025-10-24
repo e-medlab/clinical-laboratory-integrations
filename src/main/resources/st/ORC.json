@@ -1,0 +1,285 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ORC",
+  "url": "http://hl7.org/hapi-v2-parser/StructureDefinition/ORC",
+  "name": "ORC",
+  "status": "draft",
+  "kind": "logical",
+  "abstract": false,
+  "type": "ORC",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [ {
+      "id": "ORC.ORC--1",
+      "path": "ORC.ORC--1",
+      "short": "Order Control",
+      "min": 1,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ID"
+      } ]
+    }, {
+      "id": "ORC.ORC--2",
+      "path": "ORC.ORC--2",
+      "short": "Placer Order Number",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/EI"
+      } ]
+    }, {
+      "id": "ORC.ORC--3",
+      "path": "ORC.ORC--3",
+      "short": "Filler Order Number",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/EI"
+      } ]
+    }, {
+      "id": "ORC.ORC--4",
+      "path": "ORC.ORC--4",
+      "short": "Placer Group Number",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/EI"
+      } ]
+    }, {
+      "id": "ORC.ORC--5",
+      "path": "ORC.ORC--5",
+      "short": "Order Status",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ID"
+      } ]
+    }, {
+      "id": "ORC.ORC--6",
+      "path": "ORC.ORC--6",
+      "short": "Response Flag",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ID"
+      } ]
+    }, {
+      "id": "ORC.ORC--7",
+      "path": "ORC.ORC--7",
+      "short": "Quantity/Timing",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/TQ"
+      } ]
+    }, {
+      "id": "ORC.ORC--8",
+      "path": "ORC.ORC--8",
+      "short": "Parent Order",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/EIP"
+      } ]
+    }, {
+      "id": "ORC.ORC--9",
+      "path": "ORC.ORC--9",
+      "short": "Date/Time of Transaction",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/TS"
+      } ]
+    }, {
+      "id": "ORC.ORC--10",
+      "path": "ORC.ORC--10",
+      "short": "Entered By",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XCN"
+      } ]
+    }, {
+      "id": "ORC.ORC--11",
+      "path": "ORC.ORC--11",
+      "short": "Verified By",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XCN"
+      } ]
+    }, {
+      "id": "ORC.ORC--12",
+      "path": "ORC.ORC--12",
+      "short": "Ordering Provider",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XCN"
+      } ]
+    }, {
+      "id": "ORC.ORC--13",
+      "path": "ORC.ORC--13",
+      "short": "Enterer's Location",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/PL"
+      } ]
+    }, {
+      "id": "ORC.ORC--14",
+      "path": "ORC.ORC--14",
+      "short": "Call Back Phone Number",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XTN"
+      } ]
+    }, {
+      "id": "ORC.ORC--15",
+      "path": "ORC.ORC--15",
+      "short": "Order Effective Date/Time",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/TS"
+      } ]
+    }, {
+      "id": "ORC.ORC--16",
+      "path": "ORC.ORC--16",
+      "short": "Order Control Code Reason",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "ORC.ORC--17",
+      "path": "ORC.ORC--17",
+      "short": "Entering Organization",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "ORC.ORC--18",
+      "path": "ORC.ORC--18",
+      "short": "Entering Device",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "ORC.ORC--19",
+      "path": "ORC.ORC--19",
+      "short": "Action By",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XCN"
+      } ]
+    }, {
+      "id": "ORC.ORC--20",
+      "path": "ORC.ORC--20",
+      "short": "Advanced Beneficiary Notice Code",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "ORC.ORC--21",
+      "path": "ORC.ORC--21",
+      "short": "Ordering Facility Name",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XON"
+      } ]
+    }, {
+      "id": "ORC.ORC--22",
+      "path": "ORC.ORC--22",
+      "short": "Ordering Facility Address",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XAD"
+      } ]
+    }, {
+      "id": "ORC.ORC--23",
+      "path": "ORC.ORC--23",
+      "short": "Ordering Facility Phone Number",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XTN"
+      } ]
+    }, {
+      "id": "ORC.ORC--24",
+      "path": "ORC.ORC--24",
+      "short": "Ordering Provider Address",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XAD"
+      } ]
+    }, {
+      "id": "ORC.ORC--25",
+      "path": "ORC.ORC--25",
+      "short": "Order Status Modifier",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CWE"
+      } ]
+    }, {
+      "id": "ORC.ORC--26",
+      "path": "ORC.ORC--26",
+      "short": "Advanced Beneficiary Notice Override Reason",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CWE"
+      } ]
+    }, {
+      "id": "ORC.ORC--27",
+      "path": "ORC.ORC--27",
+      "short": "Filler's Expected Availability Date/Time",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/TS"
+      } ]
+    }, {
+      "id": "ORC.ORC--28",
+      "path": "ORC.ORC--28",
+      "short": "Confidentiality Code",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CWE"
+      } ]
+    }, {
+      "id": "ORC.ORC--29",
+      "path": "ORC.ORC--29",
+      "short": "Order Type",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CWE"
+      } ]
+    }, {
+      "id": "ORC.ORC--30",
+      "path": "ORC.ORC--30",
+      "short": "Enterer Authorization Mode",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CNE"
+      } ]
+    } ]
+  }
+}

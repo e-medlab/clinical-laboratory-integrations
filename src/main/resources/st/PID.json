@@ -1,0 +1,366 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "PID",
+  "url": "http://hl7.org/hapi-v2-parser/StructureDefinition/PID",
+  "name": "PID",
+  "status": "draft",
+  "kind": "logical",
+  "abstract": false,
+  "type": "PID",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [ {
+      "id": "PID.PID--1",
+      "path": "PID.PID--1",
+      "short": "Set ID - PID",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/SI"
+      } ]
+    }, {
+      "id": "PID.PID--2",
+      "path": "PID.PID--2",
+      "short": "Patient ID",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CX"
+      } ]
+    }, {
+      "id": "PID.PID--3",
+      "path": "PID.PID--3",
+      "short": "Patient Identifier List",
+      "min": 1,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CX"
+      } ]
+    }, {
+      "id": "PID.PID--4",
+      "path": "PID.PID--4",
+      "short": "Alternate Patient ID - PID",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CX"
+      } ]
+    }, {
+      "id": "PID.PID--5",
+      "path": "PID.PID--5",
+      "short": "Patient Name",
+      "min": 1,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XPN"
+      } ]
+    }, {
+      "id": "PID.PID--6",
+      "path": "PID.PID--6",
+      "short": "Mother's Maiden Name",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XPN"
+      } ]
+    }, {
+      "id": "PID.PID--7",
+      "path": "PID.PID--7",
+      "short": "Date/Time of Birth",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/TS"
+      } ]
+    }, {
+      "id": "PID.PID--8",
+      "path": "PID.PID--8",
+      "short": "Administrative Sex",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "PID.PID--9",
+      "path": "PID.PID--9",
+      "short": "Patient Alias",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XPN"
+      } ]
+    }, {
+      "id": "PID.PID--10",
+      "path": "PID.PID--10",
+      "short": "Race",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "PID.PID--11",
+      "path": "PID.PID--11",
+      "short": "Patient Address",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XAD"
+      } ]
+    }, {
+      "id": "PID.PID--12",
+      "path": "PID.PID--12",
+      "short": "County Code",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "PID.PID--13",
+      "path": "PID.PID--13",
+      "short": "Phone Number - Home",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XTN"
+      } ]
+    }, {
+      "id": "PID.PID--14",
+      "path": "PID.PID--14",
+      "short": "Phone Number - Business",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XTN"
+      } ]
+    }, {
+      "id": "PID.PID--15",
+      "path": "PID.PID--15",
+      "short": "Primary Language",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "PID.PID--16",
+      "path": "PID.PID--16",
+      "short": "Marital Status",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "PID.PID--17",
+      "path": "PID.PID--17",
+      "short": "Religion",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "PID.PID--18",
+      "path": "PID.PID--18",
+      "short": "Patient Account Number",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CX"
+      } ]
+    }, {
+      "id": "PID.PID--19",
+      "path": "PID.PID--19",
+      "short": "SSN Number - Patient",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "PID.PID--20",
+      "path": "PID.PID--20",
+      "short": "Driver's License Number - Patient",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/DLN"
+      } ]
+    }, {
+      "id": "PID.PID--21",
+      "path": "PID.PID--21",
+      "short": "Mother's Identifier",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CX"
+      } ]
+    }, {
+      "id": "PID.PID--22",
+      "path": "PID.PID--22",
+      "short": "Ethnic Group",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "PID.PID--23",
+      "path": "PID.PID--23",
+      "short": "Birth Place",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "PID.PID--24",
+      "path": "PID.PID--24",
+      "short": "Multiple Birth Indicator",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ID"
+      } ]
+    }, {
+      "id": "PID.PID--25",
+      "path": "PID.PID--25",
+      "short": "Birth Order",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/NM"
+      } ]
+    }, {
+      "id": "PID.PID--26",
+      "path": "PID.PID--26",
+      "short": "Citizenship",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "PID.PID--27",
+      "path": "PID.PID--27",
+      "short": "Veterans Military Status",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "PID.PID--28",
+      "path": "PID.PID--28",
+      "short": "Nationality",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "PID.PID--29",
+      "path": "PID.PID--29",
+      "short": "Patient Death Date and Time",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/TS"
+      } ]
+    }, {
+      "id": "PID.PID--30",
+      "path": "PID.PID--30",
+      "short": "Patient Death Indicator",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ID"
+      } ]
+    }, {
+      "id": "PID.PID--31",
+      "path": "PID.PID--31",
+      "short": "Identity Unknown Indicator",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ID"
+      } ]
+    }, {
+      "id": "PID.PID--32",
+      "path": "PID.PID--32",
+      "short": "Identity Reliability Code",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "PID.PID--33",
+      "path": "PID.PID--33",
+      "short": "Last Update Date/Time",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/TS"
+      } ]
+    }, {
+      "id": "PID.PID--34",
+      "path": "PID.PID--34",
+      "short": "Last Update Facility",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/HD"
+      } ]
+    }, {
+      "id": "PID.PID--35",
+      "path": "PID.PID--35",
+      "short": "Species Code",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "PID.PID--36",
+      "path": "PID.PID--36",
+      "short": "Breed Code",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "PID.PID--37",
+      "path": "PID.PID--37",
+      "short": "Strain",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "PID.PID--38",
+      "path": "PID.PID--38",
+      "short": "Production Class Code",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "PID.PID--39",
+      "path": "PID.PID--39",
+      "short": "Tribal Citizenship",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CWE"
+      } ]
+    } ]
+  }
+}

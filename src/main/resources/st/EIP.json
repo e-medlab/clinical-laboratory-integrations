@@ -1,0 +1,31 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "EIP",
+  "url": "http://hl7.org/hapi-v2-parser/StructureDefinition/EIP",
+  "name": "EIP",
+  "status": "draft",
+  "kind": "logical",
+  "abstract": false,
+  "type": "EIP",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [ {
+      "id": "EIP.EIP--1",
+      "path": "EIP.EIP--1",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/EI"
+      } ]
+    }, {
+      "id": "EIP.EIP--2",
+      "path": "EIP.EIP--2",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/EI"
+      } ]
+    } ]
+  }
+}

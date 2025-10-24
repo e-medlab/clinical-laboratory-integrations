@@ -1,0 +1,186 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "OBX",
+  "url": "http://hl7.org/hapi-v2-parser/StructureDefinition/OBX",
+  "name": "OBX",
+  "status": "draft",
+  "kind": "logical",
+  "abstract": false,
+  "type": "OBX",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [ {
+      "id": "OBX.OBX--1",
+      "path": "OBX.OBX--1",
+      "short": "Set ID - OBX",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/SI"
+      } ]
+    }, {
+      "id": "OBX.OBX--2",
+      "path": "OBX.OBX--2",
+      "short": "Value Type",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ID"
+      } ]
+    }, {
+      "id": "OBX.OBX--3",
+      "path": "OBX.OBX--3",
+      "short": "Observation Identifier",
+      "min": 1,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "OBX.OBX--4",
+      "path": "OBX.OBX--4",
+      "short": "Observation Sub-ID",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "OBX.OBX--5",
+      "path": "OBX.OBX--5",
+      "short": "Observation Value",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/UNKNOWN"
+      } ]
+    }, {
+      "id": "OBX.OBX--6",
+      "path": "OBX.OBX--6",
+      "short": "Units",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "OBX.OBX--7",
+      "path": "OBX.OBX--7",
+      "short": "References Range",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "OBX.OBX--8",
+      "path": "OBX.OBX--8",
+      "short": "Abnormal Flags",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "OBX.OBX--9",
+      "path": "OBX.OBX--9",
+      "short": "Probability",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/NM"
+      } ]
+    }, {
+      "id": "OBX.OBX--10",
+      "path": "OBX.OBX--10",
+      "short": "Nature of Abnormal Test",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ID"
+      } ]
+    }, {
+      "id": "OBX.OBX--11",
+      "path": "OBX.OBX--11",
+      "short": "Observation Result Status",
+      "min": 1,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ID"
+      } ]
+    }, {
+      "id": "OBX.OBX--12",
+      "path": "OBX.OBX--12",
+      "short": "Effective Date of Reference Range",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/TS"
+      } ]
+    }, {
+      "id": "OBX.OBX--13",
+      "path": "OBX.OBX--13",
+      "short": "User Defined Access Checks",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "OBX.OBX--14",
+      "path": "OBX.OBX--14",
+      "short": "Date/Time of the Observation",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/TS"
+      } ]
+    }, {
+      "id": "OBX.OBX--15",
+      "path": "OBX.OBX--15",
+      "short": "Producer's ID",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "OBX.OBX--16",
+      "path": "OBX.OBX--16",
+      "short": "Responsible Observer",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XCN"
+      } ]
+    }, {
+      "id": "OBX.OBX--17",
+      "path": "OBX.OBX--17",
+      "short": "Observation Method",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "OBX.OBX--18",
+      "path": "OBX.OBX--18",
+      "short": "Equipment Instance Identifier",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/EI"
+      } ]
+    }, {
+      "id": "OBX.OBX--19",
+      "path": "OBX.OBX--19",
+      "short": "Date/Time of the Analysis",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/TS"
+      } ]
+    } ]
+  }
+}

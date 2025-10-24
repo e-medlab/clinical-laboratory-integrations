@@ -1,0 +1,27 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "TX",
+  "url": "http://hl7.org/hapi-v2-parser/StructureDefinition/TX",
+  "name": "TX",
+  "status": "draft",
+  "kind": "logical",
+  "abstract": false,
+  "type": "string",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/string",
+  "derivation": "specialization",
+  "differential": {
+    "element": [ {
+      "id": "TX",
+      "path": "TX"
+    }, {
+      "id": "TX.xmlText",
+      "path": "TX.xmlText",
+      "representation": [ "xmlText" ],
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "string"
+      } ]
+    } ]
+  }
+}

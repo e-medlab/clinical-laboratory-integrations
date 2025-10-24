@@ -1,0 +1,105 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "TQ2",
+  "url": "http://hl7.org/hapi-v2-parser/StructureDefinition/TQ2",
+  "name": "TQ2",
+  "status": "draft",
+  "kind": "logical",
+  "abstract": false,
+  "type": "TQ2",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [ {
+      "id": "TQ2.TQ2--1",
+      "path": "TQ2.TQ2--1",
+      "short": "Set ID - TQ2",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/SI"
+      } ]
+    }, {
+      "id": "TQ2.TQ2--2",
+      "path": "TQ2.TQ2--2",
+      "short": "Sequence/Results Flag",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ID"
+      } ]
+    }, {
+      "id": "TQ2.TQ2--3",
+      "path": "TQ2.TQ2--3",
+      "short": "Related Placer Number",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/EI"
+      } ]
+    }, {
+      "id": "TQ2.TQ2--4",
+      "path": "TQ2.TQ2--4",
+      "short": "Related Filler Number",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/EI"
+      } ]
+    }, {
+      "id": "TQ2.TQ2--5",
+      "path": "TQ2.TQ2--5",
+      "short": "Related Placer Group Number",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/EI"
+      } ]
+    }, {
+      "id": "TQ2.TQ2--6",
+      "path": "TQ2.TQ2--6",
+      "short": "Sequence Condition Code",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ID"
+      } ]
+    }, {
+      "id": "TQ2.TQ2--7",
+      "path": "TQ2.TQ2--7",
+      "short": "Cyclic Entry/Exit Indicator",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ID"
+      } ]
+    }, {
+      "id": "TQ2.TQ2--8",
+      "path": "TQ2.TQ2--8",
+      "short": "Sequence Condition Time Interval",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CQ"
+      } ]
+    }, {
+      "id": "TQ2.TQ2--9",
+      "path": "TQ2.TQ2--9",
+      "short": "Cyclic Group Maximum Number of Repeats",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/NM"
+      } ]
+    }, {
+      "id": "TQ2.TQ2--10",
+      "path": "TQ2.TQ2--10",
+      "short": "Special Service Request Relationship",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ID"
+      } ]
+    } ]
+  }
+}

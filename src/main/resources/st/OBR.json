@@ -1,0 +1,456 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "OBR",
+  "url": "http://hl7.org/hapi-v2-parser/StructureDefinition/OBR",
+  "name": "OBR",
+  "status": "draft",
+  "kind": "logical",
+  "abstract": false,
+  "type": "OBR",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [ {
+      "id": "OBR.OBR--1",
+      "path": "OBR.OBR--1",
+      "short": "Set ID - OBR",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/SI"
+      } ]
+    }, {
+      "id": "OBR.OBR--2",
+      "path": "OBR.OBR--2",
+      "short": "Placer Order Number",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/EI"
+      } ]
+    }, {
+      "id": "OBR.OBR--3",
+      "path": "OBR.OBR--3",
+      "short": "Filler Order Number",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/EI"
+      } ]
+    }, {
+      "id": "OBR.OBR--4",
+      "path": "OBR.OBR--4",
+      "short": "Universal Service Identifier",
+      "min": 1,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "OBR.OBR--5",
+      "path": "OBR.OBR--5",
+      "short": "Priority _ OBR",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ID"
+      } ]
+    }, {
+      "id": "OBR.OBR--6",
+      "path": "OBR.OBR--6",
+      "short": "Requested Date/Time",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/TS"
+      } ]
+    }, {
+      "id": "OBR.OBR--7",
+      "path": "OBR.OBR--7",
+      "short": "Observation Date/Time",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/TS"
+      } ]
+    }, {
+      "id": "OBR.OBR--8",
+      "path": "OBR.OBR--8",
+      "short": "Observation End Date/Time",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/TS"
+      } ]
+    }, {
+      "id": "OBR.OBR--9",
+      "path": "OBR.OBR--9",
+      "short": "Collection Volume",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CQ"
+      } ]
+    }, {
+      "id": "OBR.OBR--10",
+      "path": "OBR.OBR--10",
+      "short": "Collector Identifier",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XCN"
+      } ]
+    }, {
+      "id": "OBR.OBR--11",
+      "path": "OBR.OBR--11",
+      "short": "Specimen Action Code",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ID"
+      } ]
+    }, {
+      "id": "OBR.OBR--12",
+      "path": "OBR.OBR--12",
+      "short": "Danger Code",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "OBR.OBR--13",
+      "path": "OBR.OBR--13",
+      "short": "Relevant Clinical Information",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "OBR.OBR--14",
+      "path": "OBR.OBR--14",
+      "short": "Specimen Received Date/Time",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/TS"
+      } ]
+    }, {
+      "id": "OBR.OBR--15",
+      "path": "OBR.OBR--15",
+      "short": "Specimen Source",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/SPS"
+      } ]
+    }, {
+      "id": "OBR.OBR--16",
+      "path": "OBR.OBR--16",
+      "short": "Ordering Provider",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XCN"
+      } ]
+    }, {
+      "id": "OBR.OBR--17",
+      "path": "OBR.OBR--17",
+      "short": "Order Callback Phone Number",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XTN"
+      } ]
+    }, {
+      "id": "OBR.OBR--18",
+      "path": "OBR.OBR--18",
+      "short": "Placer Field 1",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "OBR.OBR--19",
+      "path": "OBR.OBR--19",
+      "short": "Placer Field 2",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "OBR.OBR--20",
+      "path": "OBR.OBR--20",
+      "short": "Filler Field 1",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "OBR.OBR--21",
+      "path": "OBR.OBR--21",
+      "short": "Filler Field 2",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "OBR.OBR--22",
+      "path": "OBR.OBR--22",
+      "short": "Results Rpt/Status Chng - Date/Time",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/TS"
+      } ]
+    }, {
+      "id": "OBR.OBR--23",
+      "path": "OBR.OBR--23",
+      "short": "Charge to Practice",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/MOC"
+      } ]
+    }, {
+      "id": "OBR.OBR--24",
+      "path": "OBR.OBR--24",
+      "short": "Diagnostic Serv Sect ID",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ID"
+      } ]
+    }, {
+      "id": "OBR.OBR--25",
+      "path": "OBR.OBR--25",
+      "short": "Result Status",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ID"
+      } ]
+    }, {
+      "id": "OBR.OBR--26",
+      "path": "OBR.OBR--26",
+      "short": "Parent Result",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/PRL"
+      } ]
+    }, {
+      "id": "OBR.OBR--27",
+      "path": "OBR.OBR--27",
+      "short": "Quantity/Timing",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/TQ"
+      } ]
+    }, {
+      "id": "OBR.OBR--28",
+      "path": "OBR.OBR--28",
+      "short": "Result Copies To",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XCN"
+      } ]
+    }, {
+      "id": "OBR.OBR--29",
+      "path": "OBR.OBR--29",
+      "short": "Parent Number",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/EIP"
+      } ]
+    }, {
+      "id": "OBR.OBR--30",
+      "path": "OBR.OBR--30",
+      "short": "Transportation Mode",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ID"
+      } ]
+    }, {
+      "id": "OBR.OBR--31",
+      "path": "OBR.OBR--31",
+      "short": "Reason for Study",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "OBR.OBR--32",
+      "path": "OBR.OBR--32",
+      "short": "Principal Result Interpreter",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/NDL"
+      } ]
+    }, {
+      "id": "OBR.OBR--33",
+      "path": "OBR.OBR--33",
+      "short": "Assistant Result Interpreter",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/NDL"
+      } ]
+    }, {
+      "id": "OBR.OBR--34",
+      "path": "OBR.OBR--34",
+      "short": "Technician",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/NDL"
+      } ]
+    }, {
+      "id": "OBR.OBR--35",
+      "path": "OBR.OBR--35",
+      "short": "Transcriptionist",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/NDL"
+      } ]
+    }, {
+      "id": "OBR.OBR--36",
+      "path": "OBR.OBR--36",
+      "short": "Scheduled Date/Time",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/TS"
+      } ]
+    }, {
+      "id": "OBR.OBR--37",
+      "path": "OBR.OBR--37",
+      "short": "Number of Sample Containers *",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/NM"
+      } ]
+    }, {
+      "id": "OBR.OBR--38",
+      "path": "OBR.OBR--38",
+      "short": "Transport Logistics of Collected Sample",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "OBR.OBR--39",
+      "path": "OBR.OBR--39",
+      "short": "Collector's Comment *",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "OBR.OBR--40",
+      "path": "OBR.OBR--40",
+      "short": "Transport Arrangement Responsibility",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "OBR.OBR--41",
+      "path": "OBR.OBR--41",
+      "short": "Transport Arranged",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ID"
+      } ]
+    }, {
+      "id": "OBR.OBR--42",
+      "path": "OBR.OBR--42",
+      "short": "Escort Required",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ID"
+      } ]
+    }, {
+      "id": "OBR.OBR--43",
+      "path": "OBR.OBR--43",
+      "short": "Planned Patient Transport Comment",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "OBR.OBR--44",
+      "path": "OBR.OBR--44",
+      "short": "Procedure Code",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "OBR.OBR--45",
+      "path": "OBR.OBR--45",
+      "short": "Procedure Code Modifier",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "OBR.OBR--46",
+      "path": "OBR.OBR--46",
+      "short": "Placer Supplemental Service Information",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "OBR.OBR--47",
+      "path": "OBR.OBR--47",
+      "short": "Filler Supplemental Service Information",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "OBR.OBR--48",
+      "path": "OBR.OBR--48",
+      "short": "Medically Necessary Duplicate Procedure Reason.",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CWE"
+      } ]
+    }, {
+      "id": "OBR.OBR--49",
+      "path": "OBR.OBR--49",
+      "short": "Result Handling",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    } ]
+  }
+}

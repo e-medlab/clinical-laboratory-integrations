@@ -1,0 +1,95 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "CX",
+  "url": "http://hl7.org/hapi-v2-parser/StructureDefinition/CX",
+  "name": "CX",
+  "status": "draft",
+  "kind": "logical",
+  "abstract": false,
+  "type": "CX",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [ {
+      "id": "CX.CX--1",
+      "path": "CX.CX--1",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "CX.CX--2",
+      "path": "CX.CX--2",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "CX.CX--3",
+      "path": "CX.CX--3",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ID"
+      } ]
+    }, {
+      "id": "CX.CX--4",
+      "path": "CX.CX--4",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/HD"
+      } ]
+    }, {
+      "id": "CX.CX--5",
+      "path": "CX.CX--5",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ID"
+      } ]
+    }, {
+      "id": "CX.CX--6",
+      "path": "CX.CX--6",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/HD"
+      } ]
+    }, {
+      "id": "CX.CX--7",
+      "path": "CX.CX--7",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/DT"
+      } ]
+    }, {
+      "id": "CX.CX--8",
+      "path": "CX.CX--8",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/DT"
+      } ]
+    }, {
+      "id": "CX.CX--9",
+      "path": "CX.CX--9",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CWE"
+      } ]
+    }, {
+      "id": "CX.CX--10",
+      "path": "CX.CX--10",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CWE"
+      } ]
+    } ]
+  }
+}

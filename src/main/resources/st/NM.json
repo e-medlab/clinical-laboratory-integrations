@@ -1,0 +1,27 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "NM",
+  "url": "http://hl7.org/hapi-v2-parser/StructureDefinition/NM",
+  "name": "NM",
+  "status": "draft",
+  "kind": "logical",
+  "abstract": false,
+  "type": "decimal",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/decimal",
+  "derivation": "specialization",
+  "differential": {
+    "element": [ {
+      "id": "NM",
+      "path": "NM"
+    }, {
+      "id": "NM.xmlText",
+      "path": "NM.xmlText",
+      "representation": [ "xmlText" ],
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "decimal"
+      } ]
+    } ]
+  }
+}

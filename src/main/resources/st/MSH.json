@@ -1,0 +1,204 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "MSH",
+  "url": "http://hl7.org/hapi-v2-parser/StructureDefinition/MSH",
+  "name": "MSH",
+  "status": "draft",
+  "kind": "logical",
+  "abstract": false,
+  "type": "MSH",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [ {
+      "id": "MSH.MSH--1",
+      "path": "MSH.MSH--1",
+      "short": "Field Separator",
+      "min": 1,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "MSH.MSH--2",
+      "path": "MSH.MSH--2",
+      "short": "Encoding Characters",
+      "min": 1,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "MSH.MSH--3",
+      "path": "MSH.MSH--3",
+      "short": "Sending Application",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/HD"
+      } ]
+    }, {
+      "id": "MSH.MSH--4",
+      "path": "MSH.MSH--4",
+      "short": "Sending Facility",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/HD"
+      } ]
+    }, {
+      "id": "MSH.MSH--5",
+      "path": "MSH.MSH--5",
+      "short": "Receiving Application",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/HD"
+      } ]
+    }, {
+      "id": "MSH.MSH--6",
+      "path": "MSH.MSH--6",
+      "short": "Receiving Facility",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/HD"
+      } ]
+    }, {
+      "id": "MSH.MSH--7",
+      "path": "MSH.MSH--7",
+      "short": "Date/Time Of Message",
+      "min": 1,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/TS"
+      } ]
+    }, {
+      "id": "MSH.MSH--8",
+      "path": "MSH.MSH--8",
+      "short": "Security",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "MSH.MSH--9",
+      "path": "MSH.MSH--9",
+      "short": "Message Type",
+      "min": 1,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/MSG"
+      } ]
+    }, {
+      "id": "MSH.MSH--10",
+      "path": "MSH.MSH--10",
+      "short": "Message Control ID",
+      "min": 1,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "MSH.MSH--11",
+      "path": "MSH.MSH--11",
+      "short": "Processing ID",
+      "min": 1,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/PT"
+      } ]
+    }, {
+      "id": "MSH.MSH--12",
+      "path": "MSH.MSH--12",
+      "short": "Version ID",
+      "min": 1,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/VID"
+      } ]
+    }, {
+      "id": "MSH.MSH--13",
+      "path": "MSH.MSH--13",
+      "short": "Sequence Number",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/NM"
+      } ]
+    }, {
+      "id": "MSH.MSH--14",
+      "path": "MSH.MSH--14",
+      "short": "Continuation Pointer",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "MSH.MSH--15",
+      "path": "MSH.MSH--15",
+      "short": "Accept Acknowledgment Type",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ID"
+      } ]
+    }, {
+      "id": "MSH.MSH--16",
+      "path": "MSH.MSH--16",
+      "short": "Application Acknowledgment Type",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ID"
+      } ]
+    }, {
+      "id": "MSH.MSH--17",
+      "path": "MSH.MSH--17",
+      "short": "Country Code",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ID"
+      } ]
+    }, {
+      "id": "MSH.MSH--18",
+      "path": "MSH.MSH--18",
+      "short": "Character Set",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ID"
+      } ]
+    }, {
+      "id": "MSH.MSH--19",
+      "path": "MSH.MSH--19",
+      "short": "Principal Language Of Message",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "MSH.MSH--20",
+      "path": "MSH.MSH--20",
+      "short": "Alternate Character Set Handling Scheme",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ID"
+      } ]
+    }, {
+      "id": "MSH.MSH--21",
+      "path": "MSH.MSH--21",
+      "short": "Message Profile Identifier",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/EI"
+      } ]
+    } ]
+  }
+}
