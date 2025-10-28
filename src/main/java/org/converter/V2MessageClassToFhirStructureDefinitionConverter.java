@@ -106,7 +106,7 @@ public class V2MessageClassToFhirStructureDefinitionConverter {
             convertPrimitive(type, "decimal");
             return;
         }
-
+        // TODO: handle unknown
         System.out.println("WARNING: Skipping unconfigured type: " + type.getName());
     }
 
@@ -144,19 +144,26 @@ public class V2MessageClassToFhirStructureDefinitionConverter {
 
     private static ElementDefinition getElementDefinition(Structure structure, Message message) throws HL7Exception {
         ElementDefinition elementDefinition = new ElementDefinition();
-        String structureName = structure.getName();
+        String structureName = getMessageElementName(structure, message);
         String structurePath = message.getName() + '.' + structureName;
 
         elementDefinition.setId(structurePath);
-        elementDefinition.setMin(message.isRequired(structureName) ? 1 : 0);
-        elementDefinition.setMax(message.isRepeating(structureName) ? "*" : "1");
+        elementDefinition.setMin(message.isRequired(structure.getName()) ? 1 : 0);
+        elementDefinition.setMax(message.isRepeating(structure.getName()) ? "*" : "1");
         elementDefinition.setPath(structurePath);
 
         ElementDefinition.TypeRefComponent typeRef = new ElementDefinition.TypeRefComponent();
-        typeRef.setCode(PROFILE_BASE_URL + structureName);
+        typeRef.setCode(PROFILE_BASE_URL + structure.getName());
         elementDefinition.addType(typeRef);
 
         return elementDefinition;
+    }
+
+    private static String getMessageElementName(Structure structure, Message message) throws HL7Exception {
+        if (structure instanceof Group) {
+            return message.getName() + "--" + structure.getName();
+        }
+        return structure.getName();
     }
 
     private static void convertGroup(Group group) throws Exception {
@@ -195,7 +202,7 @@ public class V2MessageClassToFhirStructureDefinitionConverter {
     private static ElementDefinition getElementDefinition(Structure structure, Group group) throws HL7Exception {
         ElementDefinition elementDefinition = new ElementDefinition();
         String structureName = structure.getName();
-        String structurePath = group.getName() + '.' + group.getName() + "--" + structureName;
+        String structurePath = group.getName() + '.' + structureName;
 
         elementDefinition.setId(structurePath);
         elementDefinition.setMin(group.isRequired(structureName) ? 1 : 0);

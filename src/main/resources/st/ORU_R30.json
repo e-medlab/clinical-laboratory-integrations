@@ -46,8 +46,8 @@
         "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/PD1"
       } ]
     }, {
-      "id": "ORU_R30.VISIT",
-      "path": "ORU_R30.VISIT",
+      "id": "ORU_R30.ORU_R30--VISIT",
+      "path": "ORU_R30.ORU_R30--VISIT",
       "min": 0,
       "max": "1",
       "type": [ {
@@ -78,16 +78,16 @@
         "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/NTE"
       } ]
     }, {
-      "id": "ORU_R30.TIMING_QTY",
-      "path": "ORU_R30.TIMING_QTY",
+      "id": "ORU_R30.ORU_R30--TIMING_QTY",
+      "path": "ORU_R30.ORU_R30--TIMING_QTY",
       "min": 0,
       "max": "*",
       "type": [ {
         "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/TIMING_QTY"
       } ]
     }, {
-      "id": "ORU_R30.OBSERVATION",
-      "path": "ORU_R30.OBSERVATION",
+      "id": "ORU_R30.ORU_R30--OBSERVATION",
+      "path": "ORU_R30.ORU_R30--OBSERVATION",
       "min": 1,
       "max": "*",
       "type": [ {

@@ -14,16 +14,16 @@
       "id": "OBSERVATION",
       "path": "OBSERVATION"
     }, {
-      "id": "OBSERVATION.OBSERVATION--OBX",
-      "path": "OBSERVATION.OBSERVATION--OBX",
+      "id": "OBSERVATION.OBX",
+      "path": "OBSERVATION.OBX",
       "min": 1,
       "max": "1",
       "type": [ {
         "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/OBX"
       } ]
     }, {
-      "id": "OBSERVATION.OBSERVATION--NTE",
-      "path": "OBSERVATION.OBSERVATION--NTE",
+      "id": "OBSERVATION.NTE",
+      "path": "OBSERVATION.NTE",
       "min": 0,
       "max": "*",
       "type": [ {
