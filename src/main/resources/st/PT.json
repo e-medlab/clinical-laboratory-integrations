@@ -6,11 +6,14 @@
   "status": "draft",
   "kind": "logical",
   "abstract": false,
-  "type": "PT",
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/PT",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
   "derivation": "specialization",
   "differential": {
     "element": [ {
+      "id": "PT",
+      "path": "PT"
+    }, {
       "id": "PT.PT--1",
       "path": "PT.PT--1",
       "min": 0,

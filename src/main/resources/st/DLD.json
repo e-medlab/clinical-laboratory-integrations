@@ -6,11 +6,14 @@
   "status": "draft",
   "kind": "logical",
   "abstract": false,
-  "type": "DLD",
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/DLD",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
   "derivation": "specialization",
   "differential": {
     "element": [ {
+      "id": "DLD",
+      "path": "DLD"
+    }, {
       "id": "DLD.DLD--1",
       "path": "DLD.DLD--1",
       "min": 0,

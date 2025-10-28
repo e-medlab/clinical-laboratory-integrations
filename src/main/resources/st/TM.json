@@ -6,7 +6,7 @@
   "status": "draft",
   "kind": "logical",
   "abstract": false,
-  "type": "time",
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/TM",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/time",
   "derivation": "specialization",
   "differential": {

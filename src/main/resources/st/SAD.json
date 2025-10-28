@@ -6,11 +6,14 @@
   "status": "draft",
   "kind": "logical",
   "abstract": false,
-  "type": "SAD",
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/SAD",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
   "derivation": "specialization",
   "differential": {
     "element": [ {
+      "id": "SAD",
+      "path": "SAD"
+    }, {
       "id": "SAD.SAD--1",
       "path": "SAD.SAD--1",
       "min": 0,

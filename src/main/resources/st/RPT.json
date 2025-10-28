@@ -6,11 +6,14 @@
   "status": "draft",
   "kind": "logical",
   "abstract": false,
-  "type": "RPT",
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/RPT",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
   "derivation": "specialization",
   "differential": {
     "element": [ {
+      "id": "RPT",
+      "path": "RPT"
+    }, {
       "id": "RPT.RPT--1",
       "path": "RPT.RPT--1",
       "min": 0,

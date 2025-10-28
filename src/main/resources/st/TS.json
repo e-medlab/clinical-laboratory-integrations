@@ -6,11 +6,14 @@
   "status": "draft",
   "kind": "logical",
   "abstract": false,
-  "type": "TS",
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/TS",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
   "derivation": "specialization",
   "differential": {
     "element": [ {
+      "id": "TS",
+      "path": "TS"
+    }, {
       "id": "TS.TS--1",
       "path": "TS.TS--1",
       "min": 0,

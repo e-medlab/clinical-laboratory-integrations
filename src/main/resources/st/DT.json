@@ -6,7 +6,7 @@
   "status": "draft",
   "kind": "logical",
   "abstract": false,
-  "type": "date",
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/DT",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/date",
   "derivation": "specialization",
   "differential": {

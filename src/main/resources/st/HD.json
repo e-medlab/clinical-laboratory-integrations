@@ -6,11 +6,14 @@
   "status": "draft",
   "kind": "logical",
   "abstract": false,
-  "type": "HD",
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/HD",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
   "derivation": "specialization",
   "differential": {
     "element": [ {
+      "id": "HD",
+      "path": "HD"
+    }, {
       "id": "HD.HD--1",
       "path": "HD.HD--1",
       "min": 0,

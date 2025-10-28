@@ -6,11 +6,14 @@
   "status": "draft",
   "kind": "logical",
   "abstract": false,
-  "type": "OBSERVATION",
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/OBSERVATION",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
   "derivation": "specialization",
   "differential": {
     "element": [ {
+      "id": "OBSERVATION",
+      "path": "OBSERVATION"
+    }, {
       "id": "OBSERVATION.OBSERVATION--OBX",
       "path": "OBSERVATION.OBSERVATION--OBX",
       "min": 1,

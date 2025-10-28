@@ -6,11 +6,14 @@
   "status": "draft",
   "kind": "logical",
   "abstract": false,
-  "type": "NTE",
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/NTE",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
   "derivation": "specialization",
   "differential": {
     "element": [ {
+      "id": "NTE",
+      "path": "NTE"
+    }, {
       "id": "NTE.NTE--1",
       "path": "NTE.NTE--1",
       "short": "Set ID - NTE",

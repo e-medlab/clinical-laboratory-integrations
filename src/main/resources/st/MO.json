@@ -6,11 +6,14 @@
   "status": "draft",
   "kind": "logical",
   "abstract": false,
-  "type": "MO",
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/MO",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
   "derivation": "specialization",
   "differential": {
     "element": [ {
+      "id": "MO",
+      "path": "MO"
+    }, {
       "id": "MO.MO--1",
       "path": "MO.MO--1",
       "min": 0,

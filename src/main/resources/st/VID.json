@@ -6,11 +6,14 @@
   "status": "draft",
   "kind": "logical",
   "abstract": false,
-  "type": "VID",
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/VID",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
   "derivation": "specialization",
   "differential": {
     "element": [ {
+      "id": "VID",
+      "path": "VID"
+    }, {
       "id": "VID.VID--1",
       "path": "VID.VID--1",
       "min": 0,

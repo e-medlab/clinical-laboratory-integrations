@@ -6,11 +6,14 @@
   "status": "draft",
   "kind": "logical",
   "abstract": false,
-  "type": "EIP",
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/EIP",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
   "derivation": "specialization",
   "differential": {
     "element": [ {
+      "id": "EIP",
+      "path": "EIP"
+    }, {
       "id": "EIP.EIP--1",
       "path": "EIP.EIP--1",
       "min": 0,

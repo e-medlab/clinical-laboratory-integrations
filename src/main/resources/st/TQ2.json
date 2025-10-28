@@ -6,11 +6,14 @@
   "status": "draft",
   "kind": "logical",
   "abstract": false,
-  "type": "TQ2",
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/TQ2",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
   "derivation": "specialization",
   "differential": {
     "element": [ {
+      "id": "TQ2",
+      "path": "TQ2"
+    }, {
       "id": "TQ2.TQ2--1",
       "path": "TQ2.TQ2--1",
       "short": "Set ID - TQ2",

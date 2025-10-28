@@ -6,11 +6,14 @@
   "status": "draft",
   "kind": "logical",
   "abstract": false,
-  "type": "XAD",
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/XAD",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
   "derivation": "specialization",
   "differential": {
     "element": [ {
+      "id": "XAD",
+      "path": "XAD"
+    }, {
       "id": "XAD.XAD--1",
       "path": "XAD.XAD--1",
       "min": 0,

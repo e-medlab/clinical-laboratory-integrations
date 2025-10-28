@@ -6,11 +6,14 @@
   "status": "draft",
   "kind": "logical",
   "abstract": false,
-  "type": "SFT",
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/SFT",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
   "derivation": "specialization",
   "differential": {
     "element": [ {
+      "id": "SFT",
+      "path": "SFT"
+    }, {
       "id": "SFT.SFT--1",
       "path": "SFT.SFT--1",
       "short": "Software Vendor Organization",

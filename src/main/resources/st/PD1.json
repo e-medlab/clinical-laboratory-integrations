@@ -6,11 +6,14 @@
   "status": "draft",
   "kind": "logical",
   "abstract": false,
-  "type": "PD1",
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/PD1",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
   "derivation": "specialization",
   "differential": {
     "element": [ {
+      "id": "PD1",
+      "path": "PD1"
+    }, {
       "id": "PD1.PD1--1",
       "path": "PD1.PD1--1",
       "short": "Living Dependency",

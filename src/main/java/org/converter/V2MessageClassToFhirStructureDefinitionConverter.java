@@ -126,6 +126,11 @@ public class V2MessageClassToFhirStructureDefinitionConverter {
         structureDefinition.setDerivation(StructureDefinition.TypeDerivationRule.SPECIALIZATION);
         StructureDefinition.StructureDefinitionDifferentialComponent differential = structureDefinition.getDifferential();
 
+        ElementDefinition parentElementDefinition = new ElementDefinition();
+        parentElementDefinition.setId(v2Message.getName());
+        parentElementDefinition.setPath(v2Message.getName());
+        differential.addElement(parentElementDefinition);
+
         String[] names = v2Message.getNames();
         for (String name : names) {
             Structure structure = v2Message.get(name);
@@ -164,12 +169,17 @@ public class V2MessageClassToFhirStructureDefinitionConverter {
                 Enumerations.PublicationStatus.DRAFT,
                 StructureDefinition.StructureDefinitionKind.LOGICAL,
                 false,
-                groupName
+                groupUrl
         );
         structureDefinition.setId(groupName);
         structureDefinition.setBaseDefinition("http://hl7.org/fhir/StructureDefinition/Element");
         structureDefinition.setDerivation(StructureDefinition.TypeDerivationRule.SPECIALIZATION);
         StructureDefinition.StructureDefinitionDifferentialComponent diff = structureDefinition.getDifferential();
+
+        ElementDefinition parentElementDefinition = new ElementDefinition();
+        parentElementDefinition.setId(groupName);
+        parentElementDefinition.setPath(groupName);
+        diff.addElement(parentElementDefinition);
 
         String[] names = group.getNames();
         for (String name : names) {
@@ -209,12 +219,17 @@ public class V2MessageClassToFhirStructureDefinitionConverter {
                 Enumerations.PublicationStatus.DRAFT,
                 StructureDefinition.StructureDefinitionKind.LOGICAL,
                 false,
-                segmentName
+                segmentUrl
         );
         structureDefinition.setId(segmentName);
         structureDefinition.setBaseDefinition("http://hl7.org/fhir/StructureDefinition/Element");
         structureDefinition.setDerivation(StructureDefinition.TypeDerivationRule.SPECIALIZATION);
         StructureDefinition.StructureDefinitionDifferentialComponent diff = structureDefinition.getDifferential();
+
+        ElementDefinition parentElementDefinition = new ElementDefinition();
+        parentElementDefinition.setId(segmentName);
+        parentElementDefinition.setPath(segmentName);
+        diff.addElement(parentElementDefinition);
 
         String[] fieldNames = segment.getNames();
         for (int i = 0; i < fieldNames.length; i++) {
@@ -256,12 +271,17 @@ public class V2MessageClassToFhirStructureDefinitionConverter {
                 Enumerations.PublicationStatus.DRAFT,
                 StructureDefinition.StructureDefinitionKind.LOGICAL,
                 false,
-                compositeName
+                compositeUrl
         );
         structureDefinition.setId(compositeName);
         structureDefinition.setBaseDefinition("http://hl7.org/fhir/StructureDefinition/Element");
         structureDefinition.setDerivation(StructureDefinition.TypeDerivationRule.SPECIALIZATION);
         StructureDefinition.StructureDefinitionDifferentialComponent diff = structureDefinition.getDifferential();
+
+        ElementDefinition parentElementDefinition = new ElementDefinition();
+        parentElementDefinition.setId(compositeName);
+        parentElementDefinition.setPath(compositeName);
+        diff.addElement(parentElementDefinition);
 
         Type[] fields = composite.getComponents();
         for (int i = 0; i < fields.length; i++) {
@@ -293,15 +313,15 @@ public class V2MessageClassToFhirStructureDefinitionConverter {
 
     private static void convertPrimitive(Type primitive, String fhirPrimitive) {
         String primitiveName = primitive.getName();
-        String idPrimitiveUrl = PROFILE_BASE_URL + primitiveName;
+        String primitiveUrl = PROFILE_BASE_URL + primitiveName;
 
         StructureDefinition structureDefinition = new StructureDefinition(
-                idPrimitiveUrl,
+                primitiveUrl,
                 primitiveName,
                 Enumerations.PublicationStatus.DRAFT,
                 StructureDefinition.StructureDefinitionKind.LOGICAL,
                 false,
-                fhirPrimitive
+                primitiveUrl
         );
         structureDefinition.setId(primitiveName);
         structureDefinition.setBaseDefinition("http://hl7.org/fhir/StructureDefinition/" + fhirPrimitive);

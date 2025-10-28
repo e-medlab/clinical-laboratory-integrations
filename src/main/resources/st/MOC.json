@@ -6,11 +6,14 @@
   "status": "draft",
   "kind": "logical",
   "abstract": false,
-  "type": "MOC",
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/MOC",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
   "derivation": "specialization",
   "differential": {
     "element": [ {
+      "id": "MOC",
+      "path": "MOC"
+    }, {
       "id": "MOC.MOC--1",
       "path": "MOC.MOC--1",
       "min": 0,

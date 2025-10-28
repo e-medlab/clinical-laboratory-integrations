@@ -6,11 +6,14 @@
   "status": "draft",
   "kind": "logical",
   "abstract": false,
-  "type": "FN",
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/FN",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
   "derivation": "specialization",
   "differential": {
     "element": [ {
+      "id": "FN",
+      "path": "FN"
+    }, {
       "id": "FN.FN--1",
       "path": "FN.FN--1",
       "min": 0,

@@ -6,7 +6,7 @@
   "status": "draft",
   "kind": "logical",
   "abstract": false,
-  "type": "decimal",
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/NM",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/decimal",
   "derivation": "specialization",
   "differential": {

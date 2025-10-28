@@ -6,11 +6,14 @@
   "status": "draft",
   "kind": "logical",
   "abstract": false,
-  "type": "XON",
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/XON",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
   "derivation": "specialization",
   "differential": {
     "element": [ {
+      "id": "XON",
+      "path": "XON"
+    }, {
       "id": "XON.XON--1",
       "path": "XON.XON--1",
       "min": 0,

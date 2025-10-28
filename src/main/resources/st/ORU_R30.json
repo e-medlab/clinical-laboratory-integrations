@@ -11,6 +11,9 @@
   "derivation": "specialization",
   "differential": {
     "element": [ {
+      "id": "ORU_R30",
+      "path": "ORU_R30"
+    }, {
       "id": "ORU_R30.MSH",
       "path": "ORU_R30.MSH",
       "min": 1,

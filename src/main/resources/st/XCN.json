@@ -6,11 +6,14 @@
   "status": "draft",
   "kind": "logical",
   "abstract": false,
-  "type": "XCN",
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/XCN",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
   "derivation": "specialization",
   "differential": {
     "element": [ {
+      "id": "XCN",
+      "path": "XCN"
+    }, {
       "id": "XCN.XCN--1",
       "path": "XCN.XCN--1",
       "min": 0,

@@ -6,11 +6,14 @@
   "status": "draft",
   "kind": "logical",
   "abstract": false,
-  "type": "ORC",
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/ORC",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
   "derivation": "specialization",
   "differential": {
     "element": [ {
+      "id": "ORC",
+      "path": "ORC"
+    }, {
       "id": "ORC.ORC--1",
       "path": "ORC.ORC--1",
       "short": "Order Control",

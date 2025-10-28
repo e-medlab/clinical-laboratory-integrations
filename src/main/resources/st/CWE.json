@@ -6,11 +6,14 @@
   "status": "draft",
   "kind": "logical",
   "abstract": false,
-  "type": "CWE",
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/CWE",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
   "derivation": "specialization",
   "differential": {
     "element": [ {
+      "id": "CWE",
+      "path": "CWE"
+    }, {
       "id": "CWE.CWE--1",
       "path": "CWE.CWE--1",
       "min": 0,

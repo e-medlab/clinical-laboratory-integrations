@@ -6,11 +6,14 @@
   "status": "draft",
   "kind": "logical",
   "abstract": false,
-  "type": "PRL",
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/PRL",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
   "derivation": "specialization",
   "differential": {
     "element": [ {
+      "id": "PRL",
+      "path": "PRL"
+    }, {
       "id": "PRL.PRL--1",
       "path": "PRL.PRL--1",
       "min": 0,

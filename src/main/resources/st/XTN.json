@@ -6,11 +6,14 @@
   "status": "draft",
   "kind": "logical",
   "abstract": false,
-  "type": "XTN",
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/XTN",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
   "derivation": "specialization",
   "differential": {
     "element": [ {
+      "id": "XTN",
+      "path": "XTN"
+    }, {
       "id": "XTN.XTN--1",
       "path": "XTN.XTN--1",
       "min": 0,

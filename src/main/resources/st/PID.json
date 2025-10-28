@@ -6,11 +6,14 @@
   "status": "draft",
   "kind": "logical",
   "abstract": false,
-  "type": "PID",
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/PID",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
   "derivation": "specialization",
   "differential": {
     "element": [ {
+      "id": "PID",
+      "path": "PID"
+    }, {
       "id": "PID.PID--1",
       "path": "PID.PID--1",
       "short": "Set ID - PID",

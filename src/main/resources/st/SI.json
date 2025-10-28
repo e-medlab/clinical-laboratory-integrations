@@ -6,7 +6,7 @@
   "status": "draft",
   "kind": "logical",
   "abstract": false,
-  "type": "integer",
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/SI",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/integer",
   "derivation": "specialization",
   "differential": {

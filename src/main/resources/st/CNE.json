@@ -6,11 +6,14 @@
   "status": "draft",
   "kind": "logical",
   "abstract": false,
-  "type": "CNE",
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/CNE",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
   "derivation": "specialization",
   "differential": {
     "element": [ {
+      "id": "CNE",
+      "path": "CNE"
+    }, {
       "id": "CNE.CNE--1",
       "path": "CNE.CNE--1",
       "min": 0,

@@ -6,11 +6,14 @@
   "status": "draft",
   "kind": "logical",
   "abstract": false,
-  "type": "XPN",
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/XPN",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
   "derivation": "specialization",
   "differential": {
     "element": [ {
+      "id": "XPN",
+      "path": "XPN"
+    }, {
       "id": "XPN.XPN--1",
       "path": "XPN.XPN--1",
       "min": 0,

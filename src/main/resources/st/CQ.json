@@ -6,11 +6,14 @@
   "status": "draft",
   "kind": "logical",
   "abstract": false,
-  "type": "CQ",
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/CQ",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
   "derivation": "specialization",
   "differential": {
     "element": [ {
+      "id": "CQ",
+      "path": "CQ"
+    }, {
       "id": "CQ.CQ--1",
       "path": "CQ.CQ--1",
       "min": 0,

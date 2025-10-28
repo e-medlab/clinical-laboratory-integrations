@@ -6,11 +6,14 @@
   "status": "draft",
   "kind": "logical",
   "abstract": false,
-  "type": "CNN",
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/CNN",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
   "derivation": "specialization",
   "differential": {
     "element": [ {
+      "id": "CNN",
+      "path": "CNN"
+    }, {
       "id": "CNN.CNN--1",
       "path": "CNN.CNN--1",
       "min": 0,

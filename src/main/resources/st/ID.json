@@ -6,7 +6,7 @@
   "status": "draft",
   "kind": "logical",
   "abstract": false,
-  "type": "code",
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/ID",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/code",
   "derivation": "specialization",
   "differential": {

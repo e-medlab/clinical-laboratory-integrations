@@ -6,11 +6,14 @@
   "status": "draft",
   "kind": "logical",
   "abstract": false,
-  "type": "NDL",
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/NDL",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
   "derivation": "specialization",
   "differential": {
     "element": [ {
+      "id": "NDL",
+      "path": "NDL"
+    }, {
       "id": "NDL.NDL--1",
       "path": "NDL.NDL--1",
       "min": 0,

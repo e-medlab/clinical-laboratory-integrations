@@ -6,11 +6,14 @@
   "status": "draft",
   "kind": "logical",
   "abstract": false,
-  "type": "OBR",
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/OBR",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
   "derivation": "specialization",
   "differential": {
     "element": [ {
+      "id": "OBR",
+      "path": "OBR"
+    }, {
       "id": "OBR.OBR--1",
       "path": "OBR.OBR--1",
       "short": "Set ID - OBR",

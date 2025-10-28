@@ -6,11 +6,14 @@
   "status": "draft",
   "kind": "logical",
   "abstract": false,
-  "type": "VISIT",
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/VISIT",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
   "derivation": "specialization",
   "differential": {
     "element": [ {
+      "id": "VISIT",
+      "path": "VISIT"
+    }, {
       "id": "VISIT.VISIT--PV1",
       "path": "VISIT.VISIT--PV1",
       "min": 1,

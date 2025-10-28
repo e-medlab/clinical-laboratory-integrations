@@ -6,11 +6,14 @@
   "status": "draft",
   "kind": "logical",
   "abstract": false,
-  "type": "MSG",
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/MSG",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
   "derivation": "specialization",
   "differential": {
     "element": [ {
+      "id": "MSG",
+      "path": "MSG"
+    }, {
       "id": "MSG.MSG--1",
       "path": "MSG.MSG--1",
       "min": 0,

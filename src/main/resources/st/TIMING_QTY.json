@@ -6,11 +6,14 @@
   "status": "draft",
   "kind": "logical",
   "abstract": false,
-  "type": "TIMING_QTY",
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/TIMING_QTY",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
   "derivation": "specialization",
   "differential": {
     "element": [ {
+      "id": "TIMING_QTY",
+      "path": "TIMING_QTY"
+    }, {
       "id": "TIMING_QTY.TIMING_QTY--TQ1",
       "path": "TIMING_QTY.TIMING_QTY--TQ1",
       "min": 1,

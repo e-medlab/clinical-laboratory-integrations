@@ -6,11 +6,14 @@
   "status": "draft",
   "kind": "logical",
   "abstract": false,
-  "type": "OBX",
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/OBX",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
   "derivation": "specialization",
   "differential": {
     "element": [ {
+      "id": "OBX",
+      "path": "OBX"
+    }, {
       "id": "OBX.OBX--1",
       "path": "OBX.OBX--1",
       "short": "Set ID - OBX",

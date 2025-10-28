@@ -6,11 +6,14 @@
   "status": "draft",
   "kind": "logical",
   "abstract": false,
-  "type": "PL",
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/PL",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
   "derivation": "specialization",
   "differential": {
     "element": [ {
+      "id": "PL",
+      "path": "PL"
+    }, {
       "id": "PL.PL--1",
       "path": "PL.PL--1",
       "min": 0,

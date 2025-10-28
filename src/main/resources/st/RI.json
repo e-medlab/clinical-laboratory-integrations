@@ -6,11 +6,14 @@
   "status": "draft",
   "kind": "logical",
   "abstract": false,
-  "type": "RI",
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/RI",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
   "derivation": "specialization",
   "differential": {
     "element": [ {
+      "id": "RI",
+      "path": "RI"
+    }, {
       "id": "RI.RI--1",
       "path": "RI.RI--1",
       "min": 0,

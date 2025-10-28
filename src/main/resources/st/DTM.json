@@ -6,7 +6,7 @@
   "status": "draft",
   "kind": "logical",
   "abstract": false,
-  "type": "dateTime",
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/DTM",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/dateTime",
   "derivation": "specialization",
   "differential": {

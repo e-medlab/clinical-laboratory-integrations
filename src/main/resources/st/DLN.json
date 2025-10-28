@@ -6,11 +6,14 @@
   "status": "draft",
   "kind": "logical",
   "abstract": false,
-  "type": "DLN",
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/DLN",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
   "derivation": "specialization",
   "differential": {
     "element": [ {
+      "id": "DLN",
+      "path": "DLN"
+    }, {
       "id": "DLN.DLN--1",
       "path": "DLN.DLN--1",
       "min": 0,

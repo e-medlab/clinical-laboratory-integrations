@@ -6,11 +6,14 @@
   "status": "draft",
   "kind": "logical",
   "abstract": false,
-  "type": "OSD",
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/OSD",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
   "derivation": "specialization",
   "differential": {
     "element": [ {
+      "id": "OSD",
+      "path": "OSD"
+    }, {
       "id": "OSD.OSD--1",
       "path": "OSD.OSD--1",
       "min": 0,

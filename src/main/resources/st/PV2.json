@@ -6,11 +6,14 @@
   "status": "draft",
   "kind": "logical",
   "abstract": false,
-  "type": "PV2",
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/PV2",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
   "derivation": "specialization",
   "differential": {
     "element": [ {
+      "id": "PV2",
+      "path": "PV2"
+    }, {
       "id": "PV2.PV2--1",
       "path": "PV2.PV2--1",
       "short": "Prior Pending Location",

@@ -6,11 +6,14 @@
   "status": "draft",
   "kind": "logical",
   "abstract": false,
-  "type": "MSH",
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/MSH",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
   "derivation": "specialization",
   "differential": {
     "element": [ {
+      "id": "MSH",
+      "path": "MSH"
+    }, {
       "id": "MSH.MSH--1",
       "path": "MSH.MSH--1",
       "short": "Field Separator",

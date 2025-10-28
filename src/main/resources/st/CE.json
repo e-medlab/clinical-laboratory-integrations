@@ -6,11 +6,14 @@
   "status": "draft",
   "kind": "logical",
   "abstract": false,
-  "type": "CE",
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
   "derivation": "specialization",
   "differential": {
     "element": [ {
+      "id": "CE",
+      "path": "CE"
+    }, {
       "id": "CE.CE--1",
       "path": "CE.CE--1",
       "min": 0,

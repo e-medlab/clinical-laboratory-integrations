@@ -6,11 +6,14 @@
   "status": "draft",
   "kind": "logical",
   "abstract": false,
-  "type": "EI",
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/EI",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
   "derivation": "specialization",
   "differential": {
     "element": [ {
+      "id": "EI",
+      "path": "EI"
+    }, {
       "id": "EI.EI--1",
       "path": "EI.EI--1",
       "min": 0,

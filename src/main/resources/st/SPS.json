@@ -6,11 +6,14 @@
   "status": "draft",
   "kind": "logical",
   "abstract": false,
-  "type": "SPS",
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/SPS",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
   "derivation": "specialization",
   "differential": {
     "element": [ {
+      "id": "SPS",
+      "path": "SPS"
+    }, {
       "id": "SPS.SPS--1",
       "path": "SPS.SPS--1",
       "min": 0,
