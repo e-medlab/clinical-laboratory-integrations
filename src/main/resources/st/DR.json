@@ -1,0 +1,31 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "DR",
+  "url": "http://hl7.org/hapi-v2-parser/StructureDefinition/DR",
+  "name": "DR",
+  "status": "draft",
+  "kind": "logical",
+  "abstract": false,
+  "type": "DR",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [ {
+      "id": "DR.DR--1",
+      "path": "DR.DR--1",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/TS"
+      } ]
+    }, {
+      "id": "DR.DR--2",
+      "path": "DR.DR--2",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/TS"
+      } ]
+    } ]
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "RI",
+  "url": "http://hl7.org/hapi-v2-parser/StructureDefinition/RI",
+  "name": "RI",
+  "status": "draft",
+  "kind": "logical",
+  "abstract": false,
+  "type": "RI",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [ {
+      "id": "RI.RI--1",
+      "path": "RI.RI--1",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "RI.RI--2",
+      "path": "RI.RI--2",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    } ]
+  }
+}

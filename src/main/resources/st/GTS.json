@@ -1,0 +1,27 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "GTS",
+  "url": "http://hl7.org/hapi-v2-parser/StructureDefinition/GTS",
+  "name": "GTS",
+  "status": "draft",
+  "kind": "logical",
+  "abstract": false,
+  "type": "decimal",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/decimal",
+  "derivation": "specialization",
+  "differential": {
+    "element": [ {
+      "id": "GTS",
+      "path": "GTS"
+    }, {
+      "id": "GTS.xmlText",
+      "path": "GTS.xmlText",
+      "representation": [ "xmlText" ],
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "decimal"
+      } ]
+    } ]
+  }
+}

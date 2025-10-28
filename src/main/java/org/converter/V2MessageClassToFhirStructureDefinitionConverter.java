@@ -267,6 +267,7 @@ public class V2MessageClassToFhirStructureDefinitionConverter {
         for (int i = 0; i < fields.length; i++) {
             int fieldNum = i + 1;
             ElementDefinition fld = getElementDefinition(fieldNum, fields[i], composite);
+            convert(fields[i]);
             diff.addElement(fld);
         }
 

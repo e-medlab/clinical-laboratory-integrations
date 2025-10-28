@@ -1,0 +1,27 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "DTM",
+  "url": "http://hl7.org/hapi-v2-parser/StructureDefinition/DTM",
+  "name": "DTM",
+  "status": "draft",
+  "kind": "logical",
+  "abstract": false,
+  "type": "datetime",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/datetime",
+  "derivation": "specialization",
+  "differential": {
+    "element": [ {
+      "id": "DTM",
+      "path": "DTM"
+    }, {
+      "id": "DTM.xmlText",
+      "path": "DTM.xmlText",
+      "representation": [ "xmlText" ],
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "datetime"
+      } ]
+    } ]
+  }
+}

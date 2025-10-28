@@ -2,8 +2,6 @@ import requests
 import json
 import glob
 
-ID_FILTER = ['HD', 'ID', 'SI', 'ST']
-
 def post_json_file(api_url, json_file_path):
     # Read the JSON file content
     try:
@@ -22,10 +20,6 @@ def post_json_file(api_url, json_file_path):
 
     if not code or not url:
         print(f"Error: 'id' or 'url' not found in '{json_file_path}'. Skipping this file.")
-        return
-    
-    if code not in ID_FILTER:
-        print(f"Skipping file '{json_file_path}' with id '{code}' as it's not in the ID_FILTER.")
         return
 
     # Convert the JSON data to a string, preserving formatting

@@ -1,0 +1,39 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "SAD",
+  "url": "http://hl7.org/hapi-v2-parser/StructureDefinition/SAD",
+  "name": "SAD",
+  "status": "draft",
+  "kind": "logical",
+  "abstract": false,
+  "type": "SAD",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [ {
+      "id": "SAD.SAD--1",
+      "path": "SAD.SAD--1",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "SAD.SAD--2",
+      "path": "SAD.SAD--2",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "SAD.SAD--3",
+      "path": "SAD.SAD--3",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    } ]
+  }
+}
