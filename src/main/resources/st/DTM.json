@@ -6,8 +6,8 @@
   "status": "draft",
   "kind": "logical",
   "abstract": false,
-  "type": "datetime",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/datetime",
+  "type": "dateTime",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/dateTime",
   "derivation": "specialization",
   "differential": {
     "element": [ {
@@ -20,7 +20,7 @@
       "min": 0,
       "max": "1",
       "type": [ {
-        "code": "datetime"
+        "code": "dateTime"
       } ]
     } ]
   }

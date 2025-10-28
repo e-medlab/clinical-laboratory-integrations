@@ -69,7 +69,7 @@ public class V2MessageClassToFhirStructureDefinitionConverter {
         }
         if (type instanceof ca.uhn.hl7v2.model.primitive.TSComponentOne) {
             System.out.println("Converting TSComponentOne primitive type: " + type.getName());
-            convertPrimitive(type, "datetime");
+            convertPrimitive(type, "dateTime");
             return;
         }
         if (type instanceof ca.uhn.hl7v2.model.primitive.DT) {
