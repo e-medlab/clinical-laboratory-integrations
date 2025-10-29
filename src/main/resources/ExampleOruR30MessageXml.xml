@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ORU_R30 xmlns="urn:hl7-org:v2xml">
+<ORU_R30 xmlns="http://hl7.org/fhir">
     <MSH>
         <MSH--1>|</MSH--1>
         <MSH--2>^~\&amp;</MSH--2>
