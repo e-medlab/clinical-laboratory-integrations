@@ -106,7 +106,15 @@ public class V2MessageClassToFhirStructureDefinitionConverter {
             convertPrimitive(type, "decimal");
             return;
         }
-        // TODO: handle unknown
+        if (type instanceof Varies) {
+            // We choose to model varying types, like UNKNOWN, as strings
+            // varying types are always complemented with another field that specifies that type of that field
+            // at the same level of the structure
+            // for example: OBX--5 is UNKNOWN, but OBX--2 specifies whether it is ST, NM or any other primitive
+            // this is why this variation must be handled at mapping level
+            System.out.println("Not converting varying type: " + type.getName());
+            return;
+        }
         System.out.println("WARNING: Skipping unconfigured type: " + type.getName());
     }
 
@@ -262,7 +270,23 @@ public class V2MessageClassToFhirStructureDefinitionConverter {
         elementDefinition.setShort(segment.getNames()[fieldNum - 1]);
 
         ElementDefinition.TypeRefComponent typeRef = new ElementDefinition.TypeRefComponent();
-        typeRef.setCode(PROFILE_BASE_URL + field.getName());
+
+        // We choose to model varying types, like UNKNOWN, as strings
+        // varying types are always complemented with another field that specifies that type of that field
+        // at the same level of the structure
+        // for example: OBX--5 is UNKNOWN, but OBX--2 specifies whether it is ST, NM or any other primitive
+        // this is why this variation must be handled at mapping level
+        if (field instanceof Varies) {
+            typeRef.setCode(PROFILE_BASE_URL + "ST");
+            elementDefinition.setDefinition("""
+                    This is a varying type that is serialized as an XML string.
+                    The actual primitive data type of this field is determined the value by another field on this structure.
+                    """);
+        }
+        else {
+            typeRef.setCode(PROFILE_BASE_URL + field.getName());
+        }
+
         elementDefinition.addType(typeRef);
 
         return elementDefinition;
@@ -312,7 +336,23 @@ public class V2MessageClassToFhirStructureDefinitionConverter {
         elementDefinition.setPath(fieldPath);
 
         ElementDefinition.TypeRefComponent typeRef = new ElementDefinition.TypeRefComponent();
-        typeRef.setCode(PROFILE_BASE_URL + field.getName());
+
+        // We choose to model varying types, like UNKNOWN, as strings
+        // varying types are always complemented with another field that specifies that type of that field
+        // at the same level of the structure
+        // for example: OBX--5 is UNKNOWN, but OBX--2 specifies whether it is ST, NM or any other primitive
+        // this is why this variation must be handled at mapping level
+        if (field instanceof Varies) {
+            typeRef.setCode(PROFILE_BASE_URL + "ST");
+            elementDefinition.setDefinition("""
+                    This is a varying type that is serialized as an XML string.
+                    The actual primitive data type of this field is determined the value by another field on this structure.
+                    """);
+        }
+        else {
+            typeRef.setCode(PROFILE_BASE_URL + field.getName());
+        }
+
         elementDefinition.addType(typeRef);
 
         return elementDefinition;

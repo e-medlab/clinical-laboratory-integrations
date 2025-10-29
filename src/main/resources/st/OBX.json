@@ -53,10 +53,11 @@
       "id": "OBX.OBX--5",
       "path": "OBX.OBX--5",
       "short": "Observation Value",
+      "definition": "This is a varying type that is serialized as an XML string.\nThe actual primitive data type of this field is determined the value by another field on this structure.\n",
       "min": 0,
       "max": "0",
       "type": [ {
-        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/UNKNOWN"
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
       } ]
     }, {
       "id": "OBX.OBX--6",
