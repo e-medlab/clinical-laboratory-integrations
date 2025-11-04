@@ -1,0 +1,495 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "IN1",
+  "url": "http://hl7.org/hapi-v2-parser/StructureDefinition/IN1",
+  "name": "IN1",
+  "status": "draft",
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/IN1",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [ {
+      "id": "IN1",
+      "path": "IN1"
+    }, {
+      "id": "IN1.IN1--1",
+      "path": "IN1.IN1--1",
+      "short": "Set ID - IN1",
+      "min": 1,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/SI"
+      } ]
+    }, {
+      "id": "IN1.IN1--2",
+      "path": "IN1.IN1--2",
+      "short": "Insurance Plan ID",
+      "min": 1,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "IN1.IN1--3",
+      "path": "IN1.IN1--3",
+      "short": "Insurance Company ID",
+      "min": 1,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CX"
+      } ]
+    }, {
+      "id": "IN1.IN1--4",
+      "path": "IN1.IN1--4",
+      "short": "Insurance Company Name",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XON"
+      } ]
+    }, {
+      "id": "IN1.IN1--5",
+      "path": "IN1.IN1--5",
+      "short": "Insurance Company Address",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XAD"
+      } ]
+    }, {
+      "id": "IN1.IN1--6",
+      "path": "IN1.IN1--6",
+      "short": "Insurance Co Contact Person",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XPN"
+      } ]
+    }, {
+      "id": "IN1.IN1--7",
+      "path": "IN1.IN1--7",
+      "short": "Insurance Co Phone Number",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XTN"
+      } ]
+    }, {
+      "id": "IN1.IN1--8",
+      "path": "IN1.IN1--8",
+      "short": "Group Number",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "IN1.IN1--9",
+      "path": "IN1.IN1--9",
+      "short": "Group Name",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XON"
+      } ]
+    }, {
+      "id": "IN1.IN1--10",
+      "path": "IN1.IN1--10",
+      "short": "Insured's Group Emp ID",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CX"
+      } ]
+    }, {
+      "id": "IN1.IN1--11",
+      "path": "IN1.IN1--11",
+      "short": "Insured's Group Emp Name",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XON"
+      } ]
+    }, {
+      "id": "IN1.IN1--12",
+      "path": "IN1.IN1--12",
+      "short": "Plan Effective Date",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/DT"
+      } ]
+    }, {
+      "id": "IN1.IN1--13",
+      "path": "IN1.IN1--13",
+      "short": "Plan Expiration Date",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/DT"
+      } ]
+    }, {
+      "id": "IN1.IN1--14",
+      "path": "IN1.IN1--14",
+      "short": "Authorization Information",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/AUI"
+      } ]
+    }, {
+      "id": "IN1.IN1--15",
+      "path": "IN1.IN1--15",
+      "short": "Plan Type",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "IN1.IN1--16",
+      "path": "IN1.IN1--16",
+      "short": "Name Of Insured",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XPN"
+      } ]
+    }, {
+      "id": "IN1.IN1--17",
+      "path": "IN1.IN1--17",
+      "short": "Insured's Relationship To Patient",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "IN1.IN1--18",
+      "path": "IN1.IN1--18",
+      "short": "Insured's Date Of Birth",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/TS"
+      } ]
+    }, {
+      "id": "IN1.IN1--19",
+      "path": "IN1.IN1--19",
+      "short": "Insured's Address",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XAD"
+      } ]
+    }, {
+      "id": "IN1.IN1--20",
+      "path": "IN1.IN1--20",
+      "short": "Assignment Of Benefits",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "IN1.IN1--21",
+      "path": "IN1.IN1--21",
+      "short": "Coordination Of Benefits",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "IN1.IN1--22",
+      "path": "IN1.IN1--22",
+      "short": "Coord Of Ben. Priority",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "IN1.IN1--23",
+      "path": "IN1.IN1--23",
+      "short": "Notice Of Admission Flag",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ID"
+      } ]
+    }, {
+      "id": "IN1.IN1--24",
+      "path": "IN1.IN1--24",
+      "short": "Notice Of Admission Date",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/DT"
+      } ]
+    }, {
+      "id": "IN1.IN1--25",
+      "path": "IN1.IN1--25",
+      "short": "Report Of Eligibility Flag",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ID"
+      } ]
+    }, {
+      "id": "IN1.IN1--26",
+      "path": "IN1.IN1--26",
+      "short": "Report Of Eligibility Date",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/DT"
+      } ]
+    }, {
+      "id": "IN1.IN1--27",
+      "path": "IN1.IN1--27",
+      "short": "Release Information Code",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "IN1.IN1--28",
+      "path": "IN1.IN1--28",
+      "short": "Pre-Admit Cert (PAC)",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "IN1.IN1--29",
+      "path": "IN1.IN1--29",
+      "short": "Verification Date/Time",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/TS"
+      } ]
+    }, {
+      "id": "IN1.IN1--30",
+      "path": "IN1.IN1--30",
+      "short": "Verification By",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XCN"
+      } ]
+    }, {
+      "id": "IN1.IN1--31",
+      "path": "IN1.IN1--31",
+      "short": "Type Of Agreement Code",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "IN1.IN1--32",
+      "path": "IN1.IN1--32",
+      "short": "Billing Status",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "IN1.IN1--33",
+      "path": "IN1.IN1--33",
+      "short": "Lifetime Reserve Days",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/NM"
+      } ]
+    }, {
+      "id": "IN1.IN1--34",
+      "path": "IN1.IN1--34",
+      "short": "Delay Before L.R. Day",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/NM"
+      } ]
+    }, {
+      "id": "IN1.IN1--35",
+      "path": "IN1.IN1--35",
+      "short": "Company Plan Code",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "IN1.IN1--36",
+      "path": "IN1.IN1--36",
+      "short": "Policy Number",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "IN1.IN1--37",
+      "path": "IN1.IN1--37",
+      "short": "Policy Deductible",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CP"
+      } ]
+    }, {
+      "id": "IN1.IN1--38",
+      "path": "IN1.IN1--38",
+      "short": "Policy Limit - Amount",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CP"
+      } ]
+    }, {
+      "id": "IN1.IN1--39",
+      "path": "IN1.IN1--39",
+      "short": "Policy Limit - Days",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/NM"
+      } ]
+    }, {
+      "id": "IN1.IN1--40",
+      "path": "IN1.IN1--40",
+      "short": "Room Rate - Semi-Private",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CP"
+      } ]
+    }, {
+      "id": "IN1.IN1--41",
+      "path": "IN1.IN1--41",
+      "short": "Room Rate - Private",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CP"
+      } ]
+    }, {
+      "id": "IN1.IN1--42",
+      "path": "IN1.IN1--42",
+      "short": "Insured's Employment Status",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "IN1.IN1--43",
+      "path": "IN1.IN1--43",
+      "short": "Insured's Administrative Sex",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "IN1.IN1--44",
+      "path": "IN1.IN1--44",
+      "short": "Insured's Employer's Address",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XAD"
+      } ]
+    }, {
+      "id": "IN1.IN1--45",
+      "path": "IN1.IN1--45",
+      "short": "Verification Status",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "IN1.IN1--46",
+      "path": "IN1.IN1--46",
+      "short": "Prior Insurance Plan ID",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "IN1.IN1--47",
+      "path": "IN1.IN1--47",
+      "short": "Coverage Type",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "IN1.IN1--48",
+      "path": "IN1.IN1--48",
+      "short": "Handicap",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "IN1.IN1--49",
+      "path": "IN1.IN1--49",
+      "short": "Insured's ID Number",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CX"
+      } ]
+    }, {
+      "id": "IN1.IN1--50",
+      "path": "IN1.IN1--50",
+      "short": "Signature Code",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "IN1.IN1--51",
+      "path": "IN1.IN1--51",
+      "short": "Signature Code Date",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/DT"
+      } ]
+    }, {
+      "id": "IN1.IN1--52",
+      "path": "IN1.IN1--52",
+      "short": "Insured_s Birth Place",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "IN1.IN1--53",
+      "path": "IN1.IN1--53",
+      "short": "VIP Indicator",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    } ]
+  }
+}

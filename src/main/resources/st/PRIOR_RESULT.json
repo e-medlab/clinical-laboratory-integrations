@@ -1,0 +1,50 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "PRIOR_RESULT",
+  "url": "http://hl7.org/hapi-v2-parser/StructureDefinition/PRIOR_RESULT",
+  "name": "PRIOR_RESULT",
+  "status": "draft",
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/PRIOR_RESULT",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [ {
+      "id": "PRIOR_RESULT",
+      "path": "PRIOR_RESULT"
+    }, {
+      "id": "PRIOR_RESULT.PATIENT_PRIOR",
+      "path": "PRIOR_RESULT.PATIENT_PRIOR",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/PATIENT_PRIOR"
+      } ]
+    }, {
+      "id": "PRIOR_RESULT.PATIENT_VISIT_PRIOR",
+      "path": "PRIOR_RESULT.PATIENT_VISIT_PRIOR",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/PATIENT_VISIT_PRIOR"
+      } ]
+    }, {
+      "id": "PRIOR_RESULT.AL1",
+      "path": "PRIOR_RESULT.AL1",
+      "min": 0,
+      "max": "*",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/AL1"
+      } ]
+    }, {
+      "id": "PRIOR_RESULT.ORDER_PRIOR",
+      "path": "PRIOR_RESULT.ORDER_PRIOR",
+      "min": 1,
+      "max": "*",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ORDER_PRIOR"
+      } ]
+    } ]
+  }
+}

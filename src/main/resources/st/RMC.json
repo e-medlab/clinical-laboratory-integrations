@@ -1,0 +1,50 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "RMC",
+  "url": "http://hl7.org/hapi-v2-parser/StructureDefinition/RMC",
+  "name": "RMC",
+  "status": "draft",
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/RMC",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [ {
+      "id": "RMC",
+      "path": "RMC"
+    }, {
+      "id": "RMC.RMC--1",
+      "path": "RMC.RMC--1",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "RMC.RMC--2",
+      "path": "RMC.RMC--2",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "RMC.RMC--3",
+      "path": "RMC.RMC--3",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/NM"
+      } ]
+    }, {
+      "id": "RMC.RMC--4",
+      "path": "RMC.RMC--4",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/MOP"
+      } ]
+    } ]
+  }
+}

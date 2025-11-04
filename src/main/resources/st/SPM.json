@@ -1,0 +1,279 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "SPM",
+  "url": "http://hl7.org/hapi-v2-parser/StructureDefinition/SPM",
+  "name": "SPM",
+  "status": "draft",
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/SPM",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [ {
+      "id": "SPM",
+      "path": "SPM"
+    }, {
+      "id": "SPM.SPM--1",
+      "path": "SPM.SPM--1",
+      "short": "Set ID _ SPM",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/SI"
+      } ]
+    }, {
+      "id": "SPM.SPM--2",
+      "path": "SPM.SPM--2",
+      "short": "Specimen ID",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/EIP"
+      } ]
+    }, {
+      "id": "SPM.SPM--3",
+      "path": "SPM.SPM--3",
+      "short": "Specimen Parent IDs",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/EIP"
+      } ]
+    }, {
+      "id": "SPM.SPM--4",
+      "path": "SPM.SPM--4",
+      "short": "Specimen Type",
+      "min": 1,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CWE"
+      } ]
+    }, {
+      "id": "SPM.SPM--5",
+      "path": "SPM.SPM--5",
+      "short": "Specimen Type Modifier",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CWE"
+      } ]
+    }, {
+      "id": "SPM.SPM--6",
+      "path": "SPM.SPM--6",
+      "short": "Specimen Additives",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CWE"
+      } ]
+    }, {
+      "id": "SPM.SPM--7",
+      "path": "SPM.SPM--7",
+      "short": "Specimen Collection Method",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CWE"
+      } ]
+    }, {
+      "id": "SPM.SPM--8",
+      "path": "SPM.SPM--8",
+      "short": "Specimen Source Site",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CWE"
+      } ]
+    }, {
+      "id": "SPM.SPM--9",
+      "path": "SPM.SPM--9",
+      "short": "Specimen Source Site Modifier",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CWE"
+      } ]
+    }, {
+      "id": "SPM.SPM--10",
+      "path": "SPM.SPM--10",
+      "short": "Specimen Collection Site",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CWE"
+      } ]
+    }, {
+      "id": "SPM.SPM--11",
+      "path": "SPM.SPM--11",
+      "short": "Specimen Role",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CWE"
+      } ]
+    }, {
+      "id": "SPM.SPM--12",
+      "path": "SPM.SPM--12",
+      "short": "Specimen Collection Amount",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CQ"
+      } ]
+    }, {
+      "id": "SPM.SPM--13",
+      "path": "SPM.SPM--13",
+      "short": "Grouped Specimen Count",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/NM"
+      } ]
+    }, {
+      "id": "SPM.SPM--14",
+      "path": "SPM.SPM--14",
+      "short": "Specimen Description",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "SPM.SPM--15",
+      "path": "SPM.SPM--15",
+      "short": "Specimen Handling Code",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CWE"
+      } ]
+    }, {
+      "id": "SPM.SPM--16",
+      "path": "SPM.SPM--16",
+      "short": "Specimen Risk Code",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CWE"
+      } ]
+    }, {
+      "id": "SPM.SPM--17",
+      "path": "SPM.SPM--17",
+      "short": "Specimen Collection Date/Time",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/DR"
+      } ]
+    }, {
+      "id": "SPM.SPM--18",
+      "path": "SPM.SPM--18",
+      "short": "Specimen Received Date/Time",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/TS"
+      } ]
+    }, {
+      "id": "SPM.SPM--19",
+      "path": "SPM.SPM--19",
+      "short": "Specimen Expiration Date/Time",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/TS"
+      } ]
+    }, {
+      "id": "SPM.SPM--20",
+      "path": "SPM.SPM--20",
+      "short": "Specimen Availability",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ID"
+      } ]
+    }, {
+      "id": "SPM.SPM--21",
+      "path": "SPM.SPM--21",
+      "short": "Specimen Reject Reason",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CWE"
+      } ]
+    }, {
+      "id": "SPM.SPM--22",
+      "path": "SPM.SPM--22",
+      "short": "Specimen Quality",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CWE"
+      } ]
+    }, {
+      "id": "SPM.SPM--23",
+      "path": "SPM.SPM--23",
+      "short": "Specimen Appropriateness",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CWE"
+      } ]
+    }, {
+      "id": "SPM.SPM--24",
+      "path": "SPM.SPM--24",
+      "short": "Specimen Condition",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CWE"
+      } ]
+    }, {
+      "id": "SPM.SPM--25",
+      "path": "SPM.SPM--25",
+      "short": "Specimen Current Quantity",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CQ"
+      } ]
+    }, {
+      "id": "SPM.SPM--26",
+      "path": "SPM.SPM--26",
+      "short": "Number of Specimen Containers",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/NM"
+      } ]
+    }, {
+      "id": "SPM.SPM--27",
+      "path": "SPM.SPM--27",
+      "short": "Container Type",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CWE"
+      } ]
+    }, {
+      "id": "SPM.SPM--28",
+      "path": "SPM.SPM--28",
+      "short": "Container Condition",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CWE"
+      } ]
+    }, {
+      "id": "SPM.SPM--29",
+      "path": "SPM.SPM--29",
+      "short": "Specimen Child Role",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CWE"
+      } ]
+    } ]
+  }
+}

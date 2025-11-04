@@ -1,0 +1,369 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "NK1",
+  "url": "http://hl7.org/hapi-v2-parser/StructureDefinition/NK1",
+  "name": "NK1",
+  "status": "draft",
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/NK1",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [ {
+      "id": "NK1",
+      "path": "NK1"
+    }, {
+      "id": "NK1.NK1--1",
+      "path": "NK1.NK1--1",
+      "short": "Set ID - NK1",
+      "min": 1,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/SI"
+      } ]
+    }, {
+      "id": "NK1.NK1--2",
+      "path": "NK1.NK1--2",
+      "short": "NK Name",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XPN"
+      } ]
+    }, {
+      "id": "NK1.NK1--3",
+      "path": "NK1.NK1--3",
+      "short": "Relationship",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "NK1.NK1--4",
+      "path": "NK1.NK1--4",
+      "short": "Address",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XAD"
+      } ]
+    }, {
+      "id": "NK1.NK1--5",
+      "path": "NK1.NK1--5",
+      "short": "Phone Number",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XTN"
+      } ]
+    }, {
+      "id": "NK1.NK1--6",
+      "path": "NK1.NK1--6",
+      "short": "Business Phone Number",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XTN"
+      } ]
+    }, {
+      "id": "NK1.NK1--7",
+      "path": "NK1.NK1--7",
+      "short": "Contact Role",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "NK1.NK1--8",
+      "path": "NK1.NK1--8",
+      "short": "Start Date",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/DT"
+      } ]
+    }, {
+      "id": "NK1.NK1--9",
+      "path": "NK1.NK1--9",
+      "short": "End Date",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/DT"
+      } ]
+    }, {
+      "id": "NK1.NK1--10",
+      "path": "NK1.NK1--10",
+      "short": "Next of Kin / Associated Parties Job Title",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "NK1.NK1--11",
+      "path": "NK1.NK1--11",
+      "short": "Next of Kin / Associated Parties Job Code/Class",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/JCC"
+      } ]
+    }, {
+      "id": "NK1.NK1--12",
+      "path": "NK1.NK1--12",
+      "short": "Next of Kin / Associated Parties Employee Number",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CX"
+      } ]
+    }, {
+      "id": "NK1.NK1--13",
+      "path": "NK1.NK1--13",
+      "short": "Organization Name - NK1",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XON"
+      } ]
+    }, {
+      "id": "NK1.NK1--14",
+      "path": "NK1.NK1--14",
+      "short": "Marital Status",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "NK1.NK1--15",
+      "path": "NK1.NK1--15",
+      "short": "Administrative Sex",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "NK1.NK1--16",
+      "path": "NK1.NK1--16",
+      "short": "Date/Time of Birth",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/TS"
+      } ]
+    }, {
+      "id": "NK1.NK1--17",
+      "path": "NK1.NK1--17",
+      "short": "Living Dependency",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "NK1.NK1--18",
+      "path": "NK1.NK1--18",
+      "short": "Ambulatory Status",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "NK1.NK1--19",
+      "path": "NK1.NK1--19",
+      "short": "Citizenship",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "NK1.NK1--20",
+      "path": "NK1.NK1--20",
+      "short": "Primary Language",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "NK1.NK1--21",
+      "path": "NK1.NK1--21",
+      "short": "Living Arrangement",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "NK1.NK1--22",
+      "path": "NK1.NK1--22",
+      "short": "Publicity Code",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "NK1.NK1--23",
+      "path": "NK1.NK1--23",
+      "short": "Protection Indicator",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ID"
+      } ]
+    }, {
+      "id": "NK1.NK1--24",
+      "path": "NK1.NK1--24",
+      "short": "Student Indicator",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "NK1.NK1--25",
+      "path": "NK1.NK1--25",
+      "short": "Religion",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "NK1.NK1--26",
+      "path": "NK1.NK1--26",
+      "short": "Mother's Maiden Name",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XPN"
+      } ]
+    }, {
+      "id": "NK1.NK1--27",
+      "path": "NK1.NK1--27",
+      "short": "Nationality",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "NK1.NK1--28",
+      "path": "NK1.NK1--28",
+      "short": "Ethnic Group",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "NK1.NK1--29",
+      "path": "NK1.NK1--29",
+      "short": "Contact Reason",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "NK1.NK1--30",
+      "path": "NK1.NK1--30",
+      "short": "Contact Person's Name",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XPN"
+      } ]
+    }, {
+      "id": "NK1.NK1--31",
+      "path": "NK1.NK1--31",
+      "short": "Contact Person's Telephone Number",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XTN"
+      } ]
+    }, {
+      "id": "NK1.NK1--32",
+      "path": "NK1.NK1--32",
+      "short": "Contact Person's Address",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XAD"
+      } ]
+    }, {
+      "id": "NK1.NK1--33",
+      "path": "NK1.NK1--33",
+      "short": "Next of Kin/Associated Party's Identifiers",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CX"
+      } ]
+    }, {
+      "id": "NK1.NK1--34",
+      "path": "NK1.NK1--34",
+      "short": "Job Status",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "NK1.NK1--35",
+      "path": "NK1.NK1--35",
+      "short": "Race",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "NK1.NK1--36",
+      "path": "NK1.NK1--36",
+      "short": "Handicap",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "NK1.NK1--37",
+      "path": "NK1.NK1--37",
+      "short": "Contact Person Social Security Number",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "NK1.NK1--38",
+      "path": "NK1.NK1--38",
+      "short": "Next of Kin Birth Place",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "NK1.NK1--39",
+      "path": "NK1.NK1--39",
+      "short": "VIP Indicator",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    } ]
+  }
+}

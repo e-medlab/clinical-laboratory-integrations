@@ -1,0 +1,414 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "SAC",
+  "url": "http://hl7.org/hapi-v2-parser/StructureDefinition/SAC",
+  "name": "SAC",
+  "status": "draft",
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/SAC",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [ {
+      "id": "SAC",
+      "path": "SAC"
+    }, {
+      "id": "SAC.SAC--1",
+      "path": "SAC.SAC--1",
+      "short": "External Accession Identifier",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/EI"
+      } ]
+    }, {
+      "id": "SAC.SAC--2",
+      "path": "SAC.SAC--2",
+      "short": "Accession Identifier",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/EI"
+      } ]
+    }, {
+      "id": "SAC.SAC--3",
+      "path": "SAC.SAC--3",
+      "short": "Container Identifier",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/EI"
+      } ]
+    }, {
+      "id": "SAC.SAC--4",
+      "path": "SAC.SAC--4",
+      "short": "Primary (parent) Container Identifier",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/EI"
+      } ]
+    }, {
+      "id": "SAC.SAC--5",
+      "path": "SAC.SAC--5",
+      "short": "Equipment Container Identifier",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/EI"
+      } ]
+    }, {
+      "id": "SAC.SAC--6",
+      "path": "SAC.SAC--6",
+      "short": "Specimen Source",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/SPS"
+      } ]
+    }, {
+      "id": "SAC.SAC--7",
+      "path": "SAC.SAC--7",
+      "short": "Registration Date/Time",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/TS"
+      } ]
+    }, {
+      "id": "SAC.SAC--8",
+      "path": "SAC.SAC--8",
+      "short": "Container Status",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "SAC.SAC--9",
+      "path": "SAC.SAC--9",
+      "short": "Carrier Type",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "SAC.SAC--10",
+      "path": "SAC.SAC--10",
+      "short": "Carrier Identifier",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/EI"
+      } ]
+    }, {
+      "id": "SAC.SAC--11",
+      "path": "SAC.SAC--11",
+      "short": "Position in Carrier",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/NA"
+      } ]
+    }, {
+      "id": "SAC.SAC--12",
+      "path": "SAC.SAC--12",
+      "short": "Tray Type - SAC",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "SAC.SAC--13",
+      "path": "SAC.SAC--13",
+      "short": "Tray Identifier",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/EI"
+      } ]
+    }, {
+      "id": "SAC.SAC--14",
+      "path": "SAC.SAC--14",
+      "short": "Position in Tray",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/NA"
+      } ]
+    }, {
+      "id": "SAC.SAC--15",
+      "path": "SAC.SAC--15",
+      "short": "Location",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "SAC.SAC--16",
+      "path": "SAC.SAC--16",
+      "short": "Container Height",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/NM"
+      } ]
+    }, {
+      "id": "SAC.SAC--17",
+      "path": "SAC.SAC--17",
+      "short": "Container Diameter",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/NM"
+      } ]
+    }, {
+      "id": "SAC.SAC--18",
+      "path": "SAC.SAC--18",
+      "short": "Barrier Delta",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/NM"
+      } ]
+    }, {
+      "id": "SAC.SAC--19",
+      "path": "SAC.SAC--19",
+      "short": "Bottom Delta",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/NM"
+      } ]
+    }, {
+      "id": "SAC.SAC--20",
+      "path": "SAC.SAC--20",
+      "short": "Container Height/Diameter/Delta Units",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "SAC.SAC--21",
+      "path": "SAC.SAC--21",
+      "short": "Container Volume",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/NM"
+      } ]
+    }, {
+      "id": "SAC.SAC--22",
+      "path": "SAC.SAC--22",
+      "short": "Available Specimen Volume",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/NM"
+      } ]
+    }, {
+      "id": "SAC.SAC--23",
+      "path": "SAC.SAC--23",
+      "short": "Initial Specimen Volume",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/NM"
+      } ]
+    }, {
+      "id": "SAC.SAC--24",
+      "path": "SAC.SAC--24",
+      "short": "Volume Units",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "SAC.SAC--25",
+      "path": "SAC.SAC--25",
+      "short": "Separator Type",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "SAC.SAC--26",
+      "path": "SAC.SAC--26",
+      "short": "Cap Type",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "SAC.SAC--27",
+      "path": "SAC.SAC--27",
+      "short": "Additive",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CWE"
+      } ]
+    }, {
+      "id": "SAC.SAC--28",
+      "path": "SAC.SAC--28",
+      "short": "Specimen Component",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "SAC.SAC--29",
+      "path": "SAC.SAC--29",
+      "short": "Dilution Factor",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/SN"
+      } ]
+    }, {
+      "id": "SAC.SAC--30",
+      "path": "SAC.SAC--30",
+      "short": "Treatment",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "SAC.SAC--31",
+      "path": "SAC.SAC--31",
+      "short": "Temperature",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/SN"
+      } ]
+    }, {
+      "id": "SAC.SAC--32",
+      "path": "SAC.SAC--32",
+      "short": "Hemolysis Index",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/NM"
+      } ]
+    }, {
+      "id": "SAC.SAC--33",
+      "path": "SAC.SAC--33",
+      "short": "Hemolysis Index Units",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "SAC.SAC--34",
+      "path": "SAC.SAC--34",
+      "short": "Lipemia Index",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/NM"
+      } ]
+    }, {
+      "id": "SAC.SAC--35",
+      "path": "SAC.SAC--35",
+      "short": "Lipemia Index Units",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "SAC.SAC--36",
+      "path": "SAC.SAC--36",
+      "short": "Icterus Index",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/NM"
+      } ]
+    }, {
+      "id": "SAC.SAC--37",
+      "path": "SAC.SAC--37",
+      "short": "Icterus Index Units",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "SAC.SAC--38",
+      "path": "SAC.SAC--38",
+      "short": "Fibrin Index",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/NM"
+      } ]
+    }, {
+      "id": "SAC.SAC--39",
+      "path": "SAC.SAC--39",
+      "short": "Fibrin Index Units",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "SAC.SAC--40",
+      "path": "SAC.SAC--40",
+      "short": "System Induced Contaminants",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "SAC.SAC--41",
+      "path": "SAC.SAC--41",
+      "short": "Drug Interference",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "SAC.SAC--42",
+      "path": "SAC.SAC--42",
+      "short": "Artificial Blood",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "SAC.SAC--43",
+      "path": "SAC.SAC--43",
+      "short": "Special Handling Code",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CWE"
+      } ]
+    }, {
+      "id": "SAC.SAC--44",
+      "path": "SAC.SAC--44",
+      "short": "Other Environmental Factors",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    } ]
+  }
+}

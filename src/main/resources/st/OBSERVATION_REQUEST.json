@@ -1,0 +1,82 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "OBSERVATION_REQUEST",
+  "url": "http://hl7.org/hapi-v2-parser/StructureDefinition/OBSERVATION_REQUEST",
+  "name": "OBSERVATION_REQUEST",
+  "status": "draft",
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/OBSERVATION_REQUEST",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [ {
+      "id": "OBSERVATION_REQUEST",
+      "path": "OBSERVATION_REQUEST"
+    }, {
+      "id": "OBSERVATION_REQUEST.OBR",
+      "path": "OBSERVATION_REQUEST.OBR",
+      "min": 1,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/OBR"
+      } ]
+    }, {
+      "id": "OBSERVATION_REQUEST.TCD",
+      "path": "OBSERVATION_REQUEST.TCD",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/TCD"
+      } ]
+    }, {
+      "id": "OBSERVATION_REQUEST.NTE",
+      "path": "OBSERVATION_REQUEST.NTE",
+      "min": 0,
+      "max": "*",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/NTE"
+      } ]
+    }, {
+      "id": "OBSERVATION_REQUEST.CTD",
+      "path": "OBSERVATION_REQUEST.CTD",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CTD"
+      } ]
+    }, {
+      "id": "OBSERVATION_REQUEST.DG1",
+      "path": "OBSERVATION_REQUEST.DG1",
+      "min": 0,
+      "max": "*",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/DG1"
+      } ]
+    }, {
+      "id": "OBSERVATION_REQUEST.OBSERVATION",
+      "path": "OBSERVATION_REQUEST.OBSERVATION",
+      "min": 0,
+      "max": "*",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/OBSERVATION"
+      } ]
+    }, {
+      "id": "OBSERVATION_REQUEST.SPECIMEN",
+      "path": "OBSERVATION_REQUEST.SPECIMEN",
+      "min": 0,
+      "max": "*",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/SPECIMEN"
+      } ]
+    }, {
+      "id": "OBSERVATION_REQUEST.PRIOR_RESULT",
+      "path": "OBSERVATION_REQUEST.PRIOR_RESULT",
+      "min": 0,
+      "max": "*",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/PRIOR_RESULT"
+      } ]
+    } ]
+  }
+}

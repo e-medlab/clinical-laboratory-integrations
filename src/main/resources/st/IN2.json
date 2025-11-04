@@ -1,0 +1,666 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "IN2",
+  "url": "http://hl7.org/hapi-v2-parser/StructureDefinition/IN2",
+  "name": "IN2",
+  "status": "draft",
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/IN2",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [ {
+      "id": "IN2",
+      "path": "IN2"
+    }, {
+      "id": "IN2.IN2--1",
+      "path": "IN2.IN2--1",
+      "short": "Insured's Employee ID",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CX"
+      } ]
+    }, {
+      "id": "IN2.IN2--2",
+      "path": "IN2.IN2--2",
+      "short": "Insured's Social Security Number",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "IN2.IN2--3",
+      "path": "IN2.IN2--3",
+      "short": "Insured's Employer's Name and ID",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XCN"
+      } ]
+    }, {
+      "id": "IN2.IN2--4",
+      "path": "IN2.IN2--4",
+      "short": "Employer Information Data",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "IN2.IN2--5",
+      "path": "IN2.IN2--5",
+      "short": "Mail Claim Party",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "IN2.IN2--6",
+      "path": "IN2.IN2--6",
+      "short": "Medicare Health Ins Card Number",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "IN2.IN2--7",
+      "path": "IN2.IN2--7",
+      "short": "Medicaid Case Name",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XPN"
+      } ]
+    }, {
+      "id": "IN2.IN2--8",
+      "path": "IN2.IN2--8",
+      "short": "Medicaid Case Number",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "IN2.IN2--9",
+      "path": "IN2.IN2--9",
+      "short": "Military Sponsor Name",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XPN"
+      } ]
+    }, {
+      "id": "IN2.IN2--10",
+      "path": "IN2.IN2--10",
+      "short": "Military ID Number",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "IN2.IN2--11",
+      "path": "IN2.IN2--11",
+      "short": "Dependent Of Military Recipient",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "IN2.IN2--12",
+      "path": "IN2.IN2--12",
+      "short": "Military Organization",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "IN2.IN2--13",
+      "path": "IN2.IN2--13",
+      "short": "Military Station",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "IN2.IN2--14",
+      "path": "IN2.IN2--14",
+      "short": "Military Service",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "IN2.IN2--15",
+      "path": "IN2.IN2--15",
+      "short": "Military Rank/Grade",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "IN2.IN2--16",
+      "path": "IN2.IN2--16",
+      "short": "Military Status",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "IN2.IN2--17",
+      "path": "IN2.IN2--17",
+      "short": "Military Retire Date",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/DT"
+      } ]
+    }, {
+      "id": "IN2.IN2--18",
+      "path": "IN2.IN2--18",
+      "short": "Military Non-Avail Cert On File",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ID"
+      } ]
+    }, {
+      "id": "IN2.IN2--19",
+      "path": "IN2.IN2--19",
+      "short": "Baby Coverage",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ID"
+      } ]
+    }, {
+      "id": "IN2.IN2--20",
+      "path": "IN2.IN2--20",
+      "short": "Combine Baby Bill",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ID"
+      } ]
+    }, {
+      "id": "IN2.IN2--21",
+      "path": "IN2.IN2--21",
+      "short": "Blood Deductible",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "IN2.IN2--22",
+      "path": "IN2.IN2--22",
+      "short": "Special Coverage Approval Name",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XPN"
+      } ]
+    }, {
+      "id": "IN2.IN2--23",
+      "path": "IN2.IN2--23",
+      "short": "Special Coverage Approval Title",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "IN2.IN2--24",
+      "path": "IN2.IN2--24",
+      "short": "Non-Covered Insurance Code",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "IN2.IN2--25",
+      "path": "IN2.IN2--25",
+      "short": "Payor ID",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CX"
+      } ]
+    }, {
+      "id": "IN2.IN2--26",
+      "path": "IN2.IN2--26",
+      "short": "Payor Subscriber ID",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CX"
+      } ]
+    }, {
+      "id": "IN2.IN2--27",
+      "path": "IN2.IN2--27",
+      "short": "Eligibility Source",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "IN2.IN2--28",
+      "path": "IN2.IN2--28",
+      "short": "Room Coverage Type/Amount",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/RMC"
+      } ]
+    }, {
+      "id": "IN2.IN2--29",
+      "path": "IN2.IN2--29",
+      "short": "Policy Type/Amount",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/PTA"
+      } ]
+    }, {
+      "id": "IN2.IN2--30",
+      "path": "IN2.IN2--30",
+      "short": "Daily Deductible",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/DDI"
+      } ]
+    }, {
+      "id": "IN2.IN2--31",
+      "path": "IN2.IN2--31",
+      "short": "Living Dependency",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "IN2.IN2--32",
+      "path": "IN2.IN2--32",
+      "short": "Ambulatory Status",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "IN2.IN2--33",
+      "path": "IN2.IN2--33",
+      "short": "Citizenship",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "IN2.IN2--34",
+      "path": "IN2.IN2--34",
+      "short": "Primary Language",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "IN2.IN2--35",
+      "path": "IN2.IN2--35",
+      "short": "Living Arrangement",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "IN2.IN2--36",
+      "path": "IN2.IN2--36",
+      "short": "Publicity Code",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "IN2.IN2--37",
+      "path": "IN2.IN2--37",
+      "short": "Protection Indicator",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ID"
+      } ]
+    }, {
+      "id": "IN2.IN2--38",
+      "path": "IN2.IN2--38",
+      "short": "Student Indicator",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "IN2.IN2--39",
+      "path": "IN2.IN2--39",
+      "short": "Religion",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "IN2.IN2--40",
+      "path": "IN2.IN2--40",
+      "short": "Mother's Maiden Name",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XPN"
+      } ]
+    }, {
+      "id": "IN2.IN2--41",
+      "path": "IN2.IN2--41",
+      "short": "Nationality",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "IN2.IN2--42",
+      "path": "IN2.IN2--42",
+      "short": "Ethnic Group",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "IN2.IN2--43",
+      "path": "IN2.IN2--43",
+      "short": "Marital Status",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "IN2.IN2--44",
+      "path": "IN2.IN2--44",
+      "short": "Insured's Employment Start Date",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/DT"
+      } ]
+    }, {
+      "id": "IN2.IN2--45",
+      "path": "IN2.IN2--45",
+      "short": "Employment Stop Date",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/DT"
+      } ]
+    }, {
+      "id": "IN2.IN2--46",
+      "path": "IN2.IN2--46",
+      "short": "Job Title",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "IN2.IN2--47",
+      "path": "IN2.IN2--47",
+      "short": "Job Code/Class",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/JCC"
+      } ]
+    }, {
+      "id": "IN2.IN2--48",
+      "path": "IN2.IN2--48",
+      "short": "Job Status",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "IN2.IN2--49",
+      "path": "IN2.IN2--49",
+      "short": "Employer Contact Person Name",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XPN"
+      } ]
+    }, {
+      "id": "IN2.IN2--50",
+      "path": "IN2.IN2--50",
+      "short": "Employer Contact Person Phone Number",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XTN"
+      } ]
+    }, {
+      "id": "IN2.IN2--51",
+      "path": "IN2.IN2--51",
+      "short": "Employer Contact Reason",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "IN2.IN2--52",
+      "path": "IN2.IN2--52",
+      "short": "Insured's Contact Person's Name",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XPN"
+      } ]
+    }, {
+      "id": "IN2.IN2--53",
+      "path": "IN2.IN2--53",
+      "short": "Insured's Contact Person Phone Number",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XTN"
+      } ]
+    }, {
+      "id": "IN2.IN2--54",
+      "path": "IN2.IN2--54",
+      "short": "Insured's Contact Person Reason",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "IN2.IN2--55",
+      "path": "IN2.IN2--55",
+      "short": "Relationship to the Patient Start Date",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/DT"
+      } ]
+    }, {
+      "id": "IN2.IN2--56",
+      "path": "IN2.IN2--56",
+      "short": "Relationship to the Patient Stop Date",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/DT"
+      } ]
+    }, {
+      "id": "IN2.IN2--57",
+      "path": "IN2.IN2--57",
+      "short": "Insurance Co. Contact Reason",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "IN2.IN2--58",
+      "path": "IN2.IN2--58",
+      "short": "Insurance Co Contact Phone Number",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XTN"
+      } ]
+    }, {
+      "id": "IN2.IN2--59",
+      "path": "IN2.IN2--59",
+      "short": "Policy Scope",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "IN2.IN2--60",
+      "path": "IN2.IN2--60",
+      "short": "Policy Source",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "IN2.IN2--61",
+      "path": "IN2.IN2--61",
+      "short": "Patient Member Number",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CX"
+      } ]
+    }, {
+      "id": "IN2.IN2--62",
+      "path": "IN2.IN2--62",
+      "short": "Guarantor's Relationship To Insured",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "IN2.IN2--63",
+      "path": "IN2.IN2--63",
+      "short": "Insured's Phone Number - Home",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XTN"
+      } ]
+    }, {
+      "id": "IN2.IN2--64",
+      "path": "IN2.IN2--64",
+      "short": "Insured's Employer Phone Number",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XTN"
+      } ]
+    }, {
+      "id": "IN2.IN2--65",
+      "path": "IN2.IN2--65",
+      "short": "Military Handicapped Program",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "IN2.IN2--66",
+      "path": "IN2.IN2--66",
+      "short": "Suspend Flag",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ID"
+      } ]
+    }, {
+      "id": "IN2.IN2--67",
+      "path": "IN2.IN2--67",
+      "short": "Copay Limit Flag",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ID"
+      } ]
+    }, {
+      "id": "IN2.IN2--68",
+      "path": "IN2.IN2--68",
+      "short": "Stoploss Limit Flag",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ID"
+      } ]
+    }, {
+      "id": "IN2.IN2--69",
+      "path": "IN2.IN2--69",
+      "short": "Insured Organization Name and ID",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XON"
+      } ]
+    }, {
+      "id": "IN2.IN2--70",
+      "path": "IN2.IN2--70",
+      "short": "Insured Employer Organization Name and ID",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XON"
+      } ]
+    }, {
+      "id": "IN2.IN2--71",
+      "path": "IN2.IN2--71",
+      "short": "Race",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "IN2.IN2--72",
+      "path": "IN2.IN2--72",
+      "short": "CMS Patient_s Relationship to Insured",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    } ]
+  }
+}

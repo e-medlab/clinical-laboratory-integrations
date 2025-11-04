@@ -1,0 +1,34 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "CCD",
+  "url": "http://hl7.org/hapi-v2-parser/StructureDefinition/CCD",
+  "name": "CCD",
+  "status": "draft",
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/CCD",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [ {
+      "id": "CCD",
+      "path": "CCD"
+    }, {
+      "id": "CCD.CCD--1",
+      "path": "CCD.CCD--1",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ID"
+      } ]
+    }, {
+      "id": "CCD.CCD--2",
+      "path": "CCD.CCD--2",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/TS"
+      } ]
+    } ]
+  }
+}

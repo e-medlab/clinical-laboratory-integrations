@@ -1,0 +1,42 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ICD",
+  "url": "http://hl7.org/hapi-v2-parser/StructureDefinition/ICD",
+  "name": "ICD",
+  "status": "draft",
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/ICD",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [ {
+      "id": "ICD",
+      "path": "ICD"
+    }, {
+      "id": "ICD.ICD--1",
+      "path": "ICD.ICD--1",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "ICD.ICD--2",
+      "path": "ICD.ICD--2",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ID"
+      } ]
+    }, {
+      "id": "ICD.ICD--3",
+      "path": "ICD.ICD--3",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/TS"
+      } ]
+    } ]
+  }
+}

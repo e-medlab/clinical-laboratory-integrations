@@ -1,0 +1,34 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "PATIENT_VISIT",
+  "url": "http://hl7.org/hapi-v2-parser/StructureDefinition/PATIENT_VISIT",
+  "name": "PATIENT_VISIT",
+  "status": "draft",
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/PATIENT_VISIT",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [ {
+      "id": "PATIENT_VISIT",
+      "path": "PATIENT_VISIT"
+    }, {
+      "id": "PATIENT_VISIT.PV1",
+      "path": "PATIENT_VISIT.PV1",
+      "min": 1,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/PV1"
+      } ]
+    }, {
+      "id": "PATIENT_VISIT.PV2",
+      "path": "PATIENT_VISIT.PV2",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/PV2"
+      } ]
+    } ]
+  }
+}

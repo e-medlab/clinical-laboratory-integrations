@@ -7,6 +7,7 @@ import ca.uhn.hl7v2.HL7Exception;
 import ca.uhn.hl7v2.HapiContext;
 import ca.uhn.hl7v2.model.*;
 import ca.uhn.hl7v2.model.primitive.*;
+import ca.uhn.hl7v2.model.v25.message.OML_O21;
 import ca.uhn.hl7v2.model.v25.message.ORU_R30;
 import org.hl7.fhir.r5.model.ElementDefinition;
 import org.hl7.fhir.r5.model.Enumerations;
@@ -28,8 +29,14 @@ public class V2MessageClassToFhirStructureDefinitionConverter {
 
     public static void main(String args[]) throws Exception {
         ORU_R30 oruR30 = new ORU_R30(v2Context.getModelClassFactory());
+        generateStructureDefinitions(oruR30);
 
-        convert(oruR30);
+        OML_O21 omlO21 = new OML_O21(v2Context.getModelClassFactory());
+        generateStructureDefinitions(omlO21);
+    }
+
+    private static void generateStructureDefinitions(Message message) throws Exception {
+        convert(message);
 
         IParser fhirParser = fhirContext.newJsonParser().setPrettyPrint(true);
         for (StructureDefinition st : structureDefinitions){

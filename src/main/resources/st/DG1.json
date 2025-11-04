@@ -1,0 +1,207 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "DG1",
+  "url": "http://hl7.org/hapi-v2-parser/StructureDefinition/DG1",
+  "name": "DG1",
+  "status": "draft",
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/DG1",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [ {
+      "id": "DG1",
+      "path": "DG1"
+    }, {
+      "id": "DG1.DG1--1",
+      "path": "DG1.DG1--1",
+      "short": "Set ID - DG1",
+      "min": 1,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/SI"
+      } ]
+    }, {
+      "id": "DG1.DG1--2",
+      "path": "DG1.DG1--2",
+      "short": "Diagnosis Coding Method",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ID"
+      } ]
+    }, {
+      "id": "DG1.DG1--3",
+      "path": "DG1.DG1--3",
+      "short": "Diagnosis Code - DG1",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "DG1.DG1--4",
+      "path": "DG1.DG1--4",
+      "short": "Diagnosis Description",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "DG1.DG1--5",
+      "path": "DG1.DG1--5",
+      "short": "Diagnosis Date/Time",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/TS"
+      } ]
+    }, {
+      "id": "DG1.DG1--6",
+      "path": "DG1.DG1--6",
+      "short": "Diagnosis Type",
+      "min": 1,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "DG1.DG1--7",
+      "path": "DG1.DG1--7",
+      "short": "Major Diagnostic Category",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "DG1.DG1--8",
+      "path": "DG1.DG1--8",
+      "short": "Diagnostic Related Group",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "DG1.DG1--9",
+      "path": "DG1.DG1--9",
+      "short": "DRG Approval Indicator",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ID"
+      } ]
+    }, {
+      "id": "DG1.DG1--10",
+      "path": "DG1.DG1--10",
+      "short": "DRG Grouper Review Code",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "DG1.DG1--11",
+      "path": "DG1.DG1--11",
+      "short": "Outlier Type",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "DG1.DG1--12",
+      "path": "DG1.DG1--12",
+      "short": "Outlier Days",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/NM"
+      } ]
+    }, {
+      "id": "DG1.DG1--13",
+      "path": "DG1.DG1--13",
+      "short": "Outlier Cost",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CP"
+      } ]
+    }, {
+      "id": "DG1.DG1--14",
+      "path": "DG1.DG1--14",
+      "short": "Grouper Version And Type",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "DG1.DG1--15",
+      "path": "DG1.DG1--15",
+      "short": "Diagnosis Priority",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ID"
+      } ]
+    }, {
+      "id": "DG1.DG1--16",
+      "path": "DG1.DG1--16",
+      "short": "Diagnosing Clinician",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XCN"
+      } ]
+    }, {
+      "id": "DG1.DG1--17",
+      "path": "DG1.DG1--17",
+      "short": "Diagnosis Classification",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "DG1.DG1--18",
+      "path": "DG1.DG1--18",
+      "short": "Confidential Indicator",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ID"
+      } ]
+    }, {
+      "id": "DG1.DG1--19",
+      "path": "DG1.DG1--19",
+      "short": "Attestation Date/Time",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/TS"
+      } ]
+    }, {
+      "id": "DG1.DG1--20",
+      "path": "DG1.DG1--20",
+      "short": "Diagnosis Identifier",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/EI"
+      } ]
+    }, {
+      "id": "DG1.DG1--21",
+      "path": "DG1.DG1--21",
+      "short": "Diagnosis Action Code",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ID"
+      } ]
+    } ]
+  }
+}

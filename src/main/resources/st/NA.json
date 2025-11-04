@@ -1,0 +1,50 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "NA",
+  "url": "http://hl7.org/hapi-v2-parser/StructureDefinition/NA",
+  "name": "NA",
+  "status": "draft",
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/NA",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [ {
+      "id": "NA",
+      "path": "NA"
+    }, {
+      "id": "NA.NA--1",
+      "path": "NA.NA--1",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/NM"
+      } ]
+    }, {
+      "id": "NA.NA--2",
+      "path": "NA.NA--2",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/NM"
+      } ]
+    }, {
+      "id": "NA.NA--3",
+      "path": "NA.NA--3",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/NM"
+      } ]
+    }, {
+      "id": "NA.NA--4",
+      "path": "NA.NA--4",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/NM"
+      } ]
+    } ]
+  }
+}

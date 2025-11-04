@@ -1,0 +1,297 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "FT1",
+  "url": "http://hl7.org/hapi-v2-parser/StructureDefinition/FT1",
+  "name": "FT1",
+  "status": "draft",
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/FT1",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [ {
+      "id": "FT1",
+      "path": "FT1"
+    }, {
+      "id": "FT1.FT1--1",
+      "path": "FT1.FT1--1",
+      "short": "Set ID - FT1",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/SI"
+      } ]
+    }, {
+      "id": "FT1.FT1--2",
+      "path": "FT1.FT1--2",
+      "short": "Transaction ID",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "FT1.FT1--3",
+      "path": "FT1.FT1--3",
+      "short": "Transaction Batch ID",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "FT1.FT1--4",
+      "path": "FT1.FT1--4",
+      "short": "Transaction Date",
+      "min": 1,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/DR"
+      } ]
+    }, {
+      "id": "FT1.FT1--5",
+      "path": "FT1.FT1--5",
+      "short": "Transaction Posting Date",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/TS"
+      } ]
+    }, {
+      "id": "FT1.FT1--6",
+      "path": "FT1.FT1--6",
+      "short": "Transaction Type",
+      "min": 1,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "FT1.FT1--7",
+      "path": "FT1.FT1--7",
+      "short": "Transaction Code",
+      "min": 1,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "FT1.FT1--8",
+      "path": "FT1.FT1--8",
+      "short": "Transaction Description",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "FT1.FT1--9",
+      "path": "FT1.FT1--9",
+      "short": "Transaction Description - Alt",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "FT1.FT1--10",
+      "path": "FT1.FT1--10",
+      "short": "Transaction Quantity",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/NM"
+      } ]
+    }, {
+      "id": "FT1.FT1--11",
+      "path": "FT1.FT1--11",
+      "short": "Transaction Amount - Extended",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CP"
+      } ]
+    }, {
+      "id": "FT1.FT1--12",
+      "path": "FT1.FT1--12",
+      "short": "Transaction Amount - Unit",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CP"
+      } ]
+    }, {
+      "id": "FT1.FT1--13",
+      "path": "FT1.FT1--13",
+      "short": "Department Code",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "FT1.FT1--14",
+      "path": "FT1.FT1--14",
+      "short": "Insurance Plan ID",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "FT1.FT1--15",
+      "path": "FT1.FT1--15",
+      "short": "Insurance Amount",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CP"
+      } ]
+    }, {
+      "id": "FT1.FT1--16",
+      "path": "FT1.FT1--16",
+      "short": "Assigned Patient Location",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/PL"
+      } ]
+    }, {
+      "id": "FT1.FT1--17",
+      "path": "FT1.FT1--17",
+      "short": "Fee Schedule",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "FT1.FT1--18",
+      "path": "FT1.FT1--18",
+      "short": "Patient Type",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "FT1.FT1--19",
+      "path": "FT1.FT1--19",
+      "short": "Diagnosis Code - FT1",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "FT1.FT1--20",
+      "path": "FT1.FT1--20",
+      "short": "Performed By Code",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XCN"
+      } ]
+    }, {
+      "id": "FT1.FT1--21",
+      "path": "FT1.FT1--21",
+      "short": "Ordered By Code",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XCN"
+      } ]
+    }, {
+      "id": "FT1.FT1--22",
+      "path": "FT1.FT1--22",
+      "short": "Unit Cost",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CP"
+      } ]
+    }, {
+      "id": "FT1.FT1--23",
+      "path": "FT1.FT1--23",
+      "short": "Filler Order Number",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/EI"
+      } ]
+    }, {
+      "id": "FT1.FT1--24",
+      "path": "FT1.FT1--24",
+      "short": "Entered By Code",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XCN"
+      } ]
+    }, {
+      "id": "FT1.FT1--25",
+      "path": "FT1.FT1--25",
+      "short": "Procedure Code",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "FT1.FT1--26",
+      "path": "FT1.FT1--26",
+      "short": "Procedure Code Modifier",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "FT1.FT1--27",
+      "path": "FT1.FT1--27",
+      "short": "Advanced Beneficiary Notice Code",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "FT1.FT1--28",
+      "path": "FT1.FT1--28",
+      "short": "Medically Necessary Duplicate Procedure Reason.",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CWE"
+      } ]
+    }, {
+      "id": "FT1.FT1--29",
+      "path": "FT1.FT1--29",
+      "short": "NDC Code",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CNE"
+      } ]
+    }, {
+      "id": "FT1.FT1--30",
+      "path": "FT1.FT1--30",
+      "short": "Payment Reference ID",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CX"
+      } ]
+    }, {
+      "id": "FT1.FT1--31",
+      "path": "FT1.FT1--31",
+      "short": "Transaction Reference Key",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/SI"
+      } ]
+    } ]
+  }
+}

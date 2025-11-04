@@ -1,0 +1,243 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "IN3",
+  "url": "http://hl7.org/hapi-v2-parser/StructureDefinition/IN3",
+  "name": "IN3",
+  "status": "draft",
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/IN3",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [ {
+      "id": "IN3",
+      "path": "IN3"
+    }, {
+      "id": "IN3.IN3--1",
+      "path": "IN3.IN3--1",
+      "short": "Set ID - IN3",
+      "min": 1,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/SI"
+      } ]
+    }, {
+      "id": "IN3.IN3--2",
+      "path": "IN3.IN3--2",
+      "short": "Certification Number",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CX"
+      } ]
+    }, {
+      "id": "IN3.IN3--3",
+      "path": "IN3.IN3--3",
+      "short": "Certified By",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XCN"
+      } ]
+    }, {
+      "id": "IN3.IN3--4",
+      "path": "IN3.IN3--4",
+      "short": "Certification Required",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ID"
+      } ]
+    }, {
+      "id": "IN3.IN3--5",
+      "path": "IN3.IN3--5",
+      "short": "Penalty",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/MOP"
+      } ]
+    }, {
+      "id": "IN3.IN3--6",
+      "path": "IN3.IN3--6",
+      "short": "Certification Date/Time",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/TS"
+      } ]
+    }, {
+      "id": "IN3.IN3--7",
+      "path": "IN3.IN3--7",
+      "short": "Certification Modify Date/Time",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/TS"
+      } ]
+    }, {
+      "id": "IN3.IN3--8",
+      "path": "IN3.IN3--8",
+      "short": "Operator",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XCN"
+      } ]
+    }, {
+      "id": "IN3.IN3--9",
+      "path": "IN3.IN3--9",
+      "short": "Certification Begin Date",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/DT"
+      } ]
+    }, {
+      "id": "IN3.IN3--10",
+      "path": "IN3.IN3--10",
+      "short": "Certification End Date",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/DT"
+      } ]
+    }, {
+      "id": "IN3.IN3--11",
+      "path": "IN3.IN3--11",
+      "short": "Days",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/DTN"
+      } ]
+    }, {
+      "id": "IN3.IN3--12",
+      "path": "IN3.IN3--12",
+      "short": "Non-Concur Code/Description",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "IN3.IN3--13",
+      "path": "IN3.IN3--13",
+      "short": "Non-Concur Effective Date/Time",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/TS"
+      } ]
+    }, {
+      "id": "IN3.IN3--14",
+      "path": "IN3.IN3--14",
+      "short": "Physician Reviewer",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XCN"
+      } ]
+    }, {
+      "id": "IN3.IN3--15",
+      "path": "IN3.IN3--15",
+      "short": "Certification Contact",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "IN3.IN3--16",
+      "path": "IN3.IN3--16",
+      "short": "Certification Contact Phone Number",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XTN"
+      } ]
+    }, {
+      "id": "IN3.IN3--17",
+      "path": "IN3.IN3--17",
+      "short": "Appeal Reason",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "IN3.IN3--18",
+      "path": "IN3.IN3--18",
+      "short": "Certification Agency",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "IN3.IN3--19",
+      "path": "IN3.IN3--19",
+      "short": "Certification Agency Phone Number",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XTN"
+      } ]
+    }, {
+      "id": "IN3.IN3--20",
+      "path": "IN3.IN3--20",
+      "short": "Pre-Certification Requirement",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ICD"
+      } ]
+    }, {
+      "id": "IN3.IN3--21",
+      "path": "IN3.IN3--21",
+      "short": "Case Manager",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "IN3.IN3--22",
+      "path": "IN3.IN3--22",
+      "short": "Second Opinion Date",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/DT"
+      } ]
+    }, {
+      "id": "IN3.IN3--23",
+      "path": "IN3.IN3--23",
+      "short": "Second Opinion Status",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "IN3.IN3--24",
+      "path": "IN3.IN3--24",
+      "short": "Second Opinion Documentation Received",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "IN3.IN3--25",
+      "path": "IN3.IN3--25",
+      "short": "Second Opinion Physician",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XCN"
+      } ]
+    } ]
+  }
+}

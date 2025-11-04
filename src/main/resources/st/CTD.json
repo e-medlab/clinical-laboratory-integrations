@@ -1,0 +1,81 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "CTD",
+  "url": "http://hl7.org/hapi-v2-parser/StructureDefinition/CTD",
+  "name": "CTD",
+  "status": "draft",
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/CTD",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [ {
+      "id": "CTD",
+      "path": "CTD"
+    }, {
+      "id": "CTD.CTD--1",
+      "path": "CTD.CTD--1",
+      "short": "Contact Role",
+      "min": 1,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "CTD.CTD--2",
+      "path": "CTD.CTD--2",
+      "short": "Contact Name",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XPN"
+      } ]
+    }, {
+      "id": "CTD.CTD--3",
+      "path": "CTD.CTD--3",
+      "short": "Contact Address",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XAD"
+      } ]
+    }, {
+      "id": "CTD.CTD--4",
+      "path": "CTD.CTD--4",
+      "short": "Contact Location",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/PL"
+      } ]
+    }, {
+      "id": "CTD.CTD--5",
+      "path": "CTD.CTD--5",
+      "short": "Contact Communication Information",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XTN"
+      } ]
+    }, {
+      "id": "CTD.CTD--6",
+      "path": "CTD.CTD--6",
+      "short": "Preferred Method of Contact",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "CTD.CTD--7",
+      "path": "CTD.CTD--7",
+      "short": "Contact Identifiers",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/PLN"
+      } ]
+    } ]
+  }
+}

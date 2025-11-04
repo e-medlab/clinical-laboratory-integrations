@@ -25,14 +25,19 @@ class Example {
     private static final String FILE_PATH = "src/main/resources/";
 
     public static void main(String args[]) throws Exception {
+        convertMessage("ExampleOruR30Message");
+        convertMessage("ExampleOmlO21Message");
+    }
+
+    private static void convertMessage(String fileName) throws Exception {
         PipeParser pipeParser = new PipeParser();
         TransformableXmlParser xmlParser = new TransformableXmlParser();
 
-        String messageString = Files.readString(Path.of(FILE_PATH + "ExampleOruR30Message.hl7"));
+        String messageString = Files.readString(Path.of(FILE_PATH + fileName + ".hl7"));
 
         Message message = pipeParser.parse(messageString);
         String encodedMessage = xmlParser.parse(message);
 
-        Files.writeString(Path.of(FILE_PATH + "ExampleOruR30MessageXml.xml"), encodedMessage);
+        Files.writeString(Path.of(FILE_PATH + fileName + "Xml.xml"), encodedMessage);
     }
 }

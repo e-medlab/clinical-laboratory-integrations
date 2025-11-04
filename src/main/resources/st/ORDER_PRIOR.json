@@ -1,0 +1,58 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ORDER_PRIOR",
+  "url": "http://hl7.org/hapi-v2-parser/StructureDefinition/ORDER_PRIOR",
+  "name": "ORDER_PRIOR",
+  "status": "draft",
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/ORDER_PRIOR",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [ {
+      "id": "ORDER_PRIOR",
+      "path": "ORDER_PRIOR"
+    }, {
+      "id": "ORDER_PRIOR.ORC",
+      "path": "ORDER_PRIOR.ORC",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ORC"
+      } ]
+    }, {
+      "id": "ORDER_PRIOR.OBR",
+      "path": "ORDER_PRIOR.OBR",
+      "min": 1,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/OBR"
+      } ]
+    }, {
+      "id": "ORDER_PRIOR.NTE",
+      "path": "ORDER_PRIOR.NTE",
+      "min": 0,
+      "max": "*",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/NTE"
+      } ]
+    }, {
+      "id": "ORDER_PRIOR.TIMING_PRIOR",
+      "path": "ORDER_PRIOR.TIMING_PRIOR",
+      "min": 0,
+      "max": "*",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/TIMING_PRIOR"
+      } ]
+    }, {
+      "id": "ORDER_PRIOR.OBSERVATION_PRIOR",
+      "path": "ORDER_PRIOR.OBSERVATION_PRIOR",
+      "min": 1,
+      "max": "*",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/OBSERVATION_PRIOR"
+      } ]
+    } ]
+  }
+}

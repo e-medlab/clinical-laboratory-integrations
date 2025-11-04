@@ -1,0 +1,42 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "AUI",
+  "url": "http://hl7.org/hapi-v2-parser/StructureDefinition/AUI",
+  "name": "AUI",
+  "status": "draft",
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/AUI",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [ {
+      "id": "AUI",
+      "path": "AUI"
+    }, {
+      "id": "AUI.AUI--1",
+      "path": "AUI.AUI--1",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "AUI.AUI--2",
+      "path": "AUI.AUI--2",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/DT"
+      } ]
+    }, {
+      "id": "AUI.AUI--3",
+      "path": "AUI.AUI--3",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    } ]
+  }
+}

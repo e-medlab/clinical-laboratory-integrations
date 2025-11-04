@@ -1,0 +1,50 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "PTA",
+  "url": "http://hl7.org/hapi-v2-parser/StructureDefinition/PTA",
+  "name": "PTA",
+  "status": "draft",
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/PTA",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [ {
+      "id": "PTA",
+      "path": "PTA"
+    }, {
+      "id": "PTA.PTA--1",
+      "path": "PTA.PTA--1",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "PTA.PTA--2",
+      "path": "PTA.PTA--2",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "PTA.PTA--3",
+      "path": "PTA.PTA--3",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/NM"
+      } ]
+    }, {
+      "id": "PTA.PTA--4",
+      "path": "PTA.PTA--4",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/MOP"
+      } ]
+    } ]
+  }
+}

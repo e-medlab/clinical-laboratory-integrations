@@ -1,0 +1,82 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "PATIENT",
+  "url": "http://hl7.org/hapi-v2-parser/StructureDefinition/PATIENT",
+  "name": "PATIENT",
+  "status": "draft",
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/PATIENT",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [ {
+      "id": "PATIENT",
+      "path": "PATIENT"
+    }, {
+      "id": "PATIENT.PID",
+      "path": "PATIENT.PID",
+      "min": 1,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/PID"
+      } ]
+    }, {
+      "id": "PATIENT.PD1",
+      "path": "PATIENT.PD1",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/PD1"
+      } ]
+    }, {
+      "id": "PATIENT.NTE",
+      "path": "PATIENT.NTE",
+      "min": 0,
+      "max": "*",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/NTE"
+      } ]
+    }, {
+      "id": "PATIENT.NK1",
+      "path": "PATIENT.NK1",
+      "min": 0,
+      "max": "*",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/NK1"
+      } ]
+    }, {
+      "id": "PATIENT.PATIENT_VISIT",
+      "path": "PATIENT.PATIENT_VISIT",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/PATIENT_VISIT"
+      } ]
+    }, {
+      "id": "PATIENT.INSURANCE",
+      "path": "PATIENT.INSURANCE",
+      "min": 0,
+      "max": "*",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/INSURANCE"
+      } ]
+    }, {
+      "id": "PATIENT.GT1",
+      "path": "PATIENT.GT1",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/GT1"
+      } ]
+    }, {
+      "id": "PATIENT.AL1",
+      "path": "PATIENT.AL1",
+      "min": 0,
+      "max": "*",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/AL1"
+      } ]
+    } ]
+  }
+}

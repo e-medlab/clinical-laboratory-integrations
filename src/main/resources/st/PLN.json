@@ -1,0 +1,50 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "PLN",
+  "url": "http://hl7.org/hapi-v2-parser/StructureDefinition/PLN",
+  "name": "PLN",
+  "status": "draft",
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/PLN",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [ {
+      "id": "PLN",
+      "path": "PLN"
+    }, {
+      "id": "PLN.PLN--1",
+      "path": "PLN.PLN--1",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "PLN.PLN--2",
+      "path": "PLN.PLN--2",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "PLN.PLN--3",
+      "path": "PLN.PLN--3",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "PLN.PLN--4",
+      "path": "PLN.PLN--4",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/DT"
+      } ]
+    } ]
+  }
+}

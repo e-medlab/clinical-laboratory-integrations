@@ -1,0 +1,42 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "DDI",
+  "url": "http://hl7.org/hapi-v2-parser/StructureDefinition/DDI",
+  "name": "DDI",
+  "status": "draft",
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/DDI",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [ {
+      "id": "DDI",
+      "path": "DDI"
+    }, {
+      "id": "DDI.DDI--1",
+      "path": "DDI.DDI--1",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/NM"
+      } ]
+    }, {
+      "id": "DDI.DDI--2",
+      "path": "DDI.DDI--2",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/MO"
+      } ]
+    }, {
+      "id": "DDI.DDI--3",
+      "path": "DDI.DDI--3",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/NM"
+      } ]
+    } ]
+  }
+}

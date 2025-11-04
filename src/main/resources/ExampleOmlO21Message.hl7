@@ -1,0 +1,15 @@
+MSH|^~\&|LIS||GeneXpert PC^GeneXpert^6.1||20070521100245||OML^O21^OML_O21|12XASDASF|P|2.5|||AL|NE
+PID|1||PatientID-1234
+ORC|NW|1|||||||20190421100245
+OBR|1|||Test_ID-212|||||||A
+TQ1|||||||||R
+SPM|1|SID-888||ORH|||||||P
+ORC|NW|2|||||||20190421100235
+OBR|2|||Test_ID-214|||||||A
+TQ1|||||||||R
+SPM|2|SID-188||ORH|||||||P
+PID|2||PatientID-5678
+ORC|NW|1|||||||20190421100255
+OBR|1|||Test_ID-213|||||||A
+TQ1|||||||||S
+SPM|1|SID-818||ORH|||||||P

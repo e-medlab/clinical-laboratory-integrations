@@ -1,0 +1,531 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "GT1",
+  "url": "http://hl7.org/hapi-v2-parser/StructureDefinition/GT1",
+  "name": "GT1",
+  "status": "draft",
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/GT1",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [ {
+      "id": "GT1",
+      "path": "GT1"
+    }, {
+      "id": "GT1.GT1--1",
+      "path": "GT1.GT1--1",
+      "short": "Set ID - GT1",
+      "min": 1,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/SI"
+      } ]
+    }, {
+      "id": "GT1.GT1--2",
+      "path": "GT1.GT1--2",
+      "short": "Guarantor Number",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CX"
+      } ]
+    }, {
+      "id": "GT1.GT1--3",
+      "path": "GT1.GT1--3",
+      "short": "Guarantor Name",
+      "min": 1,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XPN"
+      } ]
+    }, {
+      "id": "GT1.GT1--4",
+      "path": "GT1.GT1--4",
+      "short": "Guarantor Spouse Name",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XPN"
+      } ]
+    }, {
+      "id": "GT1.GT1--5",
+      "path": "GT1.GT1--5",
+      "short": "Guarantor Address",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XAD"
+      } ]
+    }, {
+      "id": "GT1.GT1--6",
+      "path": "GT1.GT1--6",
+      "short": "Guarantor Ph Num - Home",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XTN"
+      } ]
+    }, {
+      "id": "GT1.GT1--7",
+      "path": "GT1.GT1--7",
+      "short": "Guarantor Ph Num - Business",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XTN"
+      } ]
+    }, {
+      "id": "GT1.GT1--8",
+      "path": "GT1.GT1--8",
+      "short": "Guarantor Date/Time Of Birth",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/TS"
+      } ]
+    }, {
+      "id": "GT1.GT1--9",
+      "path": "GT1.GT1--9",
+      "short": "Guarantor Administrative Sex",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "GT1.GT1--10",
+      "path": "GT1.GT1--10",
+      "short": "Guarantor Type",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "GT1.GT1--11",
+      "path": "GT1.GT1--11",
+      "short": "Guarantor Relationship",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "GT1.GT1--12",
+      "path": "GT1.GT1--12",
+      "short": "Guarantor SSN",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "GT1.GT1--13",
+      "path": "GT1.GT1--13",
+      "short": "Guarantor Date - Begin",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/DT"
+      } ]
+    }, {
+      "id": "GT1.GT1--14",
+      "path": "GT1.GT1--14",
+      "short": "Guarantor Date - End",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/DT"
+      } ]
+    }, {
+      "id": "GT1.GT1--15",
+      "path": "GT1.GT1--15",
+      "short": "Guarantor Priority",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/NM"
+      } ]
+    }, {
+      "id": "GT1.GT1--16",
+      "path": "GT1.GT1--16",
+      "short": "Guarantor Employer Name",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XPN"
+      } ]
+    }, {
+      "id": "GT1.GT1--17",
+      "path": "GT1.GT1--17",
+      "short": "Guarantor Employer Address",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XAD"
+      } ]
+    }, {
+      "id": "GT1.GT1--18",
+      "path": "GT1.GT1--18",
+      "short": "Guarantor Employer Phone Number",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XTN"
+      } ]
+    }, {
+      "id": "GT1.GT1--19",
+      "path": "GT1.GT1--19",
+      "short": "Guarantor Employee ID Number",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CX"
+      } ]
+    }, {
+      "id": "GT1.GT1--20",
+      "path": "GT1.GT1--20",
+      "short": "Guarantor Employment Status",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "GT1.GT1--21",
+      "path": "GT1.GT1--21",
+      "short": "Guarantor Organization Name",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XON"
+      } ]
+    }, {
+      "id": "GT1.GT1--22",
+      "path": "GT1.GT1--22",
+      "short": "Guarantor Billing Hold Flag",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ID"
+      } ]
+    }, {
+      "id": "GT1.GT1--23",
+      "path": "GT1.GT1--23",
+      "short": "Guarantor Credit Rating Code",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "GT1.GT1--24",
+      "path": "GT1.GT1--24",
+      "short": "Guarantor Death Date And Time",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/TS"
+      } ]
+    }, {
+      "id": "GT1.GT1--25",
+      "path": "GT1.GT1--25",
+      "short": "Guarantor Death Flag",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ID"
+      } ]
+    }, {
+      "id": "GT1.GT1--26",
+      "path": "GT1.GT1--26",
+      "short": "Guarantor Charge Adjustment Code",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "GT1.GT1--27",
+      "path": "GT1.GT1--27",
+      "short": "Guarantor Household Annual Income",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CP"
+      } ]
+    }, {
+      "id": "GT1.GT1--28",
+      "path": "GT1.GT1--28",
+      "short": "Guarantor Household Size",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/NM"
+      } ]
+    }, {
+      "id": "GT1.GT1--29",
+      "path": "GT1.GT1--29",
+      "short": "Guarantor Employer ID Number",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CX"
+      } ]
+    }, {
+      "id": "GT1.GT1--30",
+      "path": "GT1.GT1--30",
+      "short": "Guarantor Marital Status Code",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "GT1.GT1--31",
+      "path": "GT1.GT1--31",
+      "short": "Guarantor Hire Effective Date",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/DT"
+      } ]
+    }, {
+      "id": "GT1.GT1--32",
+      "path": "GT1.GT1--32",
+      "short": "Employment Stop Date",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/DT"
+      } ]
+    }, {
+      "id": "GT1.GT1--33",
+      "path": "GT1.GT1--33",
+      "short": "Living Dependency",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "GT1.GT1--34",
+      "path": "GT1.GT1--34",
+      "short": "Ambulatory Status",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "GT1.GT1--35",
+      "path": "GT1.GT1--35",
+      "short": "Citizenship",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "GT1.GT1--36",
+      "path": "GT1.GT1--36",
+      "short": "Primary Language",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "GT1.GT1--37",
+      "path": "GT1.GT1--37",
+      "short": "Living Arrangement",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "GT1.GT1--38",
+      "path": "GT1.GT1--38",
+      "short": "Publicity Code",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "GT1.GT1--39",
+      "path": "GT1.GT1--39",
+      "short": "Protection Indicator",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ID"
+      } ]
+    }, {
+      "id": "GT1.GT1--40",
+      "path": "GT1.GT1--40",
+      "short": "Student Indicator",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "GT1.GT1--41",
+      "path": "GT1.GT1--41",
+      "short": "Religion",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "GT1.GT1--42",
+      "path": "GT1.GT1--42",
+      "short": "Mother's Maiden Name",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XPN"
+      } ]
+    }, {
+      "id": "GT1.GT1--43",
+      "path": "GT1.GT1--43",
+      "short": "Nationality",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "GT1.GT1--44",
+      "path": "GT1.GT1--44",
+      "short": "Ethnic Group",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "GT1.GT1--45",
+      "path": "GT1.GT1--45",
+      "short": "Contact Person's Name",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XPN"
+      } ]
+    }, {
+      "id": "GT1.GT1--46",
+      "path": "GT1.GT1--46",
+      "short": "Contact Person's Telephone Number",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XTN"
+      } ]
+    }, {
+      "id": "GT1.GT1--47",
+      "path": "GT1.GT1--47",
+      "short": "Contact Reason",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "GT1.GT1--48",
+      "path": "GT1.GT1--48",
+      "short": "Contact Relationship",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "GT1.GT1--49",
+      "path": "GT1.GT1--49",
+      "short": "Job Title",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "GT1.GT1--50",
+      "path": "GT1.GT1--50",
+      "short": "Job Code/Class",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/JCC"
+      } ]
+    }, {
+      "id": "GT1.GT1--51",
+      "path": "GT1.GT1--51",
+      "short": "Guarantor Employer's Organization Name",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XON"
+      } ]
+    }, {
+      "id": "GT1.GT1--52",
+      "path": "GT1.GT1--52",
+      "short": "Handicap",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "GT1.GT1--53",
+      "path": "GT1.GT1--53",
+      "short": "Job Status",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "GT1.GT1--54",
+      "path": "GT1.GT1--54",
+      "short": "Guarantor Financial Class",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/FC"
+      } ]
+    }, {
+      "id": "GT1.GT1--55",
+      "path": "GT1.GT1--55",
+      "short": "Guarantor Race",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    }, {
+      "id": "GT1.GT1--56",
+      "path": "GT1.GT1--56",
+      "short": "Guarantor Birth Place",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "GT1.GT1--57",
+      "path": "GT1.GT1--57",
+      "short": "VIP Indicator",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    } ]
+  }
+}

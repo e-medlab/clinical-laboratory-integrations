@@ -1,0 +1,42 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "MOP",
+  "url": "http://hl7.org/hapi-v2-parser/StructureDefinition/MOP",
+  "name": "MOP",
+  "status": "draft",
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/MOP",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [ {
+      "id": "MOP",
+      "path": "MOP"
+    }, {
+      "id": "MOP.MOP--1",
+      "path": "MOP.MOP--1",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ID"
+      } ]
+    }, {
+      "id": "MOP.MOP--2",
+      "path": "MOP.MOP--2",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/NM"
+      } ]
+    }, {
+      "id": "MOP.MOP--3",
+      "path": "MOP.MOP--3",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ID"
+      } ]
+    } ]
+  }
+}
