@@ -25,7 +25,7 @@ class Example {
     private static final String FILE_PATH = "src/main/resources/";
 
     public static void main(String args[]) throws Exception {
-        convertMessage("ExampleOruR30Message");
+        //convertMessage("ExampleOruR30Message");
         convertMessage("ExampleOmlO21Message");
     }
 

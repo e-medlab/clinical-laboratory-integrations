@@ -9,6 +9,7 @@ import ca.uhn.hl7v2.model.*;
 import ca.uhn.hl7v2.model.primitive.*;
 import ca.uhn.hl7v2.model.v25.message.OML_O21;
 import ca.uhn.hl7v2.model.v25.message.ORU_R30;
+import ca.uhn.hl7v2.parser.PipeParser;
 import org.hl7.fhir.r5.model.ElementDefinition;
 import org.hl7.fhir.r5.model.Enumerations;
 import org.hl7.fhir.r5.model.StructureDefinition;
@@ -28,11 +29,13 @@ public class V2MessageClassToFhirStructureDefinitionConverter {
     private static ArrayList<StructureDefinition> structureDefinitions = new ArrayList();
 
     public static void main(String args[]) throws Exception {
-        ORU_R30 oruR30 = new ORU_R30(v2Context.getModelClassFactory());
-        generateStructureDefinitions(oruR30);
+        //ORU_R30 oruR30 = new ORU_R30(v2Context.getModelClassFactory());
+        //generateStructureDefinitions(oruR30);
 
-        OML_O21 omlO21 = new OML_O21(v2Context.getModelClassFactory());
-        generateStructureDefinitions(omlO21);
+        PipeParser pipeParser = new PipeParser();
+        String messageString = Files.readString(Path.of("src/main/resources/ExampleOmlO21Message.hl7"));
+        OML_O21 message = (OML_O21) pipeParser.parse(messageString);
+        generateStructureDefinitions(message);
     }
 
     private static void generateStructureDefinitions(Message message) throws Exception {

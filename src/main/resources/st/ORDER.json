@@ -46,6 +46,22 @@
         "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/FT1"
       } ]
     }, {
+      "id": "ORDER.TQ1",
+      "path": "ORDER.TQ1",
+      "min": 0,
+      "max": "*",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/TQ1"
+      } ]
+    }, {
+      "id": "ORDER.SPM",
+      "path": "ORDER.SPM",
+      "min": 0,
+      "max": "*",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/SPM"
+      } ]
+    }, {
       "id": "ORDER.CTI",
       "path": "ORDER.CTI",
       "min": 0,

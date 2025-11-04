@@ -9,20 +9,11 @@
             <code>P</code>
           </tag>
         </meta>
-        <device>
-          <identifier>
-            <value>GeneXpert PC</value>
-          </identifier>
-          <identifier>
-            <value>GeneXpert</value>
-            <type>
-                <coding>
-                    <system>http://terminology.hl7.org/CodeSystem/v2-0301</system>
-                    <code>6.1</code>
-                </coding>
-            </type>
-          </identifier>
-        </device>
+        <destination>
+          <receiver>
+            <reference>GeneXpert PC</reference>
+          </receiver>
+        </destination>
         <source>
           <name>LIS</name>
         </source>
