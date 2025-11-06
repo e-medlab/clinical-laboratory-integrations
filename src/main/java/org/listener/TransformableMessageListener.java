@@ -7,7 +7,7 @@ import ca.uhn.hl7v2.app.*;
 import ca.uhn.hl7v2.model.Message;
 import ca.uhn.hl7v2.protocol.ReceivingApplication;
 import org.converter.TransformableXmlParser;
-import org.transformer.Hl7ToFhirTransformer;
+import org.transformer.TermXTransformer;
 
 import java.io.IOException;
 import java.util.Map;
@@ -49,7 +49,7 @@ public class TransformableMessageListener {
 class TransformableMessageParserApplication implements ReceivingApplication {
 
     private static HapiContext context = new DefaultHapiContext();
-    private static Hl7ToFhirTransformer transformer = new Hl7ToFhirTransformer();
+    private static TermXTransformer transformer = new TermXTransformer();
 
     @Override
     public Message processMessage(Message message, Map map) throws HL7Exception {
@@ -64,7 +64,7 @@ class TransformableMessageParserApplication implements ReceivingApplication {
             System.out.println("------------------------------");
 
             // For now, as an example, let's take the parsed component, call a transformation on it
-            String transformedXml = transformer.transform(xml);
+            String transformedXml = transformer.fromOruR30ToFhirBundle(xml);
             System.out.println("---- Transformed HL7 Message as FHIR ----");
             System.out.println(transformedXml);
             System.out.println("------------------------------");

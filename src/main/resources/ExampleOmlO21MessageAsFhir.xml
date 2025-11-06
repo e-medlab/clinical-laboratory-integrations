@@ -1,179 +1,180 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Bundle xmlns="http://hl7.org/fhir">
-  <entry>
-    <resource>
-      <MessageHeader>
-        <meta>
-          <tag>
-            <system>P</system>
-            <code>P</code>
-          </tag>
-        </meta>
-        <destination>
-          <receiver>
-            <reference>GeneXpert PC</reference>
-          </receiver>
-        </destination>
-        <source>
-          <name>LIS</name>
-        </source>
-      </MessageHeader>
-    </resource>
-  </entry>
-  <entry>
-    <resource>
-      <Patient>
-        <identifier>
-          <value>PatientID-1234</value>
-        </identifier>
-      </Patient>
-    </resource>
-  </entry>
-  <entry>
-    <resource>
-      <ServiceRequest>
-        <status>active</status>
-        <identifier>
-          <value>1</value>
-          <type>
-            <coding>
-                <system>http://terminology.hl7.org/CodeSystem/v2-0203</system>
-                <code>PLAC</code>
-            </coding>
-          </type>
-        </identifier>
-        <authoredOn>2019-04-21T10:02:45</authoredOn>
-        <code>
-          <coding>
-            <system>http://example.org/fhir/CodeSystem/test-codes</system>
-            <code>Test_ID-212</code>
-          </coding>
-        </code>
-        <intent>#add-on#</intent>
-        <priority>Routine</priority>
-        <specimen>
-          <reference>Specimen/SID-888</reference>
-        </specimen>
-      </ServiceRequest>
-    </resource>
-  </entry>
-  <entry>
-    <resource>
-      <Specimen>
-        <identifier>
-          <value>SID-888</value>
-          <type>
-            <coding>
-                <system>http://terminology.hl7.org/CodeSystem/v2-0203</system>
-                <code>PGN</code>
-            </coding>
-          </type>
-        </identifier>
-        <type>
-            <coding>
-                <system>http://terminology.hl7.org/CodeSystem/v2-0487</system>
-                <code>Other</code>
-            </coding>
-        </type>
-      </Specimen>
-    </resource>
-  </entry>
-  <entry>
-    <resource>
-      <ServiceRequest>
-        <status>active</status>
-        <identifier>
-          <value>2</value>
-          <type>
-            <coding>
-                <system>http://terminology.hl7.org/CodeSystem/v2-0203</system>
-                <code>PLAC</code>
-            </coding>
-          </type>
-        </identifier>
-        <authoredOn>2019-04-21T10:02:35</authoredOn>
-        <code>
-          <coding>
-            <system>http://example.org/fhir/CodeSystem/test-codes</system>
-            <code>Test_ID-214</code>
-          </coding>
-        </code>
-        <intent>#add-on#</intent>
-        <priority>Routine</priority>
-        <specimen>
-          <reference>Specimen/SID-188</reference>
-        </specimen>
-      </ServiceRequest>
-    </resource>
-  </entry>
-  <entry>
-    <resource>
-      <Specimen>
-        <identifier>
-          <value>SID-188</value>
-          <type>
-            <coding>
-                <system>http://terminology.hl7.org/CodeSystem/v2-0203</system>
-                <code>PGN</code>
-            </coding>
-          </type>
-        </identifier>
-        <type>
-            <coding>
-                <system>http://terminology.hl7.org/CodeSystem/v2-0487</system>
-                <code>Other</code>
-            </coding>
-        </type>
-      </Specimen>
-    </resource>
-  </entry>
-  <entry>
-    <resource>
-      <ServiceRequest>
-        <status>active</status>
-        <identifier>
-          <value>1</value>
-          <type>
-            <coding>
-                <system>http://terminology.hl7.org/CodeSystem/v2-0203</system>
-                <code>PLAC</code>
-            </coding>
-          </type>
-        </identifier>
-        <authoredOn>2019-04-21T10:02:55</authoredOn>
-        <code>
-          <coding>
-            <system>http://example.org/fhir/CodeSystem/test-codes</system>
-            <code>Test_ID-213</code>
-          </coding>
-        </code>
-        <intent>#add-on#</intent>
-        <priority>Stat</priority>
-        <specimen>
-          <reference>Specimen/SID-818</reference>
-        </specimen>
-      </ServiceRequest>
-    </resource>
-  </entry>
-  <entry>
-    <resource>
-      <Specimen>
-        <identifier>
-          <value>SID-818</value>
-          <type>
-            <coding>
-                <system>http://terminology.hl7.org/CodeSystem/v2-0203</system>
-                <code>PGN</code>
-            </coding>
-          </type>
-        </identifier>
-        <type>
-            <coding>
-                <system>http://terminology.hl7.org/CodeSystem/v2-0487</system>
-                <code>Other</code>
-            </coding>
-        </type>
-      </Specimen>
-    </resource>
-  </entry>
+    <entry>
+        <resource>
+            <MessageHeader>
+                <id value="12XASDASF"></id>
+                <meta>
+                    <tag>
+                        <system value="P"></system>
+                        <code value="P"></code>
+                    </tag>
+                </meta>
+                <destination>
+                    <receiver>
+                        <reference value="GeneXpert PC"></reference>
+                    </receiver>
+                </destination>
+                <source>
+                    <name value="LIS"></name>
+                </source>
+            </MessageHeader>
+        </resource>
+    </entry>
+    <entry>
+        <resource>
+            <Patient>
+                <identifier>
+                    <value value="PatientID-1234"></value>
+                </identifier>
+            </Patient>
+        </resource>
+    </entry>
+    <entry>
+        <resource>
+            <ServiceRequest>
+                <status value="active"></status>
+                <identifier>
+                    <value value="1"></value>
+                    <type>
+                        <coding>
+                            <system value="http://terminology.hl7.org/CodeSystem/v2-0203"></system>
+                            <code value="PLAC"></code>
+                        </coding>
+                    </type>
+                </identifier>
+                <authoredOn value="2019-04-21T10:02:45"></authoredOn>
+                <code>
+                    <coding>
+                        <system value="http://example.org/fhir/CodeSystem/test-codes"></system>
+                        <code value="Test_ID-212"></code>
+                    </coding>
+                </code>
+                <intent value="#add-on#"></intent>
+                <priority value="Routine"></priority>
+                <specimen>
+                    <reference value="Specimen/SID-888"></reference>
+                </specimen>
+            </ServiceRequest>
+        </resource>
+    </entry>
+    <entry>
+        <resource>
+            <Specimen>
+                <identifier>
+                    <value value="SID-888"></value>
+                    <type>
+                        <coding>
+                            <system value="http://terminology.hl7.org/CodeSystem/v2-0203"></system>
+                            <code value="PGN"></code>
+                        </coding>
+                    </type>
+                </identifier>
+                <type>
+                    <coding>
+                        <system value="http://terminology.hl7.org/CodeSystem/v2-0487"></system>
+                        <code value="Other"></code>
+                    </coding>
+                </type>
+            </Specimen>
+        </resource>
+    </entry>
+    <entry>
+        <resource>
+            <ServiceRequest>
+                <status value="active"></status>
+                <identifier>
+                    <value value="2"></value>
+                    <type>
+                        <coding>
+                            <system value="http://terminology.hl7.org/CodeSystem/v2-0203"></system>
+                            <code value="PLAC"></code>
+                        </coding>
+                    </type>
+                </identifier>
+                <authoredOn value="2019-04-21T10:02:35"></authoredOn>
+                <code>
+                    <coding>
+                        <system value="http://example.org/fhir/CodeSystem/test-codes"></system>
+                        <code value="Test_ID-214"></code>
+                    </coding>
+                </code>
+                <intent value="#add-on#"></intent>
+                <priority value="Routine"></priority>
+                <specimen>
+                    <reference value="Specimen/SID-188"></reference>
+                </specimen>
+            </ServiceRequest>
+        </resource>
+    </entry>
+    <entry>
+        <resource>
+            <Specimen>
+                <identifier>
+                    <value value="SID-188"></value>
+                    <type>
+                        <coding>
+                            <system value="http://terminology.hl7.org/CodeSystem/v2-0203"></system>
+                            <code value="PGN">PGN</code>
+                        </coding>
+                    </type>
+                </identifier>
+                <type>
+                    <coding>
+                        <system value="http://terminology.hl7.org/CodeSystem/v2-0487"></system>
+                        <code value="Other"></code>
+                    </coding>
+                </type>
+            </Specimen>
+        </resource>
+    </entry>
+    <entry>
+        <resource>
+            <ServiceRequest>
+                <status value="active"></status>
+                <identifier>
+                    <value value="1"></value>
+                    <type>
+                        <coding>
+                            <system value="http://terminology.hl7.org/CodeSystem/v2-0203"></system>
+                            <code value="PLAC"></code>
+                        </coding>
+                    </type>
+                </identifier>
+                <authoredOn value="2019-04-21T10:02:55"></authoredOn>
+                <code>
+                    <coding>
+                        <system value="http://example.org/fhir/CodeSystem/test-codes"></system>
+                        <code value="Test_ID-213"></code>
+                    </coding>
+                </code>
+                <intent value="#add-on#"></intent>
+                <priority value="Stat"></priority>
+                <specimen>
+                    <reference value="Specimen/SID-818"></reference>
+                </specimen>
+            </ServiceRequest>
+        </resource>
+    </entry>
+    <entry>
+        <resource>
+            <Specimen>
+                <identifier>
+                    <value value="SID-818"></value>
+                    <type>
+                        <coding>
+                            <system value = "http://terminology.hl7.org/CodeSystem/v2-0203"></system>
+                            <code value="PGN"></code>
+                        </coding>
+                    </type>
+                </identifier>
+                <type>
+                    <coding>
+                        <system value="http://terminology.hl7.org/CodeSystem/v2-0487"></system>
+                        <code value="Other"></code>
+                    </coding>
+                </type>
+            </Specimen>
+        </resource>
+    </entry>
 </Bundle>
