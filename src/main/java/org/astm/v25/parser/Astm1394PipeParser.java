@@ -97,12 +97,14 @@ public class Astm1394PipeParser extends PipeParser {
 
                     if ("H".equals(name)) {
                         parseAstmSegment(dest, seg, encodingCharacters, repNum);
-                    }
-                    else {
+                    } else {
                         parse(dest, seg, encodingCharacters, repNum);
                     }
-                } else {
-                    log.warn("Structure '{}' is a group, not a segment; ignoring in ASTM parser", name);
+                } else if (struct instanceof Group) {
+                    log.warn("Structure '{}' is a group; ASTM parser expects segments here", name);
+                }
+                else {
+                    log.warn("Structure '{}' is a not a group nor a segment; ignoring in ASTM parser", name);
                 }
             } catch (HL7Exception e) {
                 // Segment name not defined in model: ignore
