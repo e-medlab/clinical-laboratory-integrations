@@ -2,11 +2,17 @@ package org.astm.v25.parser;
 
 import ca.uhn.hl7v2.HL7Exception;
 import ca.uhn.hl7v2.HapiContext;
+import ca.uhn.hl7v2.Version;
 import ca.uhn.hl7v2.model.*;
 import ca.uhn.hl7v2.parser.*;
+import ca.uhn.hl7v2.util.ReflectionUtil;
 import ca.uhn.hl7v2.util.Terser;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.util.*;
 
 public class Astm1394PipeParser extends PipeParser {
 
@@ -52,14 +58,22 @@ public class Astm1394PipeParser extends PipeParser {
         return m;
     }
 
-    private void parseAstm(Message message, String messageString, EncodingCharacters encodingCharacters) throws HL7Exception {
+    private void parseAstm(Message message,
+                           String messageString,
+                           EncodingCharacters encodingCharacters) throws HL7Exception {
+
         message.setParser(this);
 
         String[] segments = split(messageString, "\r");
-
         if (segments.length == 0) {
             throw new HL7Exception("Invalid message content: \"" + messageString + "\"");
         }
+
+        // Build structure definition & iterator over the model
+        IStructureDefinition structureDef = getStructureDefinitionReflective(message);
+
+        // ASTM uses H as the header / first segment
+        MessageIterator iter = new MessageIterator(message, structureDef, "H", true);
 
         String prevName = null;
         int repNum = 1;
@@ -91,25 +105,59 @@ public class Astm1394PipeParser extends PipeParser {
             }
 
             try {
-                Structure struct = message.get(name);
-                if (struct instanceof Segment) {
-                    Segment dest = (Segment) struct;
+                // tell iterator which segment we’re trying to place
+                iter.setDirection(name);
 
-                    if ("H".equals(name)) {
-                        parseAstmSegment(dest, seg, encodingCharacters, repNum);
-                    } else {
-                        parse(dest, seg, encodingCharacters, repNum);
-                    }
-                } else if (struct instanceof Group) {
-                    log.warn("Structure '{}' is a group; ASTM parser expects segments here", name);
+                if (!iter.hasNext()) {
+                    log.warn("No destination structure found for segment '{}' (rep {}); line ignored: {}",
+                            name, repNum, seg);
+                    continue;
                 }
-                else {
-                    log.warn("Structure '{}' is a not a group nor a segment; ignoring in ASTM parser", name);
+
+                Structure next = iter.next();
+                if (!(next instanceof Segment)) {
+                    log.warn("Destination for segment '{}' is not a Segment ({}); line ignored: {}",
+                            name, next.getClass().getSimpleName(), seg);
+                    continue;
                 }
+
+                Segment dest = (Segment) next;
+
+                if ("H".equals(name)) {
+                    // our custom handling for the header (field sep + delimiter definition)
+                    parseAstmSegment(dest, seg, encodingCharacters, repNum);
+                } else {
+                    // normal segment parsing using HAPI's logic
+                    parse(dest, seg, encodingCharacters, repNum);
+                }
+
+            } catch (Error e) {
+                // Mirror PipeParser behaviour: unwrap HL7Exception if wrapped in an Error
+                if (e.getCause() instanceof HL7Exception) {
+                    throw (HL7Exception) e.getCause();
+                }
+                throw e;
             } catch (HL7Exception e) {
-                // Segment name not defined in model: ignore
-                log.warn("ASTM_MSG has no segment '{}'; line ignored: {}", name, seg);
+                e.setSegmentName(name);
+                e.setSegmentRepetition(repNum);
+                throw e;
             }
+        }
+    }
+
+    private IStructureDefinition getStructureDefinitionReflective(Message message) throws HL7Exception {
+        try {
+            Method m = PipeParser.class.getDeclaredMethod("getStructureDefinition", Message.class);
+            m.setAccessible(true); // bypass private access
+            return (IStructureDefinition) m.invoke(this, message);
+        } catch (InvocationTargetException e) {
+            Throwable cause = e.getCause();
+            if (cause instanceof HL7Exception) {
+                throw (HL7Exception) cause;
+            }
+            throw new HL7Exception("Unable to obtain structure definition (target error): " + cause, cause);
+        } catch (Exception e) {
+            throw new HL7Exception("Unable to obtain structure definition via reflection", e);
         }
     }
 
@@ -226,5 +274,4 @@ public class Astm1394PipeParser extends PipeParser {
 
         return result.toString();
     }
-
 }

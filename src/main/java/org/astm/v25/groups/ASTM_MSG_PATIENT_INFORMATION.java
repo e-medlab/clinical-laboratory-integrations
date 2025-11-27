@@ -8,7 +8,7 @@ import org.astm.v25.segments.P;
 
 public class ASTM_MSG_PATIENT_INFORMATION extends AbstractGroup {
 
-    protected ASTM_MSG_PATIENT_INFORMATION(Group parent, ModelClassFactory factory) {
+    public ASTM_MSG_PATIENT_INFORMATION(Group parent, ModelClassFactory factory) {
         super(parent, factory);
         this.init(factory);
     }
@@ -17,7 +17,7 @@ public class ASTM_MSG_PATIENT_INFORMATION extends AbstractGroup {
         try {
             this.add(P.class, true, false, true);
         } catch (HL7Exception e) {
-            log.error("Unexpected error creating ADR_A19_INSURANCE - this is probably a bug in the source code generator.", e);
+            log.error("Unexpected error creating ASTM_MSG_PATIENT_INFORMATION.", e);
         }
 
     }
