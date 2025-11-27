@@ -2,9 +2,7 @@ package org.astm.v25.parser;
 
 import ca.uhn.hl7v2.HL7Exception;
 import ca.uhn.hl7v2.HapiContext;
-import ca.uhn.hl7v2.model.Message;
-import ca.uhn.hl7v2.model.Segment;
-import ca.uhn.hl7v2.model.Structure;
+import ca.uhn.hl7v2.model.*;
 import ca.uhn.hl7v2.parser.*;
 import ca.uhn.hl7v2.util.Terser;
 import org.slf4j.Logger;
@@ -155,4 +153,76 @@ public class Astm1394PipeParser extends PipeParser {
             }
         }
     }
+
+    @Override
+    protected String doEncode(Message source) throws HL7Exception {
+        Segment h = (Segment) source.get("H");
+        String fieldSepString = Terser.get(h, 1, 0, 1, 1);
+
+        if (fieldSepString == null)
+            throw new HL7Exception("Can't encode message: H-1 (field separator) is missing");
+
+        char fieldSep = '|';
+        if (!fieldSepString.isEmpty()) fieldSep = fieldSepString.charAt(0);
+
+        String encCharString = Terser.get(h, 2, 0, 1, 1);
+        EncodingCharacters en = new EncodingCharacters(fieldSep, encCharString + '~');
+
+        StringBuilder out = new StringBuilder();
+
+        for (String name : source.getNames()) {
+            if ("H".equals(name)) {
+                out.append(encodeH(h, en)).append('\r');
+                continue;
+            }
+            Structure[] reps = source.getAll(name);
+            for (Structure s : reps) {
+                if (s instanceof Segment) {
+                    out.append(encode((Segment) s, en)).append('\r');
+                } else if (s instanceof Group) {
+                    out.append(encode((Group) s, en)).append('\r');
+                }
+            }
+        }
+
+        return out.toString();
+    }
+
+    private String encodeH(Segment h, EncodingCharacters enc) throws HL7Exception {
+        StringBuilder result = new StringBuilder();
+        char fs = enc.getFieldSeparator();
+
+        // Segment name + field separator
+        result.append("H").append(fs);
+
+        // H-2: delimiter definition, written RAW
+        Type[] h2Reps = h.getField(2);
+        if (h2Reps.length > 0) {
+            Primitive p = Terser.getPrimitive(h2Reps[0], 1, 1);
+            String delimDef = p.getValue();
+            if (delimDef != null) {
+                result.append(delimDef);
+            }
+        }
+
+        // Field separator after H-2
+        result.append(fs);
+
+        // H-3..N – encode normally
+        int numFields = h.numFields();
+        for (int i = 3; i <= numFields; i++) {
+            Type[] reps = h.getField(i);
+            for (int r = 0; r < reps.length; r++) {
+                String fieldText = PipeParser.encode(reps[r], enc);
+                result.append(fieldText);
+                if (r < reps.length - 1) {
+                    result.append(enc.getRepetitionSeparator());
+                }
+            }
+            result.append(fs);
+        }
+
+        return result.toString();
+    }
+
 }
