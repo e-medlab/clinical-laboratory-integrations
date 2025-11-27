@@ -6,6 +6,8 @@ import ca.uhn.hl7v2.model.Primitive;
 import ca.uhn.hl7v2.model.Segment;
 import ca.uhn.hl7v2.parser.ModelClassFactory;
 import org.astm.v25.segments.H;
+import org.astm.v25.segments.L;
+import org.astm.v25.segments.Q;
 
 public class ASTM_MSG extends AbstractMessage {
 
@@ -17,6 +19,9 @@ public class ASTM_MSG extends AbstractMessage {
     private void init(ModelClassFactory factory) {
         try {
             this.add(H.class, true, false);
+            // patient group would go here
+            this.add(Q.class, false, false);
+            this.add(L.class, true, false);
         } catch (HL7Exception e) {
             log.error("Unexpected error creating ASTM_MSG.", e);
         }
