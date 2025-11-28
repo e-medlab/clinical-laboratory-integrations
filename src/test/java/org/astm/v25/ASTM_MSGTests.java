@@ -45,6 +45,13 @@ public class ASTM_MSGTests {
         testAstmMsgXmlParsing(message);
     }
 
+    @Test
+    void ingestAstmPatientOrderResultsToLis() throws Exception {
+        Path path = Path.of(RESOURCES_PATH + "ExampleAstmPatientOrderResultsToLis.txt");
+        Message message = testAstmMsgParsing(path);
+        testAstmMsgXmlParsing(message);
+    }
+
     private Message testAstmMsgParsing(Path messageFilePath) throws IOException, HL7Exception {
         Parser parser = new Astm1394PipeParser(context);
 
