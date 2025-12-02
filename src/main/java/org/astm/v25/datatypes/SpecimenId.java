@@ -5,27 +5,19 @@ import ca.uhn.hl7v2.model.DataTypeException;
 import ca.uhn.hl7v2.model.Message;
 import ca.uhn.hl7v2.model.Type;
 
-/*
- * Universal Test ID
- * 5.6.1 in the LIS2-A2 specification
- */
-public class UniversalTestId extends AbstractComposite {
+public class SpecimenId extends AbstractComposite {
     private Type[] data;
 
-    public UniversalTestId(Message message) {
+    public SpecimenId(Message message) {
         super(message);
         this.init();
     }
 
     private void init() {
-        this.data = new Type[7];
-        this.data[0] = new ST(this.getMessage()); // Universal test identifier (LOINC code), reserved for future use by spec
-        this.data[1] = new ST(this.getMessage()); // Test or battery name
-        this.data[2] = new ST(this.getMessage()); // Coding scheme
-        this.data[3] = new ST(this.getMessage()); // Code(s) defined by the manufacturer
-        this.data[4] = new ST(this.getMessage()); // Code(s) defined by the manufacturer
-        this.data[5] = new ST(this.getMessage()); // Code(s) defined by the manufacturer
-        this.data[6] = new ST(this.getMessage()); // Code(s) defined by the manufacturer
+        this.data = new Type[3];
+        this.data[0] = new ST(this.getMessage()); // Specimen ID
+        this.data[1] = new ST(this.getMessage()); // Specimen ID component 1
+        this.data[2] = new ST(this.getMessage()); // Specimen ID component 2
         // possibly more components, depending on the implementation of the equipment vendor
     }
 
