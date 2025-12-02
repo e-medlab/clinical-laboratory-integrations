@@ -1,0 +1,42 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "RangeIdNumber",
+  "url": "http://hl7.org/hapi-v2-parser/StructureDefinition/RangeIdNumber",
+  "name": "RangeIdNumber",
+  "status": "draft",
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/RangeIdNumber",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [ {
+      "id": "RangeIdNumber",
+      "path": "RangeIdNumber"
+    }, {
+      "id": "RangeIdNumber.RangeIdNumber--1",
+      "path": "RangeIdNumber.RangeIdNumber--1",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "RangeIdNumber.RangeIdNumber--2",
+      "path": "RangeIdNumber.RangeIdNumber--2",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "RangeIdNumber.RangeIdNumber--3",
+      "path": "RangeIdNumber.RangeIdNumber--3",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    } ]
+  }
+}

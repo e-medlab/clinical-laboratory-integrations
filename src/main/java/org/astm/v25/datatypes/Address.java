@@ -22,8 +22,8 @@ public class Address extends AbstractComposite {
         this.data[0] = new ST(this.getMessage()); // Street address
         this.data[1] = new ST(this.getMessage()); // City
         this.data[2] = new ST(this.getMessage()); // State
-        this.data[2] = new ST(this.getMessage()); // Zip or postal code
-        this.data[2] = new ST(this.getMessage()); // Country code
+        this.data[3] = new ST(this.getMessage()); // Zip or postal code
+        this.data[4] = new ST(this.getMessage()); // Country code
     }
 
     @Override

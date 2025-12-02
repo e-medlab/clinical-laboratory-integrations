@@ -1,0 +1,135 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "R",
+  "url": "http://hl7.org/hapi-v2-parser/StructureDefinition/R",
+  "name": "R",
+  "status": "draft",
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/R",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [ {
+      "id": "R",
+      "path": "R"
+    }, {
+      "id": "R.R--1",
+      "path": "R.R--1",
+      "short": "Sequence Number",
+      "min": 1,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "R.R--2",
+      "path": "R.R--2",
+      "short": "Universal Test ID",
+      "min": 1,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/UniversalTestId"
+      } ]
+    }, {
+      "id": "R.R--3",
+      "path": "R.R--3",
+      "short": "Measurement Value",
+      "min": 1,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/MeasurementValue"
+      } ]
+    }, {
+      "id": "R.R--4",
+      "path": "R.R--4",
+      "short": "Units",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "R.R--5",
+      "path": "R.R--5",
+      "short": "Reference Range",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ReferenceRange"
+      } ]
+    }, {
+      "id": "R.R--6",
+      "path": "R.R--6",
+      "short": "Abnormal Flags",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "R.R--7",
+      "path": "R.R--7",
+      "short": "Nature of Abnormality Testing",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "R.R--8",
+      "path": "R.R--8",
+      "short": "Result Status",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "R.R--9",
+      "path": "R.R--9",
+      "short": "Date of Change in Instrument Normative Values or Units",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/DT"
+      } ]
+    }, {
+      "id": "R.R--10",
+      "path": "R.R--10",
+      "short": "Operator Identification",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "R.R--11",
+      "path": "R.R--11",
+      "short": "Date/Time Test Started",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/DT"
+      } ]
+    }, {
+      "id": "R.R--12",
+      "path": "R.R--12",
+      "short": "Date/Time Test Completed",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/DT"
+      } ]
+    }, {
+      "id": "R.R--13",
+      "path": "R.R--13",
+      "short": "Instrument Identification",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/InstrumentIdentifier"
+      } ]
+    } ]
+  }
+}

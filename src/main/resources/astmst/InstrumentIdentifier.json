@@ -1,0 +1,66 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "InstrumentIdentifier",
+  "url": "http://hl7.org/hapi-v2-parser/StructureDefinition/InstrumentIdentifier",
+  "name": "InstrumentIdentifier",
+  "status": "draft",
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/InstrumentIdentifier",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [ {
+      "id": "InstrumentIdentifier",
+      "path": "InstrumentIdentifier"
+    }, {
+      "id": "InstrumentIdentifier.InstrumentIdentifier--1",
+      "path": "InstrumentIdentifier.InstrumentIdentifier--1",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "InstrumentIdentifier.InstrumentIdentifier--2",
+      "path": "InstrumentIdentifier.InstrumentIdentifier--2",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "InstrumentIdentifier.InstrumentIdentifier--3",
+      "path": "InstrumentIdentifier.InstrumentIdentifier--3",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "InstrumentIdentifier.InstrumentIdentifier--4",
+      "path": "InstrumentIdentifier.InstrumentIdentifier--4",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "InstrumentIdentifier.InstrumentIdentifier--5",
+      "path": "InstrumentIdentifier.InstrumentIdentifier--5",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "InstrumentIdentifier.InstrumentIdentifier--6",
+      "path": "InstrumentIdentifier.InstrumentIdentifier--6",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    } ]
+  }
+}

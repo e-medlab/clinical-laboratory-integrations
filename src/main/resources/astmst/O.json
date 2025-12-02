@@ -1,0 +1,270 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "O",
+  "url": "http://hl7.org/hapi-v2-parser/StructureDefinition/O",
+  "name": "O",
+  "status": "draft",
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/O",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [ {
+      "id": "O",
+      "path": "O"
+    }, {
+      "id": "O.O--1",
+      "path": "O.O--1",
+      "short": "Sequence Number",
+      "min": 1,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "O.O--2",
+      "path": "O.O--2",
+      "short": "Specimen ID",
+      "min": 1,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/SpecimenId"
+      } ]
+    }, {
+      "id": "O.O--3",
+      "path": "O.O--3",
+      "short": "Instrument Specimen ID",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "O.O--4",
+      "path": "O.O--4",
+      "short": "Universal Test ID",
+      "min": 1,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/UniversalTestId"
+      } ]
+    }, {
+      "id": "O.O--5",
+      "path": "O.O--5",
+      "short": "Priority",
+      "min": 1,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "O.O--6",
+      "path": "O.O--6",
+      "short": "Requested/Ordered Date and Time",
+      "min": 1,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/DT"
+      } ]
+    }, {
+      "id": "O.O--7",
+      "path": "O.O--7",
+      "short": "Specimen Collection Date and Time",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/DT"
+      } ]
+    }, {
+      "id": "O.O--8",
+      "path": "O.O--8",
+      "short": "Collection End Time",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/DT"
+      } ]
+    }, {
+      "id": "O.O--9",
+      "path": "O.O--9",
+      "short": "Collection Volume",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/MeasurementObservation"
+      } ]
+    }, {
+      "id": "O.O--10",
+      "path": "O.O--10",
+      "short": "Collector Identifier",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "O.O--11",
+      "path": "O.O--11",
+      "short": "Specimen Action Code",
+      "min": 1,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "O.O--12",
+      "path": "O.O--12",
+      "short": "Danger Code",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "O.O--13",
+      "path": "O.O--13",
+      "short": "Relecant Clinical Information",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "O.O--14",
+      "path": "O.O--14",
+      "short": "Date/Time Specimen Received",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/DT"
+      } ]
+    }, {
+      "id": "O.O--15",
+      "path": "O.O--15",
+      "short": "Specimen Descriptor",
+      "min": 1,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/SpecimenDescriptor"
+      } ]
+    }, {
+      "id": "O.O--16",
+      "path": "O.O--16",
+      "short": "Ordering Physician",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/UserId"
+      } ]
+    }, {
+      "id": "O.O--17",
+      "path": "O.O--17",
+      "short": "Physician's Telephone Number",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "O.O--18",
+      "path": "O.O--18",
+      "short": "User Field Number 1",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "O.O--19",
+      "path": "O.O--19",
+      "short": "User Field Number 2",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "O.O--20",
+      "path": "O.O--20",
+      "short": "Date/Time Results Reported or Last Modified",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/DT"
+      } ]
+    }, {
+      "id": "O.O--21",
+      "path": "O.O--21",
+      "short": "Instrument Charge to Information System",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "O.O--22",
+      "path": "O.O--22",
+      "short": "Instrument Section ID",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "O.O--23",
+      "path": "O.O--23",
+      "short": "Report Types",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "O.O--24",
+      "path": "O.O--24",
+      "short": "Reserved Field",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "O.O--25",
+      "path": "O.O--25",
+      "short": "Location of Specimen Collection",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "O.O--26",
+      "path": "O.O--26",
+      "short": "Nosocomial Infection Flag",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "O.O--27",
+      "path": "O.O--27",
+      "short": "Specimen Service",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "O.O--28",
+      "path": "O.O--28",
+      "short": "Specimen Institution",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    } ]
+  }
+}

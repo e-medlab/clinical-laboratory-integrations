@@ -1,0 +1,27 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "DT",
+  "url": "http://hl7.org/hapi-v2-parser/StructureDefinition/DT",
+  "name": "DT",
+  "status": "draft",
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/DT",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/date",
+  "derivation": "specialization",
+  "differential": {
+    "element": [ {
+      "id": "DT",
+      "path": "DT"
+    }, {
+      "id": "DT.xmlText",
+      "path": "DT.xmlText",
+      "representation": [ "xmlText" ],
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "date"
+      } ]
+    } ]
+  }
+}

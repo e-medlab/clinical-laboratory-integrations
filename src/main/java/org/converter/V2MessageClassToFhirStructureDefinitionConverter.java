@@ -9,7 +9,12 @@ import ca.uhn.hl7v2.model.*;
 import ca.uhn.hl7v2.model.primitive.*;
 import ca.uhn.hl7v2.model.v25.message.OML_O21;
 import ca.uhn.hl7v2.model.v25.message.ORU_R30;
+import ca.uhn.hl7v2.parser.ModelClassFactory;
+import ca.uhn.hl7v2.parser.Parser;
 import ca.uhn.hl7v2.parser.PipeParser;
+import org.astm.v25.ASTM_MSG;
+import org.astm.v25.parser.Astm1394PipeParser;
+import org.astm.v25.parser.AstmModelClassFactory;
 import org.hl7.fhir.r5.model.ElementDefinition;
 import org.hl7.fhir.r5.model.Enumerations;
 import org.hl7.fhir.r5.model.StructureDefinition;
@@ -21,7 +26,8 @@ import java.util.ArrayList;
 public class V2MessageClassToFhirStructureDefinitionConverter {
 
     private static String PROFILE_BASE_URL = "http://hl7.org/hapi-v2-parser/StructureDefinition/";
-    private static String FILE_PATH = "src/main/resources/st/";
+    private static String MESSAGE_PATH = "src/main/resources/ExampleOmlO21Message.hl7";
+    private static String FILE_PATH = "src/main/resources/astmst/";
 
     private static HapiContext v2Context = new DefaultHapiContext();
     private static FhirContext fhirContext = FhirContext.forR5();
@@ -29,12 +35,26 @@ public class V2MessageClassToFhirStructureDefinitionConverter {
     private static ArrayList<StructureDefinition> structureDefinitions = new ArrayList();
 
     public static void main(String args[]) throws Exception {
+        //PipeParser pipeParser = new PipeParser();
+        //String messageString = Files.readString(Path.of(MESSAGE_PATH));
+
         //ORU_R30 oruR30 = new ORU_R30(v2Context.getModelClassFactory());
         //generateStructureDefinitions(oruR30);
 
-        PipeParser pipeParser = new PipeParser();
-        String messageString = Files.readString(Path.of("src/main/resources/ExampleOmlO21Message.hl7"));
-        OML_O21 message = (OML_O21) pipeParser.parse(messageString);
+        //OML_O21 message = (OML_O21) pipeParser.parse(messageString);
+        //generateStructureDefinitions(message);
+
+        generateAstmStructureDefinitions();
+    }
+
+    private static void generateAstmStructureDefinitions() throws Exception {
+        ModelClassFactory customModelClassFactory = new AstmModelClassFactory();
+        v2Context.setModelClassFactory(customModelClassFactory);
+        v2Context.getParserConfiguration().setValidating(false);
+        Parser parser = new Astm1394PipeParser(v2Context);
+
+        String messageString = Files.readString(Path.of("src/test/resources/ExampleAstmPatientOrderResultsToLis.txt"));
+        Message message = parser.parse(messageString);
         generateStructureDefinitions(message);
     }
 

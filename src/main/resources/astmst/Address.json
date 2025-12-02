@@ -1,0 +1,58 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "Address",
+  "url": "http://hl7.org/hapi-v2-parser/StructureDefinition/Address",
+  "name": "Address",
+  "status": "draft",
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/Address",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [ {
+      "id": "Address",
+      "path": "Address"
+    }, {
+      "id": "Address.Address--1",
+      "path": "Address.Address--1",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "Address.Address--2",
+      "path": "Address.Address--2",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "Address.Address--3",
+      "path": "Address.Address--3",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "Address.Address--4",
+      "path": "Address.Address--4",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "Address.Address--5",
+      "path": "Address.Address--5",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    } ]
+  }
+}

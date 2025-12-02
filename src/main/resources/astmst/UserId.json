@@ -1,0 +1,58 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "UserId",
+  "url": "http://hl7.org/hapi-v2-parser/StructureDefinition/UserId",
+  "name": "UserId",
+  "status": "draft",
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/UserId",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [ {
+      "id": "UserId",
+      "path": "UserId"
+    }, {
+      "id": "UserId.UserId--1",
+      "path": "UserId.UserId--1",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "UserId.UserId--2",
+      "path": "UserId.UserId--2",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "UserId.UserId--3",
+      "path": "UserId.UserId--3",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "UserId.UserId--4",
+      "path": "UserId.UserId--4",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "UserId.UserId--5",
+      "path": "UserId.UserId--5",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    } ]
+  }
+}

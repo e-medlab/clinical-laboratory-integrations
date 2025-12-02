@@ -1,0 +1,126 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "Q",
+  "url": "http://hl7.org/hapi-v2-parser/StructureDefinition/Q",
+  "name": "Q",
+  "status": "draft",
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/Q",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [ {
+      "id": "Q",
+      "path": "Q"
+    }, {
+      "id": "Q.Q--1",
+      "path": "Q.Q--1",
+      "short": "Sequence Number",
+      "min": 1,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "Q.Q--2",
+      "path": "Q.Q--2",
+      "short": "Starting Range ID Number",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/RangeIdNumber"
+      } ]
+    }, {
+      "id": "Q.Q--3",
+      "path": "Q.Q--3",
+      "short": "Ending Range ID Number",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/RangeIdNumber"
+      } ]
+    }, {
+      "id": "Q.Q--4",
+      "path": "Q.Q--4",
+      "short": "Universal Test ID",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/UniversalTestId"
+      } ]
+    }, {
+      "id": "Q.Q--5",
+      "path": "Q.Q--5",
+      "short": "Nature of Request Time Limits",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "Q.Q--6",
+      "path": "Q.Q--6",
+      "short": "Beginning Request Results Date and Time",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/DT"
+      } ]
+    }, {
+      "id": "Q.Q--7",
+      "path": "Q.Q--7",
+      "short": "Ending Request Results Date and Time",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/DT"
+      } ]
+    }, {
+      "id": "Q.Q--8",
+      "path": "Q.Q--8",
+      "short": "Requesting Physician Name",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/UserId"
+      } ]
+    }, {
+      "id": "Q.Q--9",
+      "path": "Q.Q--9",
+      "short": "Requesting Physician Telephone Number",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "Q.Q--10",
+      "path": "Q.Q--10",
+      "short": "User Field Number 1",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "Q.Q--11",
+      "path": "Q.Q--11",
+      "short": "User Field Number 2",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "Q.Q--12",
+      "path": "Q.Q--12",
+      "short": "Request Information Status Codes",
+      "min": 1,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    } ]
+  }
+}

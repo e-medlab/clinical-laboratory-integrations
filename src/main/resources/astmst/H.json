@@ -1,0 +1,144 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "H",
+  "url": "http://hl7.org/hapi-v2-parser/StructureDefinition/H",
+  "name": "H",
+  "status": "draft",
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/H",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [ {
+      "id": "H",
+      "path": "H"
+    }, {
+      "id": "H.H--1",
+      "path": "H.H--1",
+      "short": "Field Separator",
+      "min": 1,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "H.H--2",
+      "path": "H.H--2",
+      "short": "Delimiter Definition",
+      "min": 1,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "H.H--3",
+      "path": "H.H--3",
+      "short": "Message Control ID",
+      "min": 1,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "H.H--4",
+      "path": "H.H--4",
+      "short": "Access Password",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "H.H--5",
+      "path": "H.H--5",
+      "short": "Sender Name or ID",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "H.H--6",
+      "path": "H.H--6",
+      "short": "Sender Street Address",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "H.H--7",
+      "path": "H.H--7",
+      "short": "Reserved Field",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "H.H--8",
+      "path": "H.H--8",
+      "short": "Sender Telephone Number",
+      "min": 0,
+      "max": "40",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "H.H--9",
+      "path": "H.H--9",
+      "short": "Characteristics of Sender",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "H.H--10",
+      "path": "H.H--10",
+      "short": "Receiver ID",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "H.H--11",
+      "path": "H.H--11",
+      "short": "Comment or Special Instructions",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "H.H--12",
+      "path": "H.H--12",
+      "short": "Processing ID",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "H.H--13",
+      "path": "H.H--13",
+      "short": "Version No",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "H.H--14",
+      "path": "H.H--14",
+      "short": "Date and Time of Message",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/DT"
+      } ]
+    } ]
+  }
+}

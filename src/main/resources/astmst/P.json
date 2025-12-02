@@ -1,0 +1,324 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "P",
+  "url": "http://hl7.org/hapi-v2-parser/StructureDefinition/P",
+  "name": "P",
+  "status": "draft",
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/P",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [ {
+      "id": "P",
+      "path": "P"
+    }, {
+      "id": "P.P--1",
+      "path": "P.P--1",
+      "short": "Sequence Number",
+      "min": 1,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "P.P--2",
+      "path": "P.P--2",
+      "short": "Practice-Assigned Patient ID",
+      "min": 1,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "P.P--3",
+      "path": "P.P--3",
+      "short": "Laboratory-Assigned Patient ID",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "P.P--4",
+      "path": "P.P--4",
+      "short": "Patient ID Number 3",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "P.P--5",
+      "path": "P.P--5",
+      "short": "Patient Name",
+      "min": 1,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/UserId"
+      } ]
+    }, {
+      "id": "P.P--6",
+      "path": "P.P--6",
+      "short": "Mother’s Maiden Name",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "P.P--7",
+      "path": "P.P--7",
+      "short": "Birthdate",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/DT"
+      } ]
+    }, {
+      "id": "P.P--8",
+      "path": "P.P--8",
+      "short": "Patient Sex",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "P.P--9",
+      "path": "P.P--9",
+      "short": "Patient Race-Ethnic Origin",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "P.P--10",
+      "path": "P.P--10",
+      "short": "Patient Address",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/Address"
+      } ]
+    }, {
+      "id": "P.P--11",
+      "path": "P.P--11",
+      "short": "Reserved Field",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "P.P--12",
+      "path": "P.P--12",
+      "short": "Patient Telephone Number",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "P.P--13",
+      "path": "P.P--13",
+      "short": "Attending Physician ID",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/UserId"
+      } ]
+    }, {
+      "id": "P.P--14",
+      "path": "P.P--14",
+      "short": "Special Field 1",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "P.P--15",
+      "path": "P.P--15",
+      "short": "Special Field 2",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "P.P--16",
+      "path": "P.P--16",
+      "short": "Patient Height",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/MeasurementObservation"
+      } ]
+    }, {
+      "id": "P.P--17",
+      "path": "P.P--17",
+      "short": "Patient Weight",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/MeasurementObservation"
+      } ]
+    }, {
+      "id": "P.P--18",
+      "path": "P.P--18",
+      "short": "Patient’s Known or Suspected Diagnosis",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "P.P--19",
+      "path": "P.P--19",
+      "short": "Patient Active Medications",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "P.P--20",
+      "path": "P.P--20",
+      "short": "Patient's Diet",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "P.P--21",
+      "path": "P.P--21",
+      "short": "Practice Field Number 1",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "P.P--22",
+      "path": "P.P--22",
+      "short": "Practice Field Number 2",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "P.P--23",
+      "path": "P.P--23",
+      "short": "Admission and Discharge Dates",
+      "min": 0,
+      "max": "2",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/DT"
+      } ]
+    }, {
+      "id": "P.P--24",
+      "path": "P.P--24",
+      "short": "Admission Status",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "P.P--25",
+      "path": "P.P--25",
+      "short": "Location",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "P.P--26",
+      "path": "P.P--26",
+      "short": "Nature of Alternative Diagnostic Code and Classifiers",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "P.P--27",
+      "path": "P.P--27",
+      "short": "Alternative Diagnostic Code and Classification",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/DiagnosticCode"
+      } ]
+    }, {
+      "id": "P.P--28",
+      "path": "P.P--28",
+      "short": "Patient Religion",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "P.P--29",
+      "path": "P.P--29",
+      "short": "Marital Status",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "P.P--30",
+      "path": "P.P--30",
+      "short": "Isolation Status",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "P.P--31",
+      "path": "P.P--31",
+      "short": "Language",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "P.P--32",
+      "path": "P.P--32",
+      "short": "Hospital Service",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/UserId"
+      } ]
+    }, {
+      "id": "P.P--33",
+      "path": "P.P--33",
+      "short": "Hospital Institution",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/UserId"
+      } ]
+    }, {
+      "id": "P.P--34",
+      "path": "P.P--34",
+      "short": "Dosage Category",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    } ]
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "TEST_ORDER",
+  "url": "http://hl7.org/hapi-v2-parser/StructureDefinition/TEST_ORDER",
+  "name": "TEST_ORDER",
+  "status": "draft",
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/TEST_ORDER",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [ {
+      "id": "TEST_ORDER",
+      "path": "TEST_ORDER"
+    }, {
+      "id": "TEST_ORDER.O",
+      "path": "TEST_ORDER.O",
+      "min": 1,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/O"
+      } ]
+    }, {
+      "id": "TEST_ORDER.R",
+      "path": "TEST_ORDER.R",
+      "min": 0,
+      "max": "*",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/R"
+      } ]
+    } ]
+  }
+}

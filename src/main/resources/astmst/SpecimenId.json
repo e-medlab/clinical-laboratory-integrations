@@ -1,0 +1,42 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "SpecimenId",
+  "url": "http://hl7.org/hapi-v2-parser/StructureDefinition/SpecimenId",
+  "name": "SpecimenId",
+  "status": "draft",
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/SpecimenId",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [ {
+      "id": "SpecimenId",
+      "path": "SpecimenId"
+    }, {
+      "id": "SpecimenId.SpecimenId--1",
+      "path": "SpecimenId.SpecimenId--1",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "SpecimenId.SpecimenId--2",
+      "path": "SpecimenId.SpecimenId--2",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "SpecimenId.SpecimenId--3",
+      "path": "SpecimenId.SpecimenId--3",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    } ]
+  }
+}

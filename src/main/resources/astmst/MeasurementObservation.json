@@ -1,0 +1,18 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "MeasurementObservation",
+  "url": "http://hl7.org/hapi-v2-parser/StructureDefinition/MeasurementObservation",
+  "name": "MeasurementObservation",
+  "status": "draft",
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/MeasurementObservation",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [ {
+      "id": "MeasurementObservation",
+      "path": "MeasurementObservation"
+    } ]
+  }
+}
