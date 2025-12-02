@@ -216,6 +216,8 @@ public class Astm1394PipeParser extends PipeParser {
         if (!fieldSepString.isEmpty()) fieldSep = fieldSepString.charAt(0);
 
         String encCharString = Terser.get(h, 2, 0, 1, 1);
+
+        encCharString = "" + encCharString.charAt(1) + encCharString.charAt(0) + encCharString.substring(2);
         EncodingCharacters en = new EncodingCharacters(fieldSep, encCharString + '~');
 
         StringBuilder out = new StringBuilder();

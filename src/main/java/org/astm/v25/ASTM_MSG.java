@@ -38,7 +38,14 @@ public class ASTM_MSG extends AbstractMessage {
         Segment h = (Segment) get("H");
         Primitive value = (Primitive) h.getField(2, 0);
 
-        return value.getValue() + "~"; // TODO: tilde added as a hack, v2 requires subcomponent separator not present in ASTM
+        // ASTM message contains the repeat delimiter first, then component delimiter
+        // HL7 expects component delimiter first, then repeat delimiter
+        // This is why we swap them here
+        String original = value.getValue();
+        String swapped = "" + original.charAt(1) + original.charAt(0) + original.substring(2);
+
+        // tilde added as a hack, v2 requires subcomponent separator not present in ASTM at all
+        return swapped + "~";
     }
 
     @Override
