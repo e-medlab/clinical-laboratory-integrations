@@ -34,22 +34,25 @@ public class ASTM_MSGTests {
     @Test
     void ingestAstmAllOrdersQueryToLis() throws Exception {
         Path path = Path.of(RESOURCES_PATH + "ExampleAstmAllOrdersQueryToLis.txt");
+        Path expectedXmlPath = Path.of(RESOURCES_PATH + "ExampleAstmAllOrdersQueryToLis.xml");
         Message message = testAstmMsgParsing(path);
-        testAstmMsgXmlParsing(message);
+        testAstmMsgXmlParsing(message, expectedXmlPath);
     }
 
     @Test
     void ingestAstmAllOrdersResponseFromLis() throws Exception {
         Path path = Path.of(RESOURCES_PATH + "ExampleAstmAllOrdersResponseFromLis.txt");
+        Path expectedXmlPath = Path.of(RESOURCES_PATH + "ExampleAstmAllOrdersResponseFromLis.xml");
         Message message = testAstmMsgParsing(path);
-        testAstmMsgXmlParsing(message);
+        testAstmMsgXmlParsing(message, expectedXmlPath);
     }
 
     @Test
     void ingestAstmPatientOrderResultsToLis() throws Exception {
         Path path = Path.of(RESOURCES_PATH + "ExampleAstmPatientOrderResultsToLis.txt");
+        Path expectedXmlPath = Path.of(RESOURCES_PATH + "ExampleAstmPatientOrderResultsToLis.xml");
         Message message = testAstmMsgParsing(path);
-        testAstmMsgXmlParsing(message);
+        testAstmMsgXmlParsing(message, expectedXmlPath);
     }
 
     private Message testAstmMsgParsing(Path messageFilePath) throws IOException, HL7Exception {
@@ -63,9 +66,20 @@ public class ASTM_MSGTests {
         return message;
     }
 
-    private void testAstmMsgXmlParsing(Message message) throws Exception {
+    private void testAstmMsgXmlParsing(Message message, Path expectedXmlPath) throws Exception {
         TransformableXmlParser xmlParser = new TransformableXmlParser(context);
         String xmlString = xmlParser.parse(message);
+
+        String expectedXmlString = Files.readString(expectedXmlPath);
+
         Assertions.assertNotNull(xmlString);
+        Assertions.assertEquals(
+                normalizeLineEndings(expectedXmlString).trim(),
+                normalizeLineEndings(xmlString).trim()
+        );
+    }
+
+    private String normalizeLineEndings(String text) {
+        return text.replace("\r\n", "\n").replace("\r", "\n");
     }
 }
