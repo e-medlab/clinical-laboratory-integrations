@@ -17,6 +17,14 @@ public class TermXTransformer {
         return transform("FhirBundleToV2OmlO21", fhirXml);
     }
 
+    public String fromAstmMsgOrderResultsToFhirBundle(String astmXml) throws IOException, InterruptedException {
+        return transform("AstmMsgOrderResultsToFhirBundle", astmXml);
+    }
+
+    public String fromFhirBundleToAstmMsgAllOrders(String fhirXml) throws IOException, InterruptedException {
+        return transform("FhirBundleToAstmMsgAllOrders", fhirXml);
+    }
+
     public String transform(String structureMapName, String input) throws IOException, InterruptedException {
         HttpClient client = HttpClient.newHttpClient();
 

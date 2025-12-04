@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bundle xmlns="http://hl7.org/fhir">
+    <entry>
+        <resource>
+            <MessageHeader>
+                <meta>
+                    <tag>
+                        <code value="P"/>
+                    </tag>
+                </meta>
+                <destination>
+                    <name value="LIS"/>
+                </destination>
+                <source>
+                    <name value="GeneXpert PC"/>
+                    <version value="ccc6ade20d36233"/>
+                </source>
+            </MessageHeader>
+        </resource>
+    </entry>
+    <entry>
+        <resource>
+            <Patient>
+                <id value="PID2" />
+                <identifier>
+                    <system value="http://astm.org/terminology/manufacturer-assigned-identifier"/>
+                    <value value="PID1"/>
+                </identifier>
+                <identifier>
+                    <system value="http://astm.org/terminology/practice-assigned-identifier"/>
+                    <value value="PID2"/>
+                </identifier>
+                <name>
+                    <family value="Armstrong"/>
+                    <given value="Scott"/>
+                    <given value="Neil"/>
+                    <prefix value="DR"/>
+                    <suffix value="JR"/>
+                </name>
+            </Patient>
+        </resource>
+    </entry>
+    <entry>
+        <resource>
+            <ServiceRequest>
+                <priority value="stat"/>
+                <code>
+                    <coding>
+                        <system value="http://astm.org/terminology/manufacturer-test-code"/>
+                        <code value="MRSA"/>
+                    </coding>
+                </code>
+                <subject>
+                    <reference value="PID2"/>
+                </subject>
+                <specimen>
+                    <reference value="Specimen/SID-818"/>
+                </specimen>
+            </ServiceRequest>
+        </resource>
+    </entry>
+    <entry>
+        <resource>
+            <ServiceRequest>
+                <priority value="routine"/>
+                <code>
+                    <coding>
+                        <system value="http://astm.org/terminology/manufacturer-test-code"/>
+                        <code value="CTNG"/>
+                    </coding>
+                </code>
+                <subject>
+                    <reference value="PID2"/>
+                </subject>
+                <specimen>
+                    <reference value="SID-818"/>
+                </specimen>
+            </ServiceRequest>
+        </resource>
+    </entry>
+    <entry>
+        <resource>
+            <ServiceRequest>
+                <priority value="routine"/>
+                <code>
+                    <coding>
+                        <system value="http://astm.org/terminology/manufacturer-test-code"/>
+                        <code value="EV"/>
+                    </coding>
+                </code>
+                <subject>
+                    <reference value="PID2"/>
+                </subject>
+                <specimen>
+                    <reference value="SID-818"/>
+                </specimen>
+            </ServiceRequest>
+        </resource>
+    </entry>
+    <entry>
+        <resource>
+            <Specimen>
+                <id value="SID-818" />
+                <identifier>
+                    <system value="http://astm.org/terminology/lab-assigned-identifier"/>
+                    <value value="SID-818"/>
+                </identifier>
+                <type>
+                    <coding>
+                        <system value="http://astm.org/terminology/specimen-code"/>
+                        <code value="ORH"/>
+                    </coding>
+                </type>
+            </Specimen>
+        </resource>
+    </entry>
+    <entry>
+        <resource>
+            <Patient>
+                <id value="PID123" />
+                <identifier>
+                    <system value="http://astm.org/terminology/manufacturer-assigned-identifier"/>
+                    <value value="PID345"/>
+                </identifier>
+                <identifier>
+                    <system value="http://astm.org/terminology/practice-assigned-identifier"/>
+                    <value value="PID123"/>
+                </identifier>
+                <name>
+                    <family value="Smith"/>
+                    <given value="Amanda"/>
+                    <given value="G."/>
+                </name>
+            </Patient>
+        </resource>
+    </entry>
+    <entry>
+        <resource>
+            <ServiceRequest>
+                <priority value="routine"/>
+                <code>
+                    <coding>
+                        <system value="http://astm.org/terminology/manufacturer-test-code"/>
+                        <code value="CARBA"/>
+                    </coding>
+                </code>
+                <subject>
+                    <reference value="PID123"/>
+                </subject>
+                <specimen>
+                    <reference value="SID-811"/>
+                </specimen>
+            </ServiceRequest>
+        </resource>
+    </entry>
+    <entry>
+        <resource>
+            <ServiceRequest>
+                <priority value="routine"/>
+                <code>
+                    <coding>
+                        <system value="http://astm.org/terminology/manufacturer-test-code"/>
+                        <code value="ABC"/>
+                    </coding>
+                </code>
+                <subject>
+                    <reference value="PID123"/>
+                </subject>
+                <specimen>
+                    <reference value="SID-811"/>
+                </specimen>
+            </ServiceRequest>
+        </resource>
+    </entry>
+    <entry>
+        <resource>
+            <ServiceRequest>
+                <priority value="routine"/>
+                <code>
+                    <coding>
+                        <system value="http://astm.org/terminology/manufacturer-test-code"/>
+                        <code value="GBSLB"/>
+                    </coding>
+                </code>
+                <subject>
+                    <reference value="PID123"/>
+                </subject>
+                <specimen>
+                    <reference value="SID-8"/>
+                </specimen>
+            </ServiceRequest>
+        </resource>
+    </entry>
+    <entry>
+        <resource>
+            <Specimen>
+                <id value="SID-811" />
+                <identifier>
+                    <system value="http://astm.org/terminology/lab-assigned-identifier"/>
+                    <value value="SID-811"/>
+                </identifier>
+                <type>
+                    <coding>
+                        <system value="http://astm.org/terminology/specimen-code"/>
+                        <code value="ORH"/>
+                    </coding>
+                </type>
+            </Specimen>
+        </resource>
+    </entry>
+    <entry>
+        <resource>
+            <Specimen>
+                <id value="SID-8" />
+                <identifier>
+                    <system value="http://astm.org/terminology/lab-assigned-identifier"/>
+                    <value value="SID-8"/>
+                </identifier>
+                <type>
+                    <coding>
+                        <system value="http://astm.org/terminology/specimen-code"/>
+                        <code value="ORH"/>
+                    </coding>
+                </type>
+            </Specimen>
+        </resource>
+    </entry>
+</Bundle>

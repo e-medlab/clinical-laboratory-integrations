@@ -26,8 +26,6 @@ public class ASTM_MSGTests {
     static void setup() {
         ModelClassFactory customModelClassFactory = new AstmModelClassFactory();
         context.setModelClassFactory(customModelClassFactory);
-
-        // TODO: I need a custom validator instead of disabling one
         context.getParserConfiguration().setValidating(false);
     }
 
