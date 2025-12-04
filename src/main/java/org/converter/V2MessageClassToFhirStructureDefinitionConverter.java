@@ -239,12 +239,12 @@ public class V2MessageClassToFhirStructureDefinitionConverter {
 
     private static ElementDefinition getElementDefinition(Structure structure, Group group) throws HL7Exception {
         ElementDefinition elementDefinition = new ElementDefinition();
-        String structureName = structure.getName();
+        String structureName = getMessageElementName(structure, structure.getMessage());
         String structurePath = group.getName() + '.' + structureName;
 
         elementDefinition.setId(structurePath);
-        elementDefinition.setMin(group.isRequired(structureName) ? 1 : 0);
-        elementDefinition.setMax(group.isRepeating(structureName) ? "*" : "1");
+        elementDefinition.setMin(group.isRequired(structure.getName()) ? 1 : 0);
+        elementDefinition.setMax(group.isRepeating(structure.getName()) ? "*" : "1");
         elementDefinition.setPath(structurePath);
 
         ElementDefinition.TypeRefComponent typeRef = new ElementDefinition.TypeRefComponent();

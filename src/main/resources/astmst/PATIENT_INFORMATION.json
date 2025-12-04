@@ -22,12 +22,12 @@
         "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/P"
       } ]
     }, {
-      "id": "PATIENT_INFORMATION.TEST_ORDER",
-      "path": "PATIENT_INFORMATION.TEST_ORDER",
+      "id": "PATIENT_INFORMATION.ASTM_MSG--TEST_ORDER",
+      "path": "PATIENT_INFORMATION.ASTM_MSG--TEST_ORDER",
       "min": 0,
       "max": "*",
       "type": [ {
-        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/TEST_ORDER"
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ASTM_MSG--TEST_ORDER"
       } ]
     } ]
   }
