@@ -39,12 +39,12 @@ public class AstmMessageSender {
     private static void send(Message message) throws Exception {
         Astm1394PipeParser parser = new Astm1394PipeParser(context);
         String encodedMessage = parser.encode(message);
-        //String encodedMessage = Files.readString(Path.of("src/test/resources/ExampleAstmAllOrdersQueryToLis.txt"));
 
         AstmTcpClient client = new AstmTcpClient(HOST, PORT_NUMBER);
 
         String response = client.send(encodedMessage);
 
+        System.out.println(response);
         Thread.sleep(50000);
         client.close();
     }
