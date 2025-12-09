@@ -4,9 +4,9 @@ import ca.uhn.hl7v2.DefaultHapiContext;
 import ca.uhn.hl7v2.HapiContext;
 import ca.uhn.hl7v2.model.Message;
 import ca.uhn.hl7v2.parser.ModelClassFactory;
-import org.apache.commons.lang3.NotImplementedException;
 import org.astm.v25.parser.Astm1394PipeParser;
 import org.astm.v25.parser.AstmModelClassFactory;
+import org.astm.v25.tcp.AstmTcpClient;
 import org.converter.TransformableXmlParser;
 import org.transformer.TermXTransformer;
 
@@ -15,7 +15,8 @@ import java.nio.file.Path;
 
 public class AstmMessageSender {
 
-    private static final int PORT_NUMBER = 52463;
+    private static final String HOST = "192.168.53.22";
+    private static final int PORT_NUMBER = 49999;
 
     private static HapiContext context = new DefaultHapiContext();
     private static TermXTransformer transformer = new TermXTransformer();
@@ -36,10 +37,15 @@ public class AstmMessageSender {
     }
 
     private static void send(Message message) throws Exception {
-        // TODO
         Astm1394PipeParser parser = new Astm1394PipeParser(context);
         String encodedMessage = parser.encode(message);
+        //String encodedMessage = Files.readString(Path.of("src/test/resources/ExampleAstmAllOrdersQueryToLis.txt"));
 
-        throw new NotImplementedException();
+        AstmTcpClient client = new AstmTcpClient(HOST, PORT_NUMBER);
+
+        String response = client.send(encodedMessage);
+
+        Thread.sleep(50000);
+        client.close();
     }
 }
