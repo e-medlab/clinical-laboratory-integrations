@@ -86,9 +86,9 @@
         <dependency>
             <groupId>org.dew</groupId>
             <artifactId>comm</artifactId>
-            <version>1.0.0</version>
+            <version>1.0.1</version>
             <scope>system</scope>
-            <systemPath>${project.basedir}/libs/comm-1.0.0.jar</systemPath>
+            <systemPath>${project.basedir}/libs/comm-1.0.1.jar</systemPath>
         </dependency>
 
         <!-- Reactor Netty -->

@@ -26,6 +26,15 @@ public class AstmTcpServer implements AutoCloseable {
         return AstmMessageMapper.convert(received);
     }
 
+    public String start(AstmMessageAction onMessage) throws Exception {
+        driver.waitForHostMessagesContinuous(msg -> {
+            String msgString = AstmMessageMapper.convert(msg);
+            String responseString = onMessage.onMessage(msgString);
+            return AstmMessageMapper.convert(responseString);
+        });
+        return "";
+    }
+
     @Override
     public void close() {
         driver.destroy();

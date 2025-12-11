@@ -22,7 +22,8 @@ public class AstmMessageListener {
         context.setModelClassFactory(customModelClassFactory);
         context.getParserConfiguration().setValidating(false);
 
-        run();
+        //run();
+        runContinuous();
     }
 
     public static void run() throws Exception {
@@ -48,5 +49,33 @@ public class AstmMessageListener {
         System.out.println("---- Transformed ASTM Message as FHIR ----");
         System.out.println(transformedXml);
         System.out.println("------------------------------");
+    }
+
+    public static void runContinuous() throws Exception {
+        AstmTcpServer server = new AstmTcpServer(PORT_NUMBER);
+
+        Parser parser = new Astm1394PipeParser(context);
+        TransformableXmlParser xmlParser = new TransformableXmlParser(context);
+
+        System.out.println("Starting an ASTM server listening on port " + PORT_NUMBER);
+        server.start(incoming -> {
+            System.out.println("Received message: " + incoming);
+
+            Message message = parser.parse(incoming);
+            String xml = xmlParser.parse(message);
+
+            System.out.println("---- ASTM XML Message to transform ----");
+            System.out.println(xml);
+            System.out.println("------------------------------");
+
+            String transformedXml = transformer.fromAstmMsgOrderResultsToFhirBundle(xml);
+
+            System.out.println("---- Transformed ASTM Message as FHIR ----");
+            System.out.println(transformedXml);
+            System.out.println("------------------------------");
+
+            // this would ideally be a proper business response
+            return "";
+        });
     }
 }
