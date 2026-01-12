@@ -17,6 +17,10 @@ public class TermXTransformer {
         return transform("FhirBundleToV2OmlO21", fhirXml);
     }
 
+    public String fromFhirBundleToAckR33(String fhirXml) throws IOException, InterruptedException {
+        return transform("FhirBundleToV2AckR33", fhirXml);
+    }
+
     public String fromAstmMsgOrderResultsToFhirBundle(String astmXml) throws IOException, InterruptedException {
         return transform("AstmMsgOrderResultsToFhirBundle", astmXml);
     }

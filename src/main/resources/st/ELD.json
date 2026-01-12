@@ -1,0 +1,50 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ELD",
+  "url": "http://hl7.org/hapi-v2-parser/StructureDefinition/ELD",
+  "name": "ELD",
+  "status": "draft",
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/ELD",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [ {
+      "id": "ELD",
+      "path": "ELD"
+    }, {
+      "id": "ELD.ELD--1",
+      "path": "ELD.ELD--1",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "ELD.ELD--2",
+      "path": "ELD.ELD--2",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/NM"
+      } ]
+    }, {
+      "id": "ELD.ELD--3",
+      "path": "ELD.ELD--3",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/NM"
+      } ]
+    }, {
+      "id": "ELD.ELD--4",
+      "path": "ELD.ELD--4",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    } ]
+  }
+}

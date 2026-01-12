@@ -1,0 +1,72 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "MSA",
+  "url": "http://hl7.org/hapi-v2-parser/StructureDefinition/MSA",
+  "name": "MSA",
+  "status": "draft",
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/MSA",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [ {
+      "id": "MSA",
+      "path": "MSA"
+    }, {
+      "id": "MSA.MSA--1",
+      "path": "MSA.MSA--1",
+      "short": "Acknowledgment Code",
+      "min": 1,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ID"
+      } ]
+    }, {
+      "id": "MSA.MSA--2",
+      "path": "MSA.MSA--2",
+      "short": "Message Control ID",
+      "min": 1,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "MSA.MSA--3",
+      "path": "MSA.MSA--3",
+      "short": "Text Message",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "MSA.MSA--4",
+      "path": "MSA.MSA--4",
+      "short": "Expected Sequence Number",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/NM"
+      } ]
+    }, {
+      "id": "MSA.MSA--5",
+      "path": "MSA.MSA--5",
+      "short": "Delayed Acknowledgment Type",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ID"
+      } ]
+    }, {
+      "id": "MSA.MSA--6",
+      "path": "MSA.MSA--6",
+      "short": "Error Condition",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CE"
+      } ]
+    } ]
+  }
+}

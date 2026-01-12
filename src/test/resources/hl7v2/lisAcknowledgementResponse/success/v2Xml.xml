@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ACK xmlns="http://hl7.org/fhir">
+    <MSH>
+        <MSH--1>|</MSH--1>
+        <MSH--2>^~\&amp;</MSH--2>
+        <MSH--3>
+            <HD--1>Host</HD--1>
+        </MSH--3>
+        <MSH--5>
+            <HD--1>Roche</HD--1>
+        </MSH--5>
+        <MSH--7>
+            <TS--1>20260112125530</TS--1>
+        </MSH--7>
+        <MSH--9>
+            <MSG--1>ACK</MSG--1>
+            <MSG--2>R33</MSG--2>
+            <MSG--3>ACK</MSG--3>
+        </MSH--9>
+        <MSH--10>E6BDAFD0-E22B485B-B124-A26174D4434D</MSH--10>
+        <MSH--11>
+            <PT--1>P</PT--1>
+        </MSH--11>
+        <MSH--12>
+            <VID--1>2.5</VID--1>
+        </MSH--12>
+    </MSH>
+    <MSA>
+        <MSA--1>AE</MSA--1>
+        <MSA--2>612b7a6b-8190-4c09-9de6-9a5b01228587</MSA--2>
+    </MSA>
+</ACK>

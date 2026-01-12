@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Bundle xmlns="http://hl7.org/fhir">
+    <entry>
+        <resource>
+            <MessageHeader>
+                <meta>
+                    <tag>
+                        <system>P</system>
+                        <code>P</code>
+                    </tag>
+                </meta>
+                <eventCoding>
+                    <system>R30</system>
+                    <code>R30</code>
+                </eventCoding>
+                <destination>
+                    <name>Host</name>
+                    <receiver>
+                        <display value="Healthcare Provider"/>
+                    </receiver>
+                </destination>
+                <sender>
+                    <display>Roche</display>
+                </sender>
+                <source>
+                    <name>cobas Liat</name>
+                </source>
+            </MessageHeader>
+        </resource>
+    </entry>
+    <entry>
+        <resource>
+            <Patient>
+                <identifier>
+                    <value>Unknown</value>
+                </identifier>
+                <name>
+                    <family>unknown</family>
+                </name>
+                <gender value="unknown"/>
+            </Patient>
+        </resource>
+    </entry>
+    <entry>
+        <resource>
+            <ServiceRequest>
+                <status>NW</status>
+                <intent>O</intent>
+                <code>
+                    <text>Dummy description</text>
+                </code>
+                <note>
+                    <text>Run=00016;Device=M1-E-10063;Version=3.3.0.4027;Tube=0027E;TubeExp=2064-02-29;TubeLot=AAJ5</text>
+                </note>
+            </ServiceRequest>
+        </resource>
+    </entry>
+    <entry>
+        <resource>
+            <Observation>
+                <status>F</status>
+                <code>
+                    <text>Influenza A (CDFA)</text>
+                </code>
+                <issued>20171014075501-0400</issued>
+                <performer>
+                    <display>SERVICE</display>
+                </performer>
+                <valueQuantity>
+                    <value value="0"/>
+                    <unit>0</unit>
+                </valueQuantity>
+                <note>
+                    <text>empty</text>
+                </note>
+                <device>
+                    <identifier>
+                        <value>f8:dc:7a:06:27:0c</value>
+                    </identifier>
+                </device>
+            </Observation>
+        </resource>
+    </entry>
+    <entry>
+        <resource>
+            <Observation>
+                <status>F</status>
+                <code>
+                    <text>Influenza A (CDFA)</text>
+                </code>
+                <valueString value="Not Detected"/>
+            </Observation>
+        </resource>
+    </entry>
+</Bundle>

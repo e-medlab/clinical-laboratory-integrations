@@ -1,0 +1,126 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ERR",
+  "url": "http://hl7.org/hapi-v2-parser/StructureDefinition/ERR",
+  "name": "ERR",
+  "status": "draft",
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://hl7.org/hapi-v2-parser/StructureDefinition/ERR",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [ {
+      "id": "ERR",
+      "path": "ERR"
+    }, {
+      "id": "ERR.ERR--1",
+      "path": "ERR.ERR--1",
+      "short": "Error Code and Location",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ELD"
+      } ]
+    }, {
+      "id": "ERR.ERR--2",
+      "path": "ERR.ERR--2",
+      "short": "Error Location",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ERL"
+      } ]
+    }, {
+      "id": "ERR.ERR--3",
+      "path": "ERR.ERR--3",
+      "short": "HL7 Error Code",
+      "min": 1,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CWE"
+      } ]
+    }, {
+      "id": "ERR.ERR--4",
+      "path": "ERR.ERR--4",
+      "short": "Severity",
+      "min": 1,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ID"
+      } ]
+    }, {
+      "id": "ERR.ERR--5",
+      "path": "ERR.ERR--5",
+      "short": "Application Error Code",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CWE"
+      } ]
+    }, {
+      "id": "ERR.ERR--6",
+      "path": "ERR.ERR--6",
+      "short": "Application Error Parameter",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
+      } ]
+    }, {
+      "id": "ERR.ERR--7",
+      "path": "ERR.ERR--7",
+      "short": "Diagnostic Information",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/TX"
+      } ]
+    }, {
+      "id": "ERR.ERR--8",
+      "path": "ERR.ERR--8",
+      "short": "User Message",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/TX"
+      } ]
+    }, {
+      "id": "ERR.ERR--9",
+      "path": "ERR.ERR--9",
+      "short": "Inform Person Indicator",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/IS"
+      } ]
+    }, {
+      "id": "ERR.ERR--10",
+      "path": "ERR.ERR--10",
+      "short": "Override Type",
+      "min": 0,
+      "max": "1",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CWE"
+      } ]
+    }, {
+      "id": "ERR.ERR--11",
+      "path": "ERR.ERR--11",
+      "short": "Override Reason Code",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/CWE"
+      } ]
+    }, {
+      "id": "ERR.ERR--12",
+      "path": "ERR.ERR--12",
+      "short": "Help Desk Contact Point",
+      "min": 0,
+      "max": "0",
+      "type": [ {
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/XTN"
+      } ]
+    } ]
+  }
+}

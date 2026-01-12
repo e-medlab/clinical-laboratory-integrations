@@ -113,7 +113,6 @@ public class KonelabT60SimulationTests {
     private void analyzerSendsResultsToLis(boolean success) throws Exception {
         String stepPath = RESOURCES_PATH + "/analyzerSendsResultsToLis";
         stepPath += success ? "/success" : "/failure";
-
         Path astmPipePath = Path.of(stepPath + "/astmPipe.txt");
         Path astmXmlPath = Path.of(stepPath + "/astmXml.xml");
         Path fhirXmlPath = Path.of(stepPath + "/fhirXml.xml");
@@ -173,5 +172,4 @@ public class KonelabT60SimulationTests {
     private String normalizeLineEndings(String text) {
         return text.replace("\r\n", "\n").replace("\r", "\n");
     }
-
 }

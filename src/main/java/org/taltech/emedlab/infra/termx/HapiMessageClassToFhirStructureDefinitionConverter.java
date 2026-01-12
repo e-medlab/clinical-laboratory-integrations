@@ -7,8 +7,10 @@ import ca.uhn.hl7v2.HL7Exception;
 import ca.uhn.hl7v2.HapiContext;
 import ca.uhn.hl7v2.model.*;
 import ca.uhn.hl7v2.model.primitive.*;
+import ca.uhn.hl7v2.model.v25.message.ACK;
 import ca.uhn.hl7v2.parser.ModelClassFactory;
 import ca.uhn.hl7v2.parser.Parser;
+import ca.uhn.hl7v2.parser.PipeParser;
 import org.taltech.emedlab.infra.parsers.Astm1394PipeParser;
 import org.taltech.emedlab.infra.parsers.AstmModelClassFactory;
 import org.hl7.fhir.r5.model.ElementDefinition;
@@ -22,8 +24,8 @@ import java.util.ArrayList;
 public class HapiMessageClassToFhirStructureDefinitionConverter {
 
     private static String PROFILE_BASE_URL = "http://hl7.org/hapi-v2-parser/StructureDefinition/";
-    private static String MESSAGE_PATH = "src/main/resources/ExampleOmlO21Message.hl7";
-    private static String FILE_PATH = "src/main/resources/astmst/";
+    private static String MESSAGE_PATH = "src/main/resources/ExampleAckR33Message.hl7";
+    private static String FILE_PATH = "src/main/resources/st/";
 
     private static HapiContext v2Context = new DefaultHapiContext();
     private static FhirContext fhirContext = FhirContext.forR5();
@@ -31,8 +33,8 @@ public class HapiMessageClassToFhirStructureDefinitionConverter {
     private static ArrayList<StructureDefinition> structureDefinitions = new ArrayList();
 
     public static void main(String args[]) throws Exception {
-        //PipeParser pipeParser = new PipeParser();
-        //String messageString = Files.readString(Path.of(MESSAGE_PATH));
+        PipeParser pipeParser = new PipeParser();
+        String messageString = Files.readString(Path.of(MESSAGE_PATH));
 
         //ORU_R30 oruR30 = new ORU_R30(v2Context.getModelClassFactory());
         //generateStructureDefinitions(oruR30);
@@ -40,7 +42,10 @@ public class HapiMessageClassToFhirStructureDefinitionConverter {
         //OML_O21 message = (OML_O21) pipeParser.parse(messageString);
         //generateStructureDefinitions(message);
 
-        generateAstmStructureDefinitions();
+        ACK message = (ACK) pipeParser.parse(messageString);
+        generateStructureDefinitions(message);
+
+        //generateAstmStructureDefinitions();
     }
 
     private static void generateAstmStructureDefinitions() throws Exception {

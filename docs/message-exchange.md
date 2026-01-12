@@ -76,7 +76,6 @@ NTE|||Run=00016;Device=M1-E-10063;Version=3.3.0.4027;Tube=0027E;TubeExp=2064-02-
 OBX||NM|Influenza A (CDFA)||0|0|||||F|||||SERVICE||f8:dc:7a:06:27:0c|20171014075501-0400
 NTE|1||empty
 OBX||ST|Influenza A (CDFA)||Not Detected||||||F
-
 ```
 
 ## Acknowledgement response to the analyzer indicating successful processing of the message
