@@ -5,4 +5,4 @@ The aim of this project is two-fold:
 - To enable using the FHIR Mapping Language for converting HL7 v2 messages to another format
 
 The project utilizes the open source HAPI v2 and FHIR libraries to generate StructureDefinitions from HL7 v2 message classes.
-The project also utilizes a modified version of the Apache-2.0 licensed 'comm' library for ASTM connection drivers: https://github.com/giosil/comm.
+The project also utilizes a forked version of the Apache-2.0 licensed 'comm' library for ASTM connection drivers: https://github.com/giosil/comm.
