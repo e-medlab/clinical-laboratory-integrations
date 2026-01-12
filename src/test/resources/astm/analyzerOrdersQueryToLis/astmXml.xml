@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?><ASTM_MSG xmlns="http://hl7.org/fhir">
     <H>
         <H--1>|</H--1>
-        <H--2>@^\</H--2>
-        <H--3>12X</H--3>
-        <H--5>GeneXpert PC</H--5>
-        <H--10>LIS</H--10>
+        <H--2>\^&amp;</H--2>
+        <H--5>1</H--5>
         <H--12>P</H--12>
-        <H--13>1394-97</H--13>
-        <H--14>20190521100245</H--14>
+        <H--14>20251103093250</H--14>
     </H>
     <Q>
         <Q--1>1</Q--1>
         <Q--2>
-            <RangeIdNumber--1>ALL</RangeIdNumber--1>
+            <RangeIdNumber--2>S22510300055</RangeIdNumber--2>
         </Q--2>
+        <Q--4>
+            <UniversalTestId--4>ALL</UniversalTestId--4>
+        </Q--4>
         <Q--12>O</Q--12>
-        <Q--12>N</Q--12>
     </Q>
     <L>
         <L--1>1</L--1>

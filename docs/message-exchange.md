@@ -7,7 +7,7 @@ In the real case, this ID will be read in from the barcode of the sample, insert
 ## Query sent by the Konelab T60 analyzer towards LIS
 
 ```
-H|\^&|||1^Analyzer 1^7.0|||||||P||20251103093250<CR><ETX>DF<CR><LF>
+H|\^&|||1^Analyzer 1^7.0|||||||P||20251103093250
 Q|1|^S22510300055^^||^^^ALL^||||||||O
 L|1|N
 ```
@@ -16,7 +16,7 @@ L|1|N
 
 ```
 H|\^&|||^KoneLink^1.4.134|||||||P||20251103090913
-P|1||||RAINER^RANDMAA||20000703|M||||||||||||||||||||||||||
+P|1||PID2||RAINER^RANDMAA||20000703|M||||||||||||||||||||||||||
 O|1|S22510300055||^^^ALB|R||||||X||||1|||||||||1|Q\O||||||
 O|2|S22510300055||^^^sTfR|R||||||X||||1|||||||||1|Q\O||||||
 L|1|N

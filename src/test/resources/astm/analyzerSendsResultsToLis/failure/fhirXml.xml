@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Bundle xmlns="http://hl7.org/fhir">
+    <entry>
+        <resource>
+            <Specimen>
+                <identifier>
+                    <system value="http://astm.org/terminology/lab-assigned-identifier"/>
+                </identifier>
+                <type>
+                    <coding>
+                        <system value="http://astm.org/terminology/specimen-code"/>
+                        <code value="1"/>
+                    </coding>
+                </type>
+            </Specimen>
+        </resource>
+    </entry>
+    <entry>
+        <resource>
+            <ServiceRequest>
+                <priority value="routine"/>
+                <code>
+                    <coding>
+                        <system value="http://astm.org/terminology/manufacturer-test-code"/>
+                        <code value="TestTest"/>
+                    </coding>
+                </code>
+                <specimen>
+                    <reference value="S22510300055"/>
+                </specimen>
+            </ServiceRequest>
+        </resource>
+    </entry>
+    <entry>
+        <resource>
+            <MessageHeader>
+                <meta>
+                    <tag>
+                        <code value="P"/>
+                    </tag>
+                </meta>
+            </MessageHeader>
+        </resource>
+    </entry>
+    <entry>
+        <resource>
+            <Patient>
+                <identifier>
+                    <system value="http://astm.org/terminology/practice-assigned-identifier"/>
+                    <value value="S22510300055"/>
+                </identifier>
+            </Patient>
+        </resource>
+    </entry>
+</Bundle>

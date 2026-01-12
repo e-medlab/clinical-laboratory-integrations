@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bundle xmlns="http://hl7.org/fhir">
+    <entry>
+        <resource>
+            <MessageHeader>
+                <meta>
+                    <tag>
+                        <code value="P"/>
+                    </tag>
+                </meta>
+                <destination>
+                    <name value="LIS"/>
+                </destination>
+                <source>
+                    <name value="KoneLink"/>
+                    <version value="ccc6ade20d36233"/>
+                </source>
+            </MessageHeader>
+        </resource>
+    </entry>
+    <entry>
+        <resource>
+            <Patient>
+                <id value="PID2" />
+                <identifier>
+                    <system value="http://astm.org/terminology/practice-assigned-identifier"/>
+                    <value value="PID2"/>
+                </identifier>
+                <name>
+                    <family value="RAINER"/>
+                    <given value="RANDMAA"/>
+                </name>
+            </Patient>
+        </resource>
+    </entry>
+    <entry>
+        <resource>
+            <ServiceRequest>
+                <priority value="routine"/>
+                <code>
+                    <coding>
+                        <system value="http://astm.org/terminology/manufacturer-test-code"/>
+                        <code value="ALB"/>
+                    </coding>
+                </code>
+                <subject>
+                    <reference value="PID2"/>
+                </subject>
+                <specimen>
+                    <reference value="S22510300055"/>
+                </specimen>
+            </ServiceRequest>
+        </resource>
+    </entry>
+    <entry>
+        <resource>
+            <ServiceRequest>
+                <priority value="routine"/>
+                <code>
+                    <coding>
+                        <system value="http://astm.org/terminology/manufacturer-test-code"/>
+                        <code value="sTfR"/>
+                    </coding>
+                </code>
+                <subject>
+                    <reference value="PID2"/>
+                </subject>
+                <specimen>
+                    <reference value="S22510300055"/>
+                </specimen>
+            </ServiceRequest>
+        </resource>
+    </entry>
+    <entry>
+        <resource>
+            <Specimen>
+                <id value="S22510300055" />
+                <identifier>
+                    <system value="http://astm.org/terminology/lab-assigned-identifier"/>
+                    <value value="S22510300055"/>
+                </identifier>
+                <type>
+                    <coding>
+                        <system value="http://astm.org/terminology/specimen-code"/>
+                        <code value="1"/>
+                    </coding>
+                </type>
+            </Specimen>
+        </resource>
+    </entry>
+</Bundle>

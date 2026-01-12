@@ -5,7 +5,6 @@ import ca.uhn.hl7v2.model.AbstractSegment;
 import ca.uhn.hl7v2.model.Group;
 import ca.uhn.hl7v2.parser.ModelClassFactory;
 import org.taltech.emedlab.models.astm.v25.datatypes.*;
-import org.astm.v25.datatypes.*;
 
 public class P extends AbstractSegment {
 
