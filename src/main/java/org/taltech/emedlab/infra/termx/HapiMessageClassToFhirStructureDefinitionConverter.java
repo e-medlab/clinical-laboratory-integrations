@@ -36,15 +36,11 @@ public class HapiMessageClassToFhirStructureDefinitionConverter {
         PipeParser pipeParser = new PipeParser();
         String messageString = Files.readString(Path.of(MESSAGE_PATH));
 
-        //ORU_R30 oruR30 = new ORU_R30(v2Context.getModelClassFactory());
-        //generateStructureDefinitions(oruR30);
-
+        //ORU_R30 message = new ORU_R30(v2Context.getModelClassFactory());
         //OML_O21 message = (OML_O21) pipeParser.parse(messageString);
-        //generateStructureDefinitions(message);
-
         ACK message = (ACK) pipeParser.parse(messageString);
-        generateStructureDefinitions(message);
 
+        generateStructureDefinitions(message);
         //generateAstmStructureDefinitions();
     }
 

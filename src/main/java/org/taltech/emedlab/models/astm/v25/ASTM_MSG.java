@@ -28,6 +28,7 @@ public class ASTM_MSG extends AbstractMessage {
         }
     }
 
+    // A dummy version is necessary to bypass version validation
     @Override
     public String getVersion() {
         return "2.5";
