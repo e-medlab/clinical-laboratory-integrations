@@ -4,11 +4,12 @@ import ca.uhn.hl7v2.DefaultHapiContext;
 import ca.uhn.hl7v2.HapiContext;
 import ca.uhn.hl7v2.model.Message;
 import ca.uhn.hl7v2.parser.ModelClassFactory;
+import org.taltech.emedlab.infra.fhir.AbstractTransformer;
 import org.taltech.emedlab.infra.parsers.Astm1394PipeParser;
 import org.taltech.emedlab.infra.parsers.AstmModelClassFactory;
 import org.taltech.emedlab.infra.tcp.AstmTcpClient;
 import org.taltech.emedlab.infra.parsers.TransformableXmlParser;
-import org.taltech.emedlab.infra.termx.TermXTransformer;
+import org.taltech.emedlab.infra.fhir.TermXTransformer;
 
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -19,14 +20,14 @@ public class AstmMessageSender {
     private static final int PORT_NUMBER = 49999;
 
     private static HapiContext context = new DefaultHapiContext();
-    private static TermXTransformer transformer = new TermXTransformer();
+    private static AbstractTransformer transformer = new TermXTransformer();
 
     public static void main(String[] args) throws Exception {
         ModelClassFactory customModelClassFactory = new AstmModelClassFactory();
         context.setModelClassFactory(customModelClassFactory);
         context.getParserConfiguration().setValidating(false);
 
-        String fhirMessage = Files.readString(Path.of("src/test/resources/ExampleAstmAllOrdersResponseFromLisAsFhir.xml"));
+        String fhirMessage = Files.readString(Path.of("src/test/resources/examplemessages/ExampleAstmAllOrdersResponseFromLisAsFhir.xml"));
 
         String astmMessageString = transformer.fromFhirBundleToAstmMsgAllOrders(fhirMessage);
 

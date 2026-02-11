@@ -1,4 +1,4 @@
-package org.taltech.emedlab.infra.termx;
+package org.taltech.emedlab.infra.fhir;
 
 import ca.uhn.fhir.context.FhirContext;
 import ca.uhn.fhir.parser.IParser;
@@ -24,8 +24,8 @@ import java.util.ArrayList;
 public class HapiMessageClassToFhirStructureDefinitionConverter {
 
     private static String PROFILE_BASE_URL = "http://hl7.org/hapi-v2-parser/StructureDefinition/";
-    private static String MESSAGE_PATH = "src/main/resources/ExampleAckR33Message.hl7";
-    private static String FILE_PATH = "src/main/resources/st/";
+    private static String MESSAGE_PATH = "src/main/resources/examplemessages/ExampleAckR33Message.hl7";
+    private static String FILE_PATH = "src/main/resources/structuredefinitions/st/";
 
     private static HapiContext v2Context = new DefaultHapiContext();
     private static FhirContext fhirContext = FhirContext.forR5();
@@ -50,7 +50,7 @@ public class HapiMessageClassToFhirStructureDefinitionConverter {
         v2Context.getParserConfiguration().setValidating(false);
         Parser parser = new Astm1394PipeParser(v2Context);
 
-        String messageString = Files.readString(Path.of("src/test/resources/ExampleAstmPatientOrderResultsToLis.txt"));
+        String messageString = Files.readString(Path.of("src/test/resources/examplemessages/ExampleAstmPatientOrderResultsToLis.txt"));
         Message message = parser.parse(messageString);
         generateStructureDefinitions(message);
     }

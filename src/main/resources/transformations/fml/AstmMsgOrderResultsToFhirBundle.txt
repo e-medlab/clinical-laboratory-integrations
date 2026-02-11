@@ -1,0 +1,198 @@
+/// url = 'http://hl7.org/fhir/StructureMap/AstmMsgOrderResultsToFhirBundle'
+/// name = 'AstmMsgOrderResultsToFhirBundle'
+/// title = 'AstmMsgOrderResultsToFhirBundle'
+
+conceptmap "http://taltech.org/astm-mappings/astm-priority-to-fhir-priority" {
+  prefix s = "astmPriorityCode"
+  prefix t = "fhirPriorityCode"
+
+  s:R - t:routine
+  s:S - t:stat
+}
+
+uses "http://hl7.org/hapi-v2-parser/StructureDefinition/ASTM_MSG" alias ASTM_MSG as source
+uses "http://hl7.org/fhir/StructureDefinition/Bundle" alias Bundle as target
+
+group AstmMsgOrderResultsToFhirBundle(source ASTMMSG : ASTM_MSG, target Bundle : Bundle) {
+  ASTMMSG -> Bundle then {
+    ASTMMSG.`ASTM_MSG--PATIENT_INFORMATION` as a -> Bundle then {
+      a.TEST_ORDER as b -> Bundle then {
+        b then TestOrderToBundle(b, Bundle) "rule_group_1350";
+      } "rule_1349";
+    } "rule_1348";
+  } "rule_1347";
+  ASTMMSG -> Bundle then {
+    ASTMMSG.H as a -> Bundle.entry as b then {
+      a -> b.resource = create('MessageHeader') as c then {
+        a then HToMessageHeader(a, c) "rule_group_1354";
+      } "rule_1353";
+    } "rule_1352";
+  } "rule_1351";
+  ASTMMSG -> Bundle then {
+    ASTMMSG.`ASTM_MSG--PATIENT_INFORMATION` as a -> Bundle.entry as b then {
+      a.P as c -> b.resource = create('Patient') as d then {
+        c then PToPatient(c, d) "rule_group_1358";
+      } "rule_1357";
+    } "rule_1356";
+  } "rule_1355";
+}
+
+group HToMessageHeader(source H : H, target MessageHeader : MessageHeader) {
+  H -> MessageHeader then {
+    H.`H--12` as a -> MessageHeader.meta = create('Meta') as b then {
+      a -> b.tag = create('Coding') as c then {
+        a -> c.code = create('code') as d then {
+          a.xmlText as e -> d.value = e "dset_1363";
+        } "rule_1362";
+      } "rule_1361";
+    } "rule_1360";
+  } "rule_1359";
+  H -> MessageHeader then {
+    H.`H--10` as a -> MessageHeader.destination as b then {
+      a.xmlText as c -> b.name = c "dset_1366";
+    } "rule_1365";
+  } "rule_1364";
+  H -> MessageHeader then {
+    H.`H--3` as a -> MessageHeader.source as b then {
+      a.xmlText as c -> b.version = c "dset_1369";
+      H.`H--5` as d -> b then {
+        d.xmlText as e -> b.name = e "dset_1371";
+      } "rule_1370";
+    } "rule_1368";
+  } "rule_1367";
+}
+
+group PToPatient(source P : P, target Patient : Patient) {
+  P -> Patient then {
+    P.`P--4` as a -> Patient.identifier = create('Identifier') as b then {
+      a.xmlText as c -> b.value = c "dset_1374";
+      a -> b.system = create('uri') as d then {
+        P -> d.value = ('http://astm.org/terminology/manufacturer-assigned-identifier') as constant52 "const_1376";
+      } "rule_1375";
+    } "rule_1373";
+  } "rule_1372";
+  P -> Patient then {
+    P.`P--2` as a -> Patient.identifier = create('Identifier') as b then {
+      a.xmlText as c -> b.value = c "dset_1379";
+      a -> b.system = create('uri') as d then {
+        P -> d.value = ('http://astm.org/terminology/practice-assigned-identifier') as constant73 "const_1381";
+      } "rule_1380";
+    } "rule_1378";
+  } "rule_1377";
+  P -> Patient then {
+    P.`P--5` as a -> Patient.name = create('HumanName') as b then {
+      a.`UserId--5` as c -> b then {
+        c.xmlText as d -> b.prefix = d "dset_1385";
+        a.`UserId--4` as e -> b then {
+          e.xmlText as f -> b.suffix = f "dset_1387";
+          a.`UserId--3` as g -> b then {
+            g.xmlText as h -> b.given = h "dset_1389";
+            a.`UserId--2` as i -> b then {
+              i.xmlText as j -> b.given = j "dset_1391";
+              a.`UserId--1` as k -> b then {
+                k.xmlText as l -> b.family = l "dset_1393";
+              } "rule_1392";
+            } "rule_1390";
+          } "rule_1388";
+        } "rule_1386";
+      } "rule_1384";
+    } "rule_1383";
+  } "rule_1382";
+}
+
+group OToServiceRequest(source O : O, target ServiceRequest : ServiceRequest) {
+  O -> ServiceRequest then {
+    O.`O--5` as a -> ServiceRequest.priority = create('code') as b then {
+      a.xmlText as c -> b.value = translate(c, '#http://taltech.org/astm-mappings/astm-priority-to-fhir-priority', 'code') as translate225 "translate_1396";
+    } "rule_1395";
+  } "rule_1394";
+  O -> ServiceRequest then {
+    O.`O--4` as a -> ServiceRequest.code = create('CodeableConcept') as b then {
+      a.`UniversalTestId--4` as c -> b.coding = create('Coding') as d then {
+        c.xmlText as e -> d.code = e "dset_1400";
+        O -> d.system = ('http://astm.org/terminology/manufacturer-test-code') as constant754 "const_1401";
+      } "rule_1399";
+    } "rule_1398";
+  } "rule_1397";
+  O -> ServiceRequest then {
+    O.`O--2` as a -> ServiceRequest.specimen = create('Reference') as b then {
+      a.`SpecimenId--1` as c -> b then {
+        c.xmlText as d -> b.reference = d "dset_1405";
+      } "rule_1404";
+    } "rule_1403";
+  } "rule_1402";
+}
+
+group forSaving(source R : R, target BackboneElement : BackboneElement) {
+}
+
+group OToSpecimen(source O : O, target Specimen : Specimen) {
+  O -> Specimen then {
+    O.`O--2` as a -> Specimen.identifier = create('Identifier') as b then {
+      a.`SpecimenId--1` as c -> b.system = create('uri') as d then {
+        O -> d.value = ('http://astm.org/terminology/lab-assigned-identifier') as constant304 "const_1409";
+      } "rule_1408";
+    } "rule_1407";
+  } "rule_1406";
+  O -> Specimen then {
+    O.`O--15` as a -> Specimen.type = create('CodeableConcept') as b then {
+      a.`SpecimenDescriptor--1` as c -> b.coding = create('Coding') as d then {
+        c.xmlText as e -> d.code = e "dset_1413";
+        c -> d.system = create('uri') as f then {
+          O -> f.value = ('http://astm.org/terminology/specimen-code') as constant303 "const_1415";
+        } "rule_1414";
+      } "rule_1412";
+    } "rule_1411";
+  } "rule_1410";
+}
+
+group TestOrderToBundle(source TESTORDER : TEST_ORDER, target Bundle : Bundle) {
+  TESTORDER -> Bundle then {
+    TESTORDER.O as a -> Bundle.entry as b then {
+      a -> b.resource = create('Specimen') as c then {
+        a then OToSpecimen(a, c) "rule_group_1419";
+      } "rule_1418";
+    } "rule_1417";
+  } "rule_1416";
+  TESTORDER -> Bundle then {
+    TESTORDER.O as a -> Bundle.entry as b then {
+      a -> b.resource = create('ServiceRequest') as c then {
+        a then OToServiceRequest(a, c) "rule_group_1423";
+      } "rule_1422";
+    } "rule_1421";
+  } "rule_1420";
+  TESTORDER -> Bundle then {
+    TESTORDER.R as a -> Bundle.entry as b then {
+      a -> b.resource = create('http://hapi.fhir.org/baseR4/StructureDefinition/Observation') as c then {
+        a then RToObservation(a, c) "rule_group_1427";
+      } "rule_1426";
+    } "rule_1425";
+  } "rule_1424";
+}
+
+group RToObservation(source R : R, target Observation : Observation) {
+  R -> Observation then {
+    R.`R--2` as a -> Observation.code = create('CodeableConcept') as b then {
+      a.`UniversalTestId--2` as c -> b.coding = create('Coding') as d then {
+        c.xmlText as e -> d.system = e "dset_1431";
+        a.`UniversalTestId--7` as f -> d then {
+          f.xmlText as g -> d.code = g "dset_1433";
+        } "rule_1432";
+      } "rule_1430";
+    } "rule_1429";
+  } "rule_1428";
+  R -> Observation then {
+    R.`R--3` as a -> Observation.value = create('string') as b then {
+      a.`MeasurementValue--1` as c -> b then {
+        c.xmlText as d -> b.value = d "dset_1437";
+      } "rule_1436";
+    } "rule_1435";
+  } "rule_1434";
+  R -> Observation then {
+    R.`R--3` as a -> Observation.value = create('Quantity') as b then {
+      a.`MeasurementValue--2` as c -> b then {
+        c.xmlText as d -> b.value = d "dset_1441";
+      } "rule_1440";
+    } "rule_1439";
+  } "rule_1438";
+}

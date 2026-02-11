@@ -6,8 +6,9 @@ import ca.uhn.hl7v2.app.Connection;
 import ca.uhn.hl7v2.app.Initiator;
 import ca.uhn.hl7v2.model.Message;
 import ca.uhn.hl7v2.parser.Parser;
+import org.taltech.emedlab.infra.fhir.AbstractTransformer;
 import org.taltech.emedlab.infra.parsers.TransformableXmlParser;
-import org.taltech.emedlab.infra.termx.TermXTransformer;
+import org.taltech.emedlab.infra.fhir.TermXTransformer;
 
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -17,10 +18,10 @@ public class TransformableMessageSender {
     private static final int PORT_NUMBER = 52463;
 
     private static HapiContext context = new DefaultHapiContext();
-    private static TermXTransformer transformer = new TermXTransformer();
+    private static AbstractTransformer transformer = new TermXTransformer();
 
     public static void main(String[] args) throws Exception {
-        String fhirMessage = Files.readString(Path.of("src/main/resources/ExampleOmlO21MessageAsFhir.xml"));
+        String fhirMessage = Files.readString(Path.of("src/main/resources/examplemessages/ExampleOmlO21MessageAsFhir.xml"));
 
         String v2MessageString = transformer.fromFhirBundleToOmlO21(fhirMessage);
 

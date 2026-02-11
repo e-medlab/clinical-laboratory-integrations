@@ -6,8 +6,9 @@ import ca.uhn.hl7v2.HapiContext;
 import ca.uhn.hl7v2.app.*;
 import ca.uhn.hl7v2.model.Message;
 import ca.uhn.hl7v2.protocol.ReceivingApplication;
+import org.taltech.emedlab.infra.fhir.AbstractTransformer;
 import org.taltech.emedlab.infra.parsers.TransformableXmlParser;
-import org.taltech.emedlab.infra.termx.TermXTransformer;
+import org.taltech.emedlab.infra.fhir.TermXTransformer;
 
 import java.io.IOException;
 import java.util.Map;
@@ -49,7 +50,7 @@ public class TransformableMessageListener {
 class TransformableMessageParserApplication implements ReceivingApplication {
 
     private static HapiContext context = new DefaultHapiContext();
-    private static TermXTransformer transformer = new TermXTransformer();
+    private static AbstractTransformer transformer = new TermXTransformer();
 
     @Override
     public Message processMessage(Message message, Map map) throws HL7Exception {

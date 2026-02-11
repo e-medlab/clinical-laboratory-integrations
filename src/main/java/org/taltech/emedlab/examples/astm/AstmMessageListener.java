@@ -5,17 +5,18 @@ import ca.uhn.hl7v2.HapiContext;
 import ca.uhn.hl7v2.model.Message;
 import ca.uhn.hl7v2.parser.ModelClassFactory;
 import ca.uhn.hl7v2.parser.Parser;
+import org.taltech.emedlab.infra.fhir.AbstractTransformer;
 import org.taltech.emedlab.infra.parsers.Astm1394PipeParser;
 import org.taltech.emedlab.infra.parsers.AstmModelClassFactory;
 import org.taltech.emedlab.infra.tcp.AstmTcpServer;
 import org.taltech.emedlab.infra.parsers.TransformableXmlParser;
-import org.taltech.emedlab.infra.termx.TermXTransformer;
+import org.taltech.emedlab.infra.fhir.TermXTransformer;
 
 public class AstmMessageListener {
     private static final int PORT_NUMBER = 56420;
 
     private static HapiContext context = new DefaultHapiContext();
-    private static TermXTransformer transformer = new TermXTransformer();
+    private static AbstractTransformer transformer = new TermXTransformer();
 
     public static void main(String[] args) throws Exception {
         ModelClassFactory customModelClassFactory = new AstmModelClassFactory();

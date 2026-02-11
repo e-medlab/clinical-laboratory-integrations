@@ -1,0 +1,37 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "ServiceRequestPriorityToTestOrderPrority",
+  "url" : "http://astm.org/terminology-maps/ServiceRequestPriorityToTestOrderPrority",
+  "version" : "1.0.0",
+  "name" : "ServiceRequestPriorityToTestOrderPrority",
+  "status" : "active",
+  "experimental" : true,
+  "sourceUri" : "http://astm.org/terminology-maps/ServiceRequestPriority",
+  "targetUri" : "http://astm.org/terminology-maps/TestOrderPriority",
+  "group" : [
+    {
+      "source" : "http://astm.org/terminology-maps/ServiceRequestPriority",
+      "target" : "http://astm.org/terminology-maps/TestOrderPriority",
+      "element" : [
+        {
+          "code" : "stat",
+          "target" : [
+            {
+              "code" : "S",
+              "equivalence" : "equivalent"
+            }
+          ]
+        },
+        {
+          "code" : "routine",
+          "target" : [
+            {
+              "code" : "R",
+              "equivalence" : "equivalent"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

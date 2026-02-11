@@ -1,0 +1,184 @@
+map "http://termx.health/fhir/StructureMap/FhirBundleToAstmMsgAllOrders" = "FhirBundleToAstmMsgAllOrders"
+
+conceptmap "http://astm.org/terminology-maps/ServiceRequestPriorityToTestOrderPrority" {
+  prefix s = "ServiceRequestPriority"
+  prefix t = "TestOrderPrority"
+
+  s:stat - t:S
+  s:routine - t:R
+}
+
+uses "http://hl7.org/fhir/StructureDefinition/Bundle" alias Bundle as source
+uses "http://hl7.org/hapi-v2-parser/StructureDefinition/ASTM_MSG" alias ASTM_MSG as target
+
+group FhirBundleToAstmMsgAllOrders(source Bundle : Bundle, target ASTMMSG : ASTM_MSG) {
+  Bundle -> ASTMMSG then {
+    Bundle.entry first as a where $this.resource.ofType(FHIR.MessageHeader) -> ASTMMSG.H = create('http://hl7.org/hapi-v2-parser/StructureDefinition/H') as b then {
+      a.resource as c -> b then {
+        c then MessageHeaderToH(c, b) "rule_group_686";
+      } "rule_685";
+    } "rule_684";
+  } "rule_683";
+  Bundle -> ASTMMSG then {
+    Bundle.entry as a where $this.resource.ofType(FHIR.Patient) -> ASTMMSG.ASTM_MSG--PATIENT_INFORMATION = create('http://hl7.org/hapi-v2-parser/StructureDefinition/PATIENT_INFORMATION') as b then {
+      a.resource as c -> b then {
+        c then BundleEntriesToPatientInformation(c, Bundle, b) "rule_group_690";
+      } "rule_689";
+    } "rule_688";
+  } "rule_687";
+  Bundle -> ASTMMSG then {
+    Bundle -> ASTMMSG.L = create('http://hl7.org/hapi-v2-parser/StructureDefinition/L') as a then {
+      Bundle -> a.L--2 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/ST') as b then {
+        Bundle -> b.xmlText = ('L') as constant595 "const_694";
+      } "rule_693";
+    } "rule_692";
+  } "rule_691";
+}
+
+group MessageHeaderToH(source MessageHeader : MessageHeader, target H : H) {
+  MessageHeader -> H then {
+    MessageHeader -> H.H--1 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/ST') as a then {
+      MessageHeader -> a.xmlText = ('|') as constant1 "const_697";
+    } "rule_696";
+  } "rule_695";
+  MessageHeader -> H then {
+    MessageHeader -> H.H--2 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/ST') as a then {
+      MessageHeader -> a.xmlText = ('@^\\') as constant6 "const_700";
+    } "rule_699";
+  } "rule_698";
+  MessageHeader -> H then {
+    MessageHeader.source as a -> H.H--3 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/ST') as b then {
+      a.version as c -> b.xmlText = c "dset_703";
+    } "rule_702";
+  } "rule_701";
+  MessageHeader -> H then {
+    MessageHeader.destination as a -> H.H--5 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/ST') as b then {
+      a.name as c -> b.xmlText = c "dset_706";
+    } "rule_705";
+  } "rule_704";
+  MessageHeader -> H then {
+    MessageHeader.source as a -> H.H--10 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/ST') as b then {
+      a.name as c -> b.xmlText = c "dset_709";
+    } "rule_708";
+  } "rule_707";
+  MessageHeader -> H then {
+    MessageHeader.meta as a -> H.H--12 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/ST') as b then {
+      a.tag as c -> b then {
+        c.code as d -> b.xmlText = d "dset_713";
+      } "rule_712";
+    } "rule_711";
+  } "rule_710";
+}
+
+group BundleEntriesToPatientInformation(source Patient : Patient, source Bundle : Bundle, target PATIENTINFORMATION : PATIENT_INFORMATION) {
+  Patient -> PATIENTINFORMATION then {
+    Patient.name as a -> PATIENTINFORMATION.P = create('http://hl7.org/hapi-v2-parser/StructureDefinition/P') as b then {
+      a -> b.P--2 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/ST') as c then {
+        a then GetPracticeAssignedIdentifier(Patient, c) "rule_group_717";
+        a -> b.P--5 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/UserId') as d then {
+          a then HumanNameToUserId(a, d) "rule_group_719";
+          a -> b.P--4 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/ST') as e then {
+            a then GetManufacturerAssignedIdentifier(Patient, e) "rule_group_721";
+          } "rule_720";
+        } "rule_718";
+      } "rule_716";
+    } "rule_715";
+  } "rule_714";
+  Bundle -> PATIENTINFORMATION then {
+    Bundle.entry as a where $this.resource.ofType(FHIR.ServiceRequest) and (%Patient.id = $this.resource.subject.reference) -> PATIENTINFORMATION.ASTM_MSG--TEST_ORDER = create('http://hl7.org/hapi-v2-parser/StructureDefinition/TEST_ORDER') as b then {
+      a.resource as c -> b.O = create('http://hl7.org/hapi-v2-parser/StructureDefinition/O') as d then {
+        c then BundleEntriesToO(c, Bundle, d) "rule_group_725";
+      } "rule_724";
+    } "rule_723";
+  } "rule_722";
+}
+
+group HumanNameToUserId(source HumanName : HumanName, target UserId : UserId) {
+  HumanName -> UserId then {
+    HumanName -> UserId.UserId--1 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/ST') as a then {
+      HumanName.family as b -> a.xmlText = b "dset_728";
+    } "rule_727";
+  } "rule_726";
+  HumanName -> UserId then {
+    HumanName.given first as a -> UserId.UserId--2 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/ST') as b then {
+      a.value as c -> b.xmlText = c "dset_731";
+    } "rule_730";
+  } "rule_729";
+  HumanName -> UserId then {
+    HumanName.given last as a -> UserId.UserId--3 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/ST') as b then {
+      a.value as c -> b.xmlText = c "dset_734";
+    } "rule_733";
+  } "rule_732";
+  HumanName -> UserId then {
+    HumanName -> UserId.UserId--4 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/ST') as a then {
+      HumanName.prefix as b -> a.xmlText = b "dset_737";
+    } "rule_736";
+  } "rule_735";
+  HumanName -> UserId then {
+    HumanName -> UserId.UserId--5 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/ST') as a then {
+      HumanName.suffix as b -> a.xmlText = b "dset_740";
+    } "rule_739";
+  } "rule_738";
+}
+
+group GetPracticeAssignedIdentifier(source Patient : Patient, target ST : ST) {
+  Patient -> ST then {
+    Patient.identifier first as a where $this.system = 'http://astm.org/terminology/practice-assigned-identifier' -> ST then {
+      a.value as b -> ST.xmlText = b "dset_743";
+    } "rule_742";
+  } "rule_741";
+}
+
+group GetManufacturerAssignedIdentifier(source Patient : Patient, target ST : ST) {
+  Patient -> ST then {
+    Patient.identifier first as a where $this.system = 'http://astm.org/terminology/manufacturer-assigned-identifier' -> ST then {
+      a.value as b -> ST.xmlText = b "dset_746";
+    } "rule_745";
+  } "rule_744";
+}
+
+group BundleEntriesToO(source ServiceRequest : ServiceRequest, source Bundle : Bundle, target O : O) {
+  ServiceRequest -> O then {
+    ServiceRequest then ServiceRequestToO(ServiceRequest, O) "rule_group_748";
+  } "rule_747";
+  Bundle -> O then {
+    Bundle.entry first as a where $this.resource.ofType(FHIR.Specimen) and %ServiceRequest.specimen.reference.contains($this.resource.id) -> O then {
+      a.resource as b -> O then {
+        b then SpecimenToO(b, O) "rule_group_752";
+      } "rule_751";
+    } "rule_750";
+  } "rule_749";
+}
+
+group ServiceRequestToO(source ServiceRequest : ServiceRequest, target O : O) {
+  ServiceRequest -> O then {
+    ServiceRequest.code as a -> O.O--4 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/UniversalTestId') as b then {
+      a.coding first as c where $this.system = 'http://astm.org/terminology/manufacturer-test-code' -> b.UniversalTestId--4 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/ST') as d then {
+        c.code as e -> d.xmlText = e "dset_756";
+      } "rule_755";
+    } "rule_754";
+  } "rule_753";
+  ServiceRequest -> O then {
+    ServiceRequest -> O.O--5 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/ST') as a then {
+      ServiceRequest.priority as b -> a.xmlText = translate(b, '#http://astm.org/terminology-maps/ServiceRequestPriorityToTestOrderPrority', 'code') as translate520 "translate_759";
+    } "rule_758";
+  } "rule_757";
+}
+
+group SpecimenToO(source Specimen : Specimen, target O : O) {
+  Specimen -> O then {
+    Specimen.identifier first as a where $this.system = 'http://astm.org/terminology/lab-assigned-identifier' -> O.O--2 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/SpecimenId') as b then {
+      a first where $this.system = 'http://astm.org/terminology/lab-assigned-identifier' -> b.SpecimenId--1 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/ST') as c then {
+        a.value as d -> c.xmlText = d "dset_763";
+      } "rule_762";
+    } "rule_761";
+  } "rule_760";
+  Specimen -> O then {
+    Specimen.type as a -> O.O--15 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/SpecimenDescriptor') as b then {
+      a.coding first as c where $this.system = 'http://astm.org/terminology/specimen-code' -> b.SpecimenDescriptor--1 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/ST') as d then {
+        c.code as e -> d.xmlText = e "dset_767";
+      } "rule_766";
+    } "rule_765";
+  } "rule_764";
+}
+

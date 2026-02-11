@@ -27,7 +27,7 @@
       "min": 0,
       "max": "*",
       "type": [ {
-        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/ASTM_MSG--TEST_ORDER"
+        "code": "http://hl7.org/hapi-v2-parser/StructureDefinition/TEST_ORDER"
       } ]
     } ]
   }

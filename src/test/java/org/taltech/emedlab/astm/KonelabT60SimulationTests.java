@@ -9,10 +9,12 @@ import ca.uhn.hl7v2.parser.Parser;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import org.taltech.emedlab.infra.fhir.AbstractTransformer;
+import org.taltech.emedlab.infra.fhir.LocalStructureMapTransformer;
 import org.taltech.emedlab.infra.parsers.Astm1394PipeParser;
 import org.taltech.emedlab.infra.parsers.AstmModelClassFactory;
 import org.taltech.emedlab.infra.parsers.TransformableXmlParser;
-import org.taltech.emedlab.infra.termx.TermXTransformer;
+import org.taltech.emedlab.infra.fhir.TermXTransformer;
 import org.xmlunit.builder.DiffBuilder;
 import org.xmlunit.diff.Diff;
 
@@ -35,7 +37,7 @@ public class KonelabT60SimulationTests {
 
     private static final HapiContext context = new DefaultHapiContext();
     private static final String RESOURCES_PATH = "src/test/resources/astm";
-    private static final TermXTransformer transformer = new TermXTransformer();
+    private static final AbstractTransformer transformer = new LocalStructureMapTransformer();
 
     @BeforeAll
     static void setup() {

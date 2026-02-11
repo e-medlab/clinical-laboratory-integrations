@@ -1,0 +1,62 @@
+map "http://termx.health/fhir/StructureMap/AstmMsgQueryAllOrdersToFhirBundle" = "AstmMsgQueryAllOrdersToFhirBundle"
+
+uses "http://hl7.org/hapi-v2-parser/StructureDefinition/ASTM_MSG" alias ASTM_MSG as source
+uses "http://hl7.org/fhir/StructureDefinition/Bundle" alias Bundle as target
+
+group AstmMsgQueryAllOrdersToFhirBundle(source ASTMMSG : ASTM_MSG, target Bundle : Bundle) {
+  ASTMMSG -> Bundle then {
+    ASTMMSG.H as a -> Bundle.entry as b then {
+      a -> b.resource = create('MessageHeader') as c then {
+        a then HToMessageHeader(a, c) "rule_group_109";
+      } "rule_108";
+    } "rule_107";
+  } "rule_106";
+  ASTMMSG -> Bundle then {
+    ASTMMSG.Q as a -> Bundle.entry as b then {
+      a -> b.resource = create('Parameters') as c then {
+        a then QToParameters(a, c) "rule_group_113";
+      } "rule_112";
+    } "rule_111";
+  } "rule_110";
+}
+
+group HToMessageHeader(source H : H, target MessageHeader : MessageHeader) {
+  H -> MessageHeader then {
+    H.H--3 as a -> MessageHeader.meta = create('Meta') as b then {
+      a.xmlText as c -> b.id = c "dset_116";
+      H.H--12 as d -> b.tag = create('Coding') as e then {
+        d.xmlText as f -> e.code = f "dset_118";
+      } "rule_117";
+    } "rule_115";
+  } "rule_114";
+  H -> MessageHeader then {
+    H.H--10 as a -> MessageHeader.destination as b then {
+      a -> b.receiver = create('Reference') as c then {
+        a.xmlText as d -> c.reference = d "dset_122";
+      } "rule_121";
+    } "rule_120";
+  } "rule_119";
+  H -> MessageHeader then {
+    H.H--5 as a -> MessageHeader.sender = create('Reference') as b then {
+      a.xmlText as c -> b.reference = c "dset_125";
+    } "rule_124";
+  } "rule_123";
+}
+
+group QToParameters(source Q : Q, target Parameters : Parameters) {
+  Q -> Parameters then {
+    Q.Q--2 as a -> Parameters.parameter as b then {
+      Q -> b.name = ('range') as constant54 "const_128";
+      a.RangeIdNumber--1 as c -> b then {
+        c.xmlText as d -> b.value = d "dset_130";
+      } "rule_129";
+    } "rule_127";
+  } "rule_126";
+  Q -> Parameters then {
+    Q.Q--12 as a -> Parameters.parameter as b then {
+      Q -> b.name = ('status code') as constant59 "const_134";
+      a.xmlText as c -> b.value = c "dset_135";
+    } "rule_133";
+  } "rule_132";
+}
+

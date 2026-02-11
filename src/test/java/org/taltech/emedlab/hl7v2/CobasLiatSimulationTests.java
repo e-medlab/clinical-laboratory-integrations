@@ -6,15 +6,14 @@ import ca.uhn.hl7v2.model.Message;
 import ca.uhn.hl7v2.parser.Parser;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.taltech.emedlab.infra.fhir.AbstractTransformer;
+import org.taltech.emedlab.infra.fhir.LocalStructureMapTransformer;
 import org.taltech.emedlab.infra.parsers.TransformableXmlParser;
-import org.taltech.emedlab.infra.termx.TermXTransformer;
 import org.xmlunit.builder.DiffBuilder;
 import org.xmlunit.diff.Diff;
 
 import java.nio.file.Files;
 import java.nio.file.Path;
-
-import static org.xmlunit.diff.ComparisonResult.EQUAL;
 
 /*
  * The following unit tests file implements the message exchange simulation experimental protocol for testing HL7 v2.
@@ -31,7 +30,7 @@ public class CobasLiatSimulationTests {
 
     private static HapiContext context = new DefaultHapiContext();
     private static final String RESOURCES_PATH = "src/test/resources/hl7v2";
-    private static TermXTransformer transformer = new TermXTransformer();
+    private static AbstractTransformer transformer = new LocalStructureMapTransformer();
 
     @Test
     void successfulOrderResultsTest() throws Exception {

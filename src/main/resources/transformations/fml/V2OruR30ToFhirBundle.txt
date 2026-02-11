@@ -1,0 +1,186 @@
+map "http://termx.health/fhir/StructureMap/V2OruR30ToFhirBundle" = "V2OruR30ToFhirBundle"
+
+conceptmap "http://hl7.org/fhir/uv/v2mappings/ConceptMap/table-hl70001-to-administrative-gender" {
+  prefix s = "administrative sex"
+  prefix t = "AdministrativeSex"
+
+  s:U - t:unknown
+}
+
+uses "http://hl7.org/fhir/StructureDefinition/Bundle" alias Bundle as target
+uses "http://hl7.org/hapi-v2-parser/StructureDefinition/ORU_R30" alias ORU_R30 as source
+
+group V2OruR30ToFhirBundle(target Bundle : Bundle, source ORUR30 : ORU_R30) {
+  ORUR30 -> Bundle then {
+    ORUR30.MSH as a -> Bundle.entry as b then {
+      a -> b.resource = create('MessageHeader') as c then {
+        a then MshToMessageHeader(a, c) "rule_group_2275";
+      } "rule_2274";
+    } "rule_2273";
+  } "rule_2272";
+  ORUR30 -> Bundle then {
+    ORUR30.PID as a -> Bundle.entry as b then {
+      a -> b.resource = create('Patient') as c then {
+        a then PidToPatient(a, c) "rule_group_2279";
+      } "rule_2278";
+    } "rule_2277";
+  } "rule_2276";
+  ORUR30 -> Bundle then {
+    ORUR30.NTE as a -> Bundle.entry as b then {
+      ORUR30.ORC as c -> b.resource = create('ServiceRequest') as d then {
+        ORUR30.OBR as e -> d then {
+          e then ObrOrcNteToServiceRequest(e, d, c, a) "rule_group_2284";
+        } "rule_2283";
+      } "rule_2282";
+    } "rule_2281";
+  } "rule_2280";
+  ORUR30 -> Bundle then {
+    ORUR30.ORU_R30--OBSERVATION as a -> Bundle.entry as b then {
+      a -> b.resource = create('Observation') as c then {
+        a then v2ObservationToFhirObservation(a, c) "rule_group_2288";
+      } "rule_2287";
+    } "rule_2286";
+  } "rule_2285";
+}
+
+group MshToMessageHeader(source MSH : MSH, target MessageHeader : MessageHeader) {
+  MSH -> MessageHeader then {
+    MSH.MSH--11 as a -> MessageHeader.meta = create('Meta') as b then {
+      a -> b.tag = create('Coding') as c then {
+        a.PT--1 as d -> c.code = d "dset_2292";
+        a.PT--1 as e -> c.system = e "dset_2293";
+        a -> c then {
+          a.PT--2 as f -> MessageHeadermeta96tag103.code = f "dset_2295";
+          a.PT--2 as g -> MessageHeadermeta96tag103.system = g "dset_2296";
+        } "rule_2294";
+      } "rule_2291";
+    } "rule_2290";
+  } "rule_2289";
+  MSH -> MessageHeader then {
+    MSH.MSH--9 as a -> MessageHeader.event = create('Coding') as b then {
+      a.MSG--2 as c -> b.system = c "dset_2299";
+      a.MSG--2 as d -> b.code = d "dset_2300";
+    } "rule_2298";
+  } "rule_2297";
+  MSH -> MessageHeader then {
+    MSH.MSH--5 as a -> MessageHeader.destination as b then {
+      a.HD--1 as c -> b.name = c "dset_2303";
+      MSH.MSH--6 as d -> b.receiver = create('Reference') as e then {
+        d.HD--1 as f -> e then {
+          f.xmlText as g -> e.display = g "dset_2306";
+        } "rule_2305";
+      } "rule_2304";
+    } "rule_2302";
+  } "rule_2301";
+  MSH -> MessageHeader then {
+    MSH.MSH--4 as a -> MessageHeader.sender = create('Reference') as b then {
+      a.HD--1 as c -> b.display = c "dset_2309";
+    } "rule_2308";
+  } "rule_2307";
+  MSH -> MessageHeader then {
+    MSH.MSH--3 as a -> MessageHeader.source as b then {
+      a.HD--1 as c -> b.name = c "dset_2312";
+    } "rule_2311";
+  } "rule_2310";
+}
+
+group PidToPatient(source PID : PID, target Patient : Patient) {
+  PID -> Patient then {
+    PID.PID--3 as a -> Patient.identifier = create('Identifier') as b then {
+      a.CX--1 as c -> b.value = c "dset_2315";
+    } "rule_2314";
+  } "rule_2313";
+  PID -> Patient then {
+    PID.PID--5 as a -> Patient.name = create('HumanName') as b then {
+      a.XPN--1 as c -> b then {
+        c.FN--1 as d -> b.family = d "dset_2319";
+      } "rule_2318";
+    } "rule_2317";
+  } "rule_2316";
+  PID -> Patient then {
+    PID.PID--8 as a -> Patient.gender = create('code') as b then {
+      a.xmlText as c -> b.value = translate(c, '#http://hl7.org/fhir/uv/v2mappings/ConceptMap/table-hl70001-to-administrative-gender', 'code') as translate129 "translate_2322";
+    } "rule_2321";
+  } "rule_2320";
+}
+
+group ObrOrcNteToServiceRequest(source OBR : OBR, target ServiceRequest : ServiceRequest, source ORC : ORC, source NTE : NTE) {
+  ORC -> ServiceRequest then {
+    ORC.ORC--1 as a -> ServiceRequest.status = a "dset_2324";
+  } "rule_2323";
+  OBR -> ServiceRequest then {
+    OBR.OBR--11 as a -> ServiceRequest.intent = a "dset_2326";
+  } "rule_2325";
+  OBR -> ServiceRequest then {
+    OBR.OBR--4 as a -> ServiceRequest.code = create('CodeableConcept') as b then {
+      a.CE--1 as c -> b.text = c "dset_2329";
+    } "rule_2328";
+  } "rule_2327";
+  NTE -> ServiceRequest then {
+    NTE -> ServiceRequest.note = create('Annotation') as a then {
+      NTE.NTE--3 as b -> a.text = b "dset_2332";
+    } "rule_2331";
+  } "rule_2330";
+}
+
+group forSaving(target string : string) {
+}
+
+group v2ObservationToFhirObservation(source OBSERVATION : OBSERVATION, target Observation : Observation) {
+  OBSERVATION -> Observation then {
+    OBSERVATION.OBX as a -> Observation then {
+      a.OBX--11 as b -> Observation.status = b "dset_2335";
+    } "rule_2334";
+  } "rule_2333";
+  OBSERVATION -> Observation then {
+    OBSERVATION.OBX as a -> Observation.code = create('CodeableConcept') as b then {
+      a.OBX--3 as c -> b then {
+        c.CE--1 as d -> b.text = d "dset_2339";
+      } "rule_2338";
+    } "rule_2337";
+  } "rule_2336";
+  OBSERVATION -> Observation then {
+    OBSERVATION.OBX as a -> Observation then {
+      a.OBX--19 as b -> Observation then {
+        b.TS--1 as c -> Observation.issued = c "dset_2343";
+      } "rule_2342";
+    } "rule_2341";
+  } "rule_2340";
+  OBSERVATION -> Observation then {
+    OBSERVATION.OBX as a -> Observation.performer = create('Reference') as b then {
+      a.OBX--16 as c -> b then {
+        c.XCN--1 as d -> b.display = d "dset_2347";
+      } "rule_2346";
+    } "rule_2345";
+  } "rule_2344";
+  OBSERVATION -> Observation then {
+    OBSERVATION.OBX as a -> Observation.value = create('Quantity') as b then {
+      a.OBX--5 as c where a.`OBX--2`.xmlText = 'NM' -> b then {
+        c.xmlText as d -> b.value = d "dset_2351";
+        a.OBX--6 as e -> b then {
+          e.CE--1 as f -> b.unit = f "dset_2353";
+        } "rule_2352";
+      } "rule_2350";
+    } "rule_2349";
+  } "rule_2348";
+  OBSERVATION -> Observation then {
+    OBSERVATION.OBX as a -> Observation.value = create('string') as b then {
+      a.OBX--5 as c where a.`OBX--2`.xmlText = 'ST' -> b then {
+        c.xmlText as d -> b.value = d "dset_2357";
+      } "rule_2356";
+    } "rule_2355";
+  } "rule_2354";
+  OBSERVATION -> Observation then {
+    OBSERVATION.NTE as a -> Observation.note = create('Annotation') as b then {
+      a.NTE--3 as c -> b.text = c "dset_2360";
+    } "rule_2359";
+  } "rule_2358";
+  OBSERVATION -> Observation then {
+    OBSERVATION.OBX as a -> Observation.device = create('Reference') as b then {
+      a.OBX--18 as c -> b.identifier = create('Identifier') as d then {
+        c.EI--1 as e -> d.value = e "dset_2364";
+      } "rule_2363";
+    } "rule_2362";
+  } "rule_2361";
+}
+

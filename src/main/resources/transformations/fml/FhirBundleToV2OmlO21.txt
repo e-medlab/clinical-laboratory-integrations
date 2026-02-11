@@ -1,0 +1,211 @@
+map "http://termx.health/fhir/StructureMap/FhirBundleToV2OmlO21" = "FhirBundleToV2OmlO21"
+
+conceptmap "http://hl7.org/fhir/uv/v2mappings/ConceptMap/serviceRequestStatusToOrderStatus" {
+  prefix s = "serviceRequestStatus"
+  prefix t = "orderStatus"
+
+  s:active - t:NW
+}
+
+conceptmap "http://hl7.org/fhir/uv/v2mappings/ConceptMap/serviceRequestIntentToObr11" {
+  prefix s = "serviceRequestIntent"
+  prefix t = "Obr11"
+
+  s:"#add-on#" - t:A
+}
+
+conceptmap "http://hl7.org/fhir/uv/v2mappings/ConceptMap/serviceRequestPriorityToTq9" {
+  prefix s = "serviceRequestPriority"
+  prefix t = "tq9"
+
+  s:Routine - t:R
+  s:Stat - t:S
+}
+
+conceptmap "http://hl7.org/fhir/uv/v2mappings/ConceptMap/specimenTypeToSpm4" {
+  prefix s = "specimentType"
+  prefix t = "spm4"
+
+  s:Other - t:ORH
+}
+
+uses "http://hl7.org/fhir/StructureDefinition/Bundle" alias Bundle as source
+uses "http://hl7.org/hapi-v2-parser/StructureDefinition/OML_O21" alias OML_O21 as target
+
+group FhirBundleToV2OmlO21(source Bundle : Bundle, target OMLO21 : OML_O21) {
+  Bundle -> OMLO21 then {
+    Bundle.entry as a where $this.resource.ofType(FHIR.MessageHeader) -> OMLO21.MSH = create('http://hl7.org/hapi-v2-parser/StructureDefinition/MSH') as b then {
+      a.resource as c -> b then {
+        c then MessageHeaderToMsh(c, b) "rule_group_2401";
+      } "rule_2400";
+    } "rule_2399";
+  } "rule_2398";
+  Bundle -> OMLO21 then {
+    Bundle.entry as a where $this.resource.ofType(FHIR.Patient) -> OMLO21.OML_O21--PATIENT = create('http://hl7.org/hapi-v2-parser/StructureDefinition/PATIENT') as b then {
+      a.resource as c -> b then {
+        c then PatientToPatient(c, b) "rule_group_2405";
+      } "rule_2404";
+    } "rule_2403";
+  } "rule_2402";
+  Bundle -> OMLO21 then {
+    Bundle.entry as a where $this.resource.ofType(FHIR.ServiceRequest) -> OMLO21.OML_O21--ORDER = create('http://hl7.org/hapi-v2-parser/StructureDefinition/ORDER') as b then {
+      a.resource as c -> b then {
+        c then ServiceRequestAndSpecimenToOrder(c, Bundle, b) "rule_group_2409";
+      } "rule_2408";
+    } "rule_2407";
+  } "rule_2406";
+}
+
+group MessageHeaderToMsh(source MessageHeader : MessageHeader, target MSH : MSH) {
+  MessageHeader -> MSH then {
+    MessageHeader -> MSH.MSH--1 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/ST') as a then {
+      MessageHeader -> a.xmlText = ('|') as constant74 "const_2412";
+    } "rule_2411";
+  } "rule_2410";
+  MessageHeader -> MSH then {
+    MessageHeader -> MSH.MSH--2 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/ST') as a then {
+      MessageHeader -> a.xmlText = ('^~\\\u0026') as constant445 "const_2415";
+    } "rule_2414";
+  } "rule_2413";
+  MessageHeader -> MSH then {
+    MessageHeader.source as a -> MSH.MSH--3 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/HD') as b then {
+      a -> b.HD--1 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/IS') as c then {
+        a.name as d -> c.xmlText = d "dset_2419";
+      } "rule_2418";
+    } "rule_2417";
+  } "rule_2416";
+  MessageHeader -> MSH then {
+    MessageHeader.destination as a -> MSH.MSH--5 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/HD') as b then {
+      a.receiver as c -> b.HD--1 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/IS') as d then {
+        c.reference as e -> d.xmlText = e "dset_2423";
+      } "rule_2422";
+    } "rule_2421";
+  } "rule_2420";
+  MessageHeader -> MSH then {
+    MessageHeader -> MSH.MSH--7 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/TS') as a then {
+      MessageHeader -> a.TS--1 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/DTM') as b then {
+        MessageHeader -> b.xmlText = (now().toString().replace('-','').replace(':','').replace('T','').substring(0,14)) as evaluate180 "rule_2427";
+      } "rule_2426";
+    } "rule_2425";
+  } "rule_2424";
+  MessageHeader -> MSH then {
+    MessageHeader -> MSH.MSH--9 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/MSG') as a then {
+      MessageHeader -> a.MSG--2 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/ID') as b then {
+        MessageHeader -> b.xmlText = ('O21') as constant129 "const_2431";
+        MessageHeader -> a.MSG--1 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/ID') as c then {
+          MessageHeader -> c.xmlText = ('OML') as constant128 "const_2433";
+          MessageHeader -> a.MSG--3 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/ID') as d then {
+            MessageHeader -> d.xmlText = ('OML_O21') as constant130 "const_2435";
+          } "rule_2434";
+        } "rule_2432";
+      } "rule_2430";
+    } "rule_2429";
+  } "rule_2428";
+  MessageHeader -> MSH then {
+    MessageHeader -> MSH.MSH--10 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/ST') as a then {
+      MessageHeader.id as b -> a.xmlText = b "dset_2438";
+    } "rule_2437";
+  } "rule_2436";
+  MessageHeader -> MSH then {
+    MessageHeader.meta as a -> MSH.MSH--11 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/PT') as b then {
+      a.tag as c -> b.PT--1 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/ID') as d then {
+        c.code as e -> d.xmlText = e "dset_2442";
+      } "rule_2441";
+    } "rule_2440";
+  } "rule_2439";
+  MessageHeader -> MSH then {
+    MessageHeader -> MSH.MSH--12 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/VID') as a then {
+      MessageHeader -> a.VID--1 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/ID') as b then {
+        MessageHeader -> b.xmlText = ('2.5') as constant394 "const_2446";
+      } "rule_2445";
+    } "rule_2444";
+  } "rule_2443";
+}
+
+group PatientToPatient(source Patient : Patient, target PATIENT : PATIENT) {
+  Patient -> PATIENT then {
+    Patient.identifier as a -> PATIENT.PID = create('http://hl7.org/hapi-v2-parser/StructureDefinition/PID') as b then {
+      a -> b.PID--3 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/CX') as c then {
+        a -> c.CX--3 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/ID') as d then {
+          a.value as e -> d.xmlText = e "dset_2451";
+        } "rule_2450";
+      } "rule_2449";
+    } "rule_2448";
+  } "rule_2447";
+}
+
+group ServiceRequestToOrder(source ServiceRequest : ServiceRequest, target ORDER : ORDER) {
+  ServiceRequest -> ORDER then {
+    ServiceRequest.identifier as a where $this.type.coding.code = 'PLAC' and $this.type.coding.system = 'http://terminology.hl7.org/CodeSystem/v2-0203' -> ORDER.ORC = create('http://hl7.org/hapi-v2-parser/StructureDefinition/ORC') as b then {
+      a where $this.type.coding.code = 'PLAC' and $this.type.coding.system = 'http://terminology.hl7.org/CodeSystem/v2-0203' -> b.ORC--1 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/ID') as c then {
+        ServiceRequest.status as d -> c.xmlText = translate(d, '#http://hl7.org/fhir/uv/v2mappings/ConceptMap/serviceRequestStatusToOrderStatus', 'code') as translate224 "translate_2455";
+        a where $this.type.coding.code = 'PLAC' and $this.type.coding.system = 'http://terminology.hl7.org/CodeSystem/v2-0203' -> b.ORC--2 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/EI') as e then {
+          a where $this.type.coding.code = 'PLAC' and $this.type.coding.system = 'http://terminology.hl7.org/CodeSystem/v2-0203' -> e.EI--1 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/ST') as f then {
+            a.value as g -> f.xmlText = g "dset_2458";
+            a where $this.type.coding.code = 'PLAC' and $this.type.coding.system = 'http://terminology.hl7.org/CodeSystem/v2-0203' -> b.ORC--9 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/TS') as h then {
+              a where $this.type.coding.code = 'PLAC' and $this.type.coding.system = 'http://terminology.hl7.org/CodeSystem/v2-0203' -> h.TS--1 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/DTM') as i then {
+                ServiceRequest.authoredOn as j -> i.xmlText = evaluate(j, toString().replace('-','').replace(':','').replace('T','').substring(0,14)) as evaluate258 "rule_2461";
+              } "rule_2460";
+            } "rule_2459";
+          } "rule_2457";
+        } "rule_2456";
+      } "rule_2454";
+    } "rule_2453";
+  } "rule_2452";
+  ServiceRequest -> ORDER then {
+    ServiceRequest.code as a -> ORDER.OBSERVATION_REQUEST = create('http://hl7.org/hapi-v2-parser/StructureDefinition/OBSERVATION_REQUEST') as b then {
+      a.coding as c -> b.OBR = create('http://hl7.org/hapi-v2-parser/StructureDefinition/OBR') as d then {
+        c -> d.OBR--4 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/CE') as e then {
+          c -> e.CE--1 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/ST') as f then {
+            c.code as g -> f.xmlText = g "dset_2467";
+            c -> d.OBR--11 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/ID') as h then {
+              ServiceRequest.intent as i -> h.xmlText = translate(i, '#http://hl7.org/fhir/uv/v2mappings/ConceptMap/serviceRequestIntentToObr11', 'code') as translate291 "translate_2469";
+            } "rule_2468";
+          } "rule_2466";
+        } "rule_2465";
+      } "rule_2464";
+    } "rule_2463";
+  } "rule_2462";
+  ServiceRequest -> ORDER then {
+    ServiceRequest -> ORDER.TQ1 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/TQ1') as a then {
+      ServiceRequest -> a.TQ1--9 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/CWE') as b then {
+        ServiceRequest -> b.CWE--1 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/ST') as c then {
+          ServiceRequest.priority as d -> c.xmlText = translate(d, '#http://hl7.org/fhir/uv/v2mappings/ConceptMap/serviceRequestPriorityToTq9', 'code') as translate313 "translate_2474";
+        } "rule_2473";
+      } "rule_2472";
+    } "rule_2471";
+  } "rule_2470";
+}
+
+group SpecimenToOrder(source Specimen : Specimen, target ORDER : ORDER) {
+  Specimen -> ORDER then {
+    Specimen.type as a -> ORDER.SPM = create('http://hl7.org/hapi-v2-parser/StructureDefinition/SPM') as b then {
+      a.coding as c where $this.system = 'http://terminology.hl7.org/CodeSystem/v2-0487' -> b.SPM--2 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/EIP') as d then {
+        Specimen.identifier as e -> d.EIP--1 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/EI') as f then {
+          e -> f.EI--1 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/ST') as g then {
+            e.value as h -> g.xmlText = h "dset_2480";
+            e -> b.SPM--4 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/CWE') as i then {
+              e -> i.CWE--1 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/ST') as j then {
+                c.code as k -> j.xmlText = translate(k, '#http://hl7.org/fhir/uv/v2mappings/ConceptMap/specimenTypeToSpm4', 'code') as translate518 "translate_2483";
+              } "rule_2482";
+            } "rule_2481";
+          } "rule_2479";
+        } "rule_2478";
+      } "rule_2477";
+    } "rule_2476";
+  } "rule_2475";
+}
+
+group ServiceRequestAndSpecimenToOrder(source ServiceRequest : ServiceRequest, source Bundle : Bundle, target ORDER : ORDER) {
+  ServiceRequest -> ORDER then {
+    ServiceRequest then ServiceRequestToOrder(ServiceRequest, ORDER) "rule_group_2485";
+  } "rule_2484";
+  Bundle -> ORDER then {
+    Bundle.entry as a where $this.resource.ofType(FHIR.Specimen) and %ServiceRequest.specimen.reference.contains($this.resource.identifier.value.first()) -> ORDER then {
+      a.resource as b -> ORDER then {
+        b then SpecimenToOrder(b, ORDER) "rule_group_2489";
+      } "rule_2488";
+    } "rule_2487";
+  } "rule_2486";
+}
+
