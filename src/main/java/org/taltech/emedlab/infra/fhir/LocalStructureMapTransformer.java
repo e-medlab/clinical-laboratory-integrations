@@ -65,6 +65,10 @@ public class LocalStructureMapTransformer extends AbstractTransformer {
                 // The ValidationEngine itself also has various methods to connect to terminology servers.
                 engine = new ValidationEngine.ValidationEngineBuilder().fromSource("hl7.fhir.r5.core#5.0.0");
 
+                // Ideally, instead of one-by-one pulling the custom resources, they would be packaged
+                // as a FHIR Implementation Guide which is then unpacked and resources are cahced.
+                // This is a future perspective that will be developed along with the integration engine
+                // this research is about.
                 List<StructureDefinition> sds = getStructureDefinitions();
                 sds.forEach(sd -> engine.getContext().cacheResource(sd));
 
