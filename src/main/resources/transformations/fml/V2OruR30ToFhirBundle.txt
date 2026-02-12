@@ -112,7 +112,7 @@ group ObrOrcNteToServiceRequest(source OBR : OBR, target ServiceRequest : Servic
     OBR.OBR--11 as a -> ServiceRequest.intent = a "dset_2326";
   } "rule_2325";
   OBR -> ServiceRequest then {
-    OBR.OBR--4 as a -> ServiceRequest.code = create('CodeableConcept') as b then {
+    OBR.OBR--4 as a -> ServiceRequest.category = create('CodeableConcept') as b then {
       a.CE--1 as c -> b.text = c "dset_2329";
     } "rule_2328";
   } "rule_2327";
@@ -183,4 +183,4 @@ group v2ObservationToFhirObservation(source OBSERVATION : OBSERVATION, target Ob
     } "rule_2362";
   } "rule_2361";
 }
-
+

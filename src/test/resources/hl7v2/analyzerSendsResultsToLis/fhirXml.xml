@@ -46,9 +46,9 @@
             <ServiceRequest>
                 <status>NW</status>
                 <intent>O</intent>
-                <code>
+                <category>
                     <text>Dummy description</text>
-                </code>
+                </category>
                 <note>
                     <text>Run=00016;Device=M1-E-10063;Version=3.3.0.4027;Tube=0027E;TubeExp=2064-02-29;TubeLot=AAJ5</text>
                 </note>

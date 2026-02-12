@@ -113,11 +113,6 @@ group MessageHeaderToMsa(source MessageHeader : MessageHeader, target MSA : MSA)
       a.code as c -> b.xmlText = c "dset_240";
     } "rule_239";
   } "rule_238";
-  MessageHeader -> MSA then {
-    MessageHeader.response as a -> MSA.MSA--2 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/ST') as b then {
-      a.identifier as c -> b.xmlText = c "dset_243";
-    } "rule_242";
-  } "rule_241";
 }
 
 group OperationOutcomeToErr(source OperationOutcome : OperationOutcome, target ERR : ERR) {
@@ -134,4 +129,4 @@ group OperationOutcomeToErr(source OperationOutcome : OperationOutcome, target E
     } "rule_249";
   } "rule_248";
 }
-
+

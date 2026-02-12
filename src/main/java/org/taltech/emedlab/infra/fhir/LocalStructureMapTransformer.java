@@ -35,7 +35,9 @@ public class LocalStructureMapTransformer extends AbstractTransformer {
 
         String mapUri = "http://termx.health/fhir/StructureMap/" + structureMapName;
 
-        if (input.contains("ASTM_MSG")) input = input.replace("xmlns=\"http://hl7.org/fhir\"", "");
+        if (input.contains("ASTM_MSG") || input.contains("ORU_R30") ) {
+            input = input.replace("xmlns=\"http://hl7.org/fhir\"", "");
+        }
 
         Element transformed = engine.transform(ByteProvider.forBytes(input.getBytes(StandardCharsets.UTF_8)), format, mapUri);
 

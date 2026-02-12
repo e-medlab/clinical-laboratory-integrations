@@ -1,0 +1,28 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "fhirIssueTypeToV2ErrorCode",
+  "url" : "http://hl7.org/fhir/v2mappings/ConceptMap/fhirIssueTypeToV2ErrorCode",
+  "version" : "1.0.0",
+  "name" : "fhirIssueTypeToV2ErrorCode",
+  "status" : "active",
+  "experimental" : true,
+  "sourceUri" : "http://hl7.org/fhir/v2mappings/ConceptMap/fhirIssueType",
+  "targetUri" : "http://hl7.org/fhir/v2mappings/ConceptMap/v2ErrorCode",
+  "group" : [
+    {
+      "source" : "http://hl7.org/fhir/v2mappings/ConceptMap/fhirIssueType",
+      "target" : "http://hl7.org/fhir/v2mappings/ConceptMap/v2ErrorCode",
+      "element" : [
+        {
+          "code" : "not-found",
+          "target" : [
+            {
+              "code" : "204",
+              "equivalence" : "equivalent"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1276,77 +1276,6 @@
             }
           ],
           "dependent": []
-        },
-        {
-          "name": "rule_241",
-          "source": [
-            {
-              "context": "MessageHeader"
-            }
-          ],
-          "target": [
-            {
-              "transform": "copy",
-              "parameter": [
-                {
-                  "valueId": "MSA"
-                }
-              ]
-            }
-          ],
-          "rule": [
-            {
-              "name": "rule_242",
-              "source": [
-                {
-                  "context": "MessageHeader",
-                  "element": "response",
-                  "variable": "a"
-                }
-              ],
-              "target": [
-                {
-                  "context": "MSA",
-                  "element": "MSA--2",
-                  "variable": "b",
-                  "transform": "create",
-                  "parameter": [
-                    {
-                      "valueString": "http://hl7.org/hapi-v2-parser/StructureDefinition/ST"
-                    }
-                  ]
-                }
-              ],
-              "rule": [
-                {
-                  "name": "dset_243",
-                  "source": [
-                    {
-                      "context": "a",
-                      "element": "identifier",
-                      "variable": "c"
-                    }
-                  ],
-                  "target": [
-                    {
-                      "context": "b",
-                      "element": "xmlText",
-                      "transform": "copy",
-                      "parameter": [
-                        {
-                          "valueId": "c"
-                        }
-                      ]
-                    }
-                  ],
-                  "rule": [],
-                  "dependent": []
-                }
-              ],
-              "dependent": []
-            }
-          ],
-          "dependent": []
         }
       ]
     },
@@ -1449,7 +1378,7 @@
                               "valueId": "d"
                             },
                             {
-                              "valueString": "#http://hl7.org/fhir/v2mappings/ConceptMap/fhirIssueTypeToV2ErrorCode"
+                              "valueString": "http://hl7.org/fhir/v2mappings/ConceptMap/fhirIssueTypeToV2ErrorCode"
                             },
                             {
                               "valueString": "code"
@@ -1531,7 +1460,7 @@
                           "valueId": "c"
                         },
                         {
-                          "valueString": "#http://hl7.org/fhir/v2mappings/ConceptMap/fhirSeverityToV2Severity"
+                          "valueString": "http://hl7.org/fhir/v2mappings/ConceptMap/fhirSeverityToV2Severity"
                         },
                         {
                           "valueString": "code"
@@ -1622,6 +1551,6 @@
   "import": [],
   "text": {
     "status": "generated",
-    "div": "<div>\nmap \"http://termx.health/fhir/StructureMap/FhirBundleToV2AckR33\" = \"FhirBundleToV2AckR33\"\r\n\r\nconceptmap \"http://hl7.org/fhir/v2mappings/ConceptMap/fhirIssueTypeToV2ErrorCode\" {\r\n  prefix s = \"fhirIssueType\"\r\n  prefix t = \"v2ErrorCode\"\r\n\r\n  s:\"not-found\" - t:\"204\"\r\n}\r\n\r\nconceptmap \"http://hl7.org/fhir/v2mappings/ConceptMap/fhirSeverityToV2Severity\" {\r\n  prefix s = \"fhirSeverity\"\r\n  prefix t = \"v2Severity\"\r\n\r\n  s:error - t:E\r\n}\r\n\r\nuses \"http://hl7.org/fhir/StructureDefinition/Bundle\" alias Bundle as source\r\nuses \"http://hl7.org/hapi-v2-parser/StructureDefinition/ACK\" alias ACK as target\r\n\r\ngroup FhirBundleToV2AckR33(source Bundle : Bundle, target ACK : ACK) {\r\n  Bundle -> ACK then {\r\n    Bundle.entry as a where $this.resource.ofType(FHIR.MessageHeader) -> ACK.MSH = create('http://hl7.org/hapi-v2-parser/StructureDefinition/MSH') as b then {\r\n      a.resource as c -> b then {\r\n        c then MessageHeaderToMsh(c, b) \"rule_group_192\";\r\n      } \"rule_191\";\r\n    } \"rule_190\";\r\n  } \"rule_189\";\r\n  Bundle -> ACK then {\r\n    Bundle.entry as a where $this.resource.ofType(FHIR.MessageHeader) -> ACK.MSA = create('http://hl7.org/hapi-v2-parser/StructureDefinition/MSA') as b then {\r\n      a.resource as c -> b then {\r\n        c then MessageHeaderToMsa(c, b) \"rule_group_196\";\r\n      } \"rule_195\";\r\n    } \"rule_194\";\r\n  } \"rule_193\";\r\n  Bundle -> ACK then {\r\n    Bundle.entry as a where $this.resource.ofType(FHIR.OperationOutcome) -> ACK.ERR = create('http://hl7.org/hapi-v2-parser/StructureDefinition/ERR') as b then {\r\n      a.resource as c -> b then {\r\n        c then OperationOutcomeToErr(c, b) \"rule_group_200\";\r\n      } \"rule_199\";\r\n    } \"rule_198\";\r\n  } \"rule_197\";\r\n}\r\n\r\ngroup MessageHeaderToMsh(source MessageHeader : MessageHeader, target MSH : MSH) {\r\n  MessageHeader -> MSH then {\r\n    MessageHeader -> MSH.MSH--1 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/ST') as a then {\r\n      MessageHeader -> a.xmlText = ('|') as constant35 \"const_203\";\r\n    } \"rule_202\";\r\n  } \"rule_201\";\r\n  MessageHeader -> MSH then {\r\n    MessageHeader -> MSH.MSH--2 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/ST') as a then {\r\n      MessageHeader -> a.xmlText = ('^~\\\\\\u0026') as constant38 \"const_206\";\r\n    } \"rule_205\";\r\n  } \"rule_204\";\r\n  MessageHeader -> MSH then {\r\n    MessageHeader.source as a -> MSH.MSH--3 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/HD') as b then {\r\n      a -> b.HD--1 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/IS') as c then {\r\n        a.name as d -> c.xmlText = d \"dset_210\";\r\n      } \"rule_209\";\r\n    } \"rule_208\";\r\n  } \"rule_207\";\r\n  MessageHeader -> MSH then {\r\n    MessageHeader.destination as a -> MSH.MSH--5 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/HD') as b then {\r\n      a.receiver as c -> b.HD--1 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/IS') as d then {\r\n        c.reference as e -> d.xmlText = e \"dset_214\";\r\n      } \"rule_213\";\r\n    } \"rule_212\";\r\n  } \"rule_211\";\r\n  MessageHeader -> MSH then {\r\n    MessageHeader -> MSH.MSH--7 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/TS') as a then {\r\n      MessageHeader -> a.TS--1 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/DTM') as b then {\r\n        MessageHeader -> b.xmlText = (now().toString().replace('-','').replace(':','').replace('T','').substring(0,14)) as evaluate57 \"rule_218\";\r\n      } \"rule_217\";\r\n    } \"rule_216\";\r\n  } \"rule_215\";\r\n  MessageHeader -> MSH then {\r\n    MessageHeader -> MSH.MSH--9 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/MSG') as a then {\r\n      MessageHeader -> a.MSG--1 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/ID') as b then {\r\n        MessageHeader -> b.xmlText = ('ACK') as constant107 \"const_222\";\r\n        MessageHeader -> a.MSG--2 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/ID') as c then {\r\n          MessageHeader -> c.xmlText = ('R33') as constant108 \"const_224\";\r\n          MessageHeader -> a.MSG--3 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/ID') as d then {\r\n            MessageHeader -> d.xmlText = ('ACK') as constant109 \"const_226\";\r\n          } \"rule_225\";\r\n        } \"rule_223\";\r\n      } \"rule_221\";\r\n    } \"rule_220\";\r\n  } \"rule_219\";\r\n  MessageHeader -> MSH then {\r\n    MessageHeader -> MSH.MSH--10 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/ST') as a then {\r\n      MessageHeader.id as b -> a.xmlText = b \"dset_229\";\r\n    } \"rule_228\";\r\n  } \"rule_227\";\r\n  MessageHeader -> MSH then {\r\n    MessageHeader.meta as a -> MSH.MSH--11 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/PT') as b then {\r\n      a.tag as c -> b.PT--1 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/ID') as d then {\r\n        c.code as e -> d.xmlText = e \"dset_233\";\r\n      } \"rule_232\";\r\n    } \"rule_231\";\r\n  } \"rule_230\";\r\n  MessageHeader -> MSH then {\r\n    MessageHeader -> MSH.MSH--12 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/VID') as a then {\r\n      MessageHeader -> a.VID--1 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/ID') as b then {\r\n        MessageHeader -> b.xmlText = ('2.5') as constant76 \"const_237\";\r\n      } \"rule_236\";\r\n    } \"rule_235\";\r\n  } \"rule_234\";\r\n}\r\n\r\ngroup MessageHeaderToMsa(source MessageHeader : MessageHeader, target MSA : MSA) {\r\n  MessageHeader -> MSA then {\r\n    MessageHeader.response as a -> MSA.MSA--1 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/ID') as b then {\r\n      a.code as c -> b.xmlText = c \"dset_240\";\r\n    } \"rule_239\";\r\n  } \"rule_238\";\r\n  MessageHeader -> MSA then {\r\n    MessageHeader.response as a -> MSA.MSA--2 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/ST') as b then {\r\n      a.identifier as c -> b.xmlText = c \"dset_243\";\r\n    } \"rule_242\";\r\n  } \"rule_241\";\r\n}\r\n\r\ngroup OperationOutcomeToErr(source OperationOutcome : OperationOutcome, target ERR : ERR) {\r\n  OperationOutcome -> ERR then {\r\n    OperationOutcome.issue first as a -> ERR.ERR--3 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/CWE') as b then {\r\n      a first -> b.CWE--1 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/ST') as c then {\r\n        a.code as d -> c.xmlText = translate(d, '#http://hl7.org/fhir/v2mappings/ConceptMap/fhirIssueTypeToV2ErrorCode', 'code') as translate115 \"translate_247\";\r\n      } \"rule_246\";\r\n    } \"rule_245\";\r\n  } \"rule_244\";\r\n  OperationOutcome -> ERR then {\r\n    OperationOutcome.issue first as a -> ERR.ERR--4 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/ID') as b then {\r\n      a.severity as c -> b.xmlText = translate(c, '#http://hl7.org/fhir/v2mappings/ConceptMap/fhirSeverityToV2Severity', 'code') as translate124 \"translate_250\";\r\n    } \"rule_249\";\r\n  } \"rule_248\";\r\n}\r\n\r\n</div>"
+    "div": "<div>\nmap \"http://termx.health/fhir/StructureMap/FhirBundleToV2AckR33\" = \"FhirBundleToV2AckR33\"\r\n\r\nconceptmap \"http://hl7.org/fhir/v2mappings/ConceptMap/fhirIssueTypeToV2ErrorCode\" {\r\n  prefix s = \"fhirIssueType\"\r\n  prefix t = \"v2ErrorCode\"\r\n\r\n  s:\"not-found\" - t:\"204\"\r\n}\r\n\r\nconceptmap \"http://hl7.org/fhir/v2mappings/ConceptMap/fhirSeverityToV2Severity\" {\r\n  prefix s = \"fhirSeverity\"\r\n  prefix t = \"v2Severity\"\r\n\r\n  s:error - t:E\r\n}\r\n\r\nuses \"http://hl7.org/fhir/StructureDefinition/Bundle\" alias Bundle as source\r\nuses \"http://hl7.org/hapi-v2-parser/StructureDefinition/ACK\" alias ACK as target\r\n\r\ngroup FhirBundleToV2AckR33(source Bundle : Bundle, target ACK : ACK) {\r\n  Bundle -> ACK then {\r\n    Bundle.entry as a where $this.resource.ofType(FHIR.MessageHeader) -> ACK.MSH = create('http://hl7.org/hapi-v2-parser/StructureDefinition/MSH') as b then {\r\n      a.resource as c -> b then {\r\n        c then MessageHeaderToMsh(c, b) \"rule_group_192\";\r\n      } \"rule_191\";\r\n    } \"rule_190\";\r\n  } \"rule_189\";\r\n  Bundle -> ACK then {\r\n    Bundle.entry as a where $this.resource.ofType(FHIR.MessageHeader) -> ACK.MSA = create('http://hl7.org/hapi-v2-parser/StructureDefinition/MSA') as b then {\r\n      a.resource as c -> b then {\r\n        c then MessageHeaderToMsa(c, b) \"rule_group_196\";\r\n      } \"rule_195\";\r\n    } \"rule_194\";\r\n  } \"rule_193\";\r\n  Bundle -> ACK then {\r\n    Bundle.entry as a where $this.resource.ofType(FHIR.OperationOutcome) -> ACK.ERR = create('http://hl7.org/hapi-v2-parser/StructureDefinition/ERR') as b then {\r\n      a.resource as c -> b then {\r\n        c then OperationOutcomeToErr(c, b) \"rule_group_200\";\r\n      } \"rule_199\";\r\n    } \"rule_198\";\r\n  } \"rule_197\";\r\n}\r\n\r\ngroup MessageHeaderToMsh(source MessageHeader : MessageHeader, target MSH : MSH) {\r\n  MessageHeader -> MSH then {\r\n    MessageHeader -> MSH.MSH--1 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/ST') as a then {\r\n      MessageHeader -> a.xmlText = ('|') as constant35 \"const_203\";\r\n    } \"rule_202\";\r\n  } \"rule_201\";\r\n  MessageHeader -> MSH then {\r\n    MessageHeader -> MSH.MSH--2 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/ST') as a then {\r\n      MessageHeader -> a.xmlText = ('^~\\\\\\u0026') as constant38 \"const_206\";\r\n    } \"rule_205\";\r\n  } \"rule_204\";\r\n  MessageHeader -> MSH then {\r\n    MessageHeader.source as a -> MSH.MSH--3 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/HD') as b then {\r\n      a -> b.HD--1 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/IS') as c then {\r\n        a.name as d -> c.xmlText = d \"dset_210\";\r\n      } \"rule_209\";\r\n    } \"rule_208\";\r\n  } \"rule_207\";\r\n  MessageHeader -> MSH then {\r\n    MessageHeader.destination as a -> MSH.MSH--5 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/HD') as b then {\r\n      a.receiver as c -> b.HD--1 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/IS') as d then {\r\n        c.reference as e -> d.xmlText = e \"dset_214\";\r\n      } \"rule_213\";\r\n    } \"rule_212\";\r\n  } \"rule_211\";\r\n  MessageHeader -> MSH then {\r\n    MessageHeader -> MSH.MSH--7 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/TS') as a then {\r\n      MessageHeader -> a.TS--1 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/DTM') as b then {\r\n        MessageHeader -> b.xmlText = (now().toString().replace('-','').replace(':','').replace('T','').substring(0,14)) as evaluate57 \"rule_218\";\r\n      } \"rule_217\";\r\n    } \"rule_216\";\r\n  } \"rule_215\";\r\n  MessageHeader -> MSH then {\r\n    MessageHeader -> MSH.MSH--9 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/MSG') as a then {\r\n      MessageHeader -> a.MSG--1 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/ID') as b then {\r\n        MessageHeader -> b.xmlText = ('ACK') as constant107 \"const_222\";\r\n        MessageHeader -> a.MSG--2 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/ID') as c then {\r\n          MessageHeader -> c.xmlText = ('R33') as constant108 \"const_224\";\r\n          MessageHeader -> a.MSG--3 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/ID') as d then {\r\n            MessageHeader -> d.xmlText = ('ACK') as constant109 \"const_226\";\r\n          } \"rule_225\";\r\n        } \"rule_223\";\r\n      } \"rule_221\";\r\n    } \"rule_220\";\r\n  } \"rule_219\";\r\n  MessageHeader -> MSH then {\r\n    MessageHeader -> MSH.MSH--10 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/ST') as a then {\r\n      MessageHeader.id as b -> a.xmlText = b \"dset_229\";\r\n    } \"rule_228\";\r\n  } \"rule_227\";\r\n  MessageHeader -> MSH then {\r\n    MessageHeader.meta as a -> MSH.MSH--11 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/PT') as b then {\r\n      a.tag as c -> b.PT--1 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/ID') as d then {\r\n        c.code as e -> d.xmlText = e \"dset_233\";\r\n      } \"rule_232\";\r\n    } \"rule_231\";\r\n  } \"rule_230\";\r\n  MessageHeader -> MSH then {\r\n    MessageHeader -> MSH.MSH--12 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/VID') as a then {\r\n      MessageHeader -> a.VID--1 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/ID') as b then {\r\n        MessageHeader -> b.xmlText = ('2.5') as constant76 \"const_237\";\r\n      } \"rule_236\";\r\n    } \"rule_235\";\r\n  } \"rule_234\";\r\n}\r\n\r\ngroup MessageHeaderToMsa(source MessageHeader : MessageHeader, target MSA : MSA) {\r\n  MessageHeader -> MSA then {\r\n    MessageHeader.response as a -> MSA.MSA--1 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/ID') as b then {\r\n      a.code as c -> b.xmlText = c \"dset_240\";\r\n    } \"rule_239\";\r\n  } \"rule_238\";\r\n}\r\n\r\ngroup OperationOutcomeToErr(source OperationOutcome : OperationOutcome, target ERR : ERR) {\r\n  OperationOutcome -> ERR then {\r\n    OperationOutcome.issue first as a -> ERR.ERR--3 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/CWE') as b then {\r\n      a first -> b.CWE--1 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/ST') as c then {\r\n        a.code as d -> c.xmlText = translate(d, 'http://hl7.org/fhir/v2mappings/ConceptMap/fhirIssueTypeToV2ErrorCode', 'code') as translate115 \"translate_247\";\r\n      } \"rule_246\";\r\n    } \"rule_245\";\r\n  } \"rule_244\";\r\n  OperationOutcome -> ERR then {\r\n    OperationOutcome.issue first as a -> ERR.ERR--4 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/ID') as b then {\r\n      a.severity as c -> b.xmlText = translate(c, '#http://hl7.org/fhir/v2mappings/ConceptMap/fhirSeverityToV2Severity', 'code') as translate124 \"translate_250\";\r\n    } \"rule_249\";\r\n  } \"rule_248\";\r\n}\r\n\r\n</div>"
   }
 }

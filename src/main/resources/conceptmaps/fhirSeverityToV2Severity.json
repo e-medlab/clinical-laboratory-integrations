@@ -1,0 +1,28 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "fhirSeverityToV2Severity",
+  "url" : "http://hl7.org/fhir/v2mappings/ConceptMap/fhirSeverityToV2Severity",
+  "version" : "1.0.0",
+  "name" : "fhirSeverityToV2Severity",
+  "status" : "active",
+  "experimental" : true,
+  "sourceUri" : "http://hl7.org/fhir/v2mappings/ConceptMap/fhirSeverity",
+  "targetUri" : "http://hl7.org/fhir/v2mappings/ConceptMap/v2Severity",
+  "group" : [
+    {
+      "source" : "http://hl7.org/fhir/v2mappings/ConceptMap/fhirSeverity",
+      "target" : "http://hl7.org/fhir/v2mappings/ConceptMap/v2Severity",
+      "element" : [
+        {
+          "code" : "error",
+          "target" : [
+            {
+              "code" : "E",
+              "equivalence" : "equivalent"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

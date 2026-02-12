@@ -37,12 +37,12 @@
         <resource>
             <ServiceRequest>
                 <priority value="routine"/>
-                <code>
+                <category>
                     <coding>
                         <system value="http://astm.org/terminology/manufacturer-test-code"/>
                         <code value="ALB"/>
                     </coding>
-                </code>
+                </category>
                 <subject>
                     <reference value="PID2"/>
                 </subject>
@@ -56,12 +56,12 @@
         <resource>
             <ServiceRequest>
                 <priority value="routine"/>
-                <code>
+                <category>
                     <coding>
                         <system value="http://astm.org/terminology/manufacturer-test-code"/>
                         <code value="sTfR"/>
                     </coding>
-                </code>
+                </category>
                 <subject>
                     <reference value="PID2"/>
                 </subject>

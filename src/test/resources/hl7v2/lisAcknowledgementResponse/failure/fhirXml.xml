@@ -24,7 +24,6 @@
                 </sender>
                 <response>
                     <code value="AE"></code>
-                    <identifier value="612b7a6b-8190-4c09-9de6-9a5b01228587"></identifier>
                 </response>
             </MessageHeader>
         </resource>

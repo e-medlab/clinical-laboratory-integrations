@@ -1,4 +1,4 @@
-/// url = 'http://hl7.org/fhir/StructureMap/AstmMsgOrderResultsToFhirBundle'
+/// url = 'http://termx.health/fhir/StructureMap/AstmMsgOrderResultsToFhirBundle'
 /// name = 'AstmMsgOrderResultsToFhirBundle'
 /// title = 'AstmMsgOrderResultsToFhirBundle'
 

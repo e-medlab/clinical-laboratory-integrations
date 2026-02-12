@@ -152,7 +152,7 @@ group BundleEntriesToO(source ServiceRequest : ServiceRequest, source Bundle : B
 
 group ServiceRequestToO(source ServiceRequest : ServiceRequest, target O : O) {
   ServiceRequest -> O then {
-    ServiceRequest.code as a -> O.O--4 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/UniversalTestId') as b then {
+    ServiceRequest.category as a -> O.O--4 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/UniversalTestId') as b then {
       a.coding first as c where $this.system = 'http://astm.org/terminology/manufacturer-test-code' -> b.UniversalTestId--4 = create('http://hl7.org/hapi-v2-parser/StructureDefinition/ST') as d then {
         c.code as e -> d.xmlText = e "dset_756";
       } "rule_755";
@@ -181,4 +181,4 @@ group SpecimenToO(source Specimen : Specimen, target O : O) {
     } "rule_765";
   } "rule_764";
 }
-
+
