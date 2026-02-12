@@ -67,6 +67,8 @@ public class LocalStructureMapTransformer extends AbstractTransformer {
 
                 // Ideally, instead of one-by-one pulling the custom resources, they would be packaged
                 // as a FHIR Implementation Guide which is then unpacked and resources are cahced.
+                // The implementation guide could be provided as a file or be pulled from a server and then cahced.
+                //
                 // This is a future perspective that will be developed along with the integration engine
                 // this research is about.
                 List<StructureDefinition> sds = getStructureDefinitions();
