@@ -35,7 +35,11 @@ public class LocalStructureMapTransformer extends AbstractTransformer {
 
         String mapUri = "http://termx.health/fhir/StructureMap/" + structureMapName;
 
-        if (input.contains("ASTM_MSG") || input.contains("ORU_R30") ) {
+        // For some reason, TermX expects this hl7.org namespace for transforming these resources,
+        // but the local implementation breaks.
+        // Fixing this here like that is obviously a hack, it should be decided upstream whether the namespace
+        // should be added or not, depending on the transformation engine used.
+        if (input.contains("ASTM_MSG") || input.contains("ORU_R30")) {
             input = input.replace("xmlns=\"http://hl7.org/fhir\"", "");
         }
 
@@ -53,6 +57,12 @@ public class LocalStructureMapTransformer extends AbstractTransformer {
     private synchronized ValidationEngine getEngine() {
         if (engine == null) {
             try {
+                // This getEngine method section downloads the FHIR R5 core implementation guide (resources)
+                // and then caches the custom StructureDefinitions, ConceptMaps and StructureMaps that are used for
+                // transformations.
+                // When using an external (local or remote) FHIR server or terminology server,
+                // this is where the remote resources can be pulled and cached.
+                // The ValidationEngine itself also has various methods to connect to terminology servers.
                 engine = new ValidationEngine.ValidationEngineBuilder().fromSource("hl7.fhir.r5.core#5.0.0");
 
                 List<StructureDefinition> sds = getStructureDefinitions();
@@ -125,6 +135,8 @@ public class LocalStructureMapTransformer extends AbstractTransformer {
         return structureMaps;
     }
 
+    // StructureMap uses StructureDefinition snapshots, which are usually empty.
+    // The same fix is present in termx-server and is copy-pasted from there.
     private void prepareStructureMap(ValidationEngine eng, StructureMap sm) {
         // this should not be needed. ValidationEngine#getSourceResourceFromStructureMap searches for definition by alias, however alias is nullable. workaround.
         sm.getStructure().stream().filter(s -> s.getAlias() == null)

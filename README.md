@@ -19,7 +19,7 @@ The StructureDefinitions conform to the output of HL7 v2 defined native XML repr
 
 This feature works for both HL7 v2, ASTM and any custom message classes that make use of the HAPI v2 library's message model creation API.
 
-The feature is encapsulated in a single file, available at the folder structure `infra/termx/HapiMessageClassToFhirStructureDefinitionConverter.java`.
+The feature is encapsulated in a single file, available at the folder structure `infra/fhir/HapiMessageClassToFhirStructureDefinitionConverter.java`.
 
 To run the generator, execute the main method of the `HapiMessageClassToFhirStructureDefinitionConverter` class.
 In the main method, there are two options:
@@ -97,11 +97,19 @@ In fact, a custom validation routine should be implemented to validate ASTM mess
 
 ### Transforming v2 and ASTM messages using the FHIR Mapping Language
 
-Using the `TermXTransformer.java` class, this project provides examples of how to use the FHIR Mapping Language to transform HL7 v2 and ASTM messages to other formats, in our example cases FHIR.
-The transformations are currently based in a TermX development environment instance, which makes them unstable.
-The transformations will be added as stable static files in the future.
+Using transformer classes (`TermXTransformer.java` and `LocalStructureMapTransformer.java`), this project provides examples of how to use the FHIR Mapping Language to transform HL7 v2 and ASTM messages to other formats, in our example cases FHIR.
+The TermXTransformer transformations call a remote TermX development environment instance, which makes them unstable and likely already unusable.
+The code simply exemplifies how to use the TermX API to perform transformations.
+The LocalStructureMapTransformer is more stable.
 
-Nevertheless, the examples show how to pre-process HL7 v2 and ASTM messages for transformations using the FHIR Mapping Language.
+It uses:
+- local generated StructureDefinitions (see section above on FHIR StructureDefinition generator).
+- local transformation StructureMaps and ConceptMaps exported from TermX where the transformations were developed using the visual FML redactor.
+
+All of those resources can be found under the `resources` folder in the `org.taltech.emedlab` package.
+The local transformer also contains comments that give instructions where and how a terminology or FHIR server (external or local) can be used to perform the transformations.
+
+The examples show how to pre-process HL7 v2 and ASTM messages for transformations using the FHIR Mapping Language.
 The pre-processing utilizes the native XML serialized format of the HL7 v2 standard.
 Thanks to being able to parse ASTM messages with the HAPI v2 library, the same XML serialization can be used for ASTM messages as well.
 
