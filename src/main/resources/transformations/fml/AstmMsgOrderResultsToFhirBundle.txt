@@ -16,7 +16,7 @@ uses "http://hl7.org/fhir/StructureDefinition/Bundle" alias Bundle as target
 group AstmMsgOrderResultsToFhirBundle(source ASTMMSG : ASTM_MSG, target Bundle : Bundle) {
   ASTMMSG -> Bundle then {
     ASTMMSG.`ASTM_MSG--PATIENT_INFORMATION` as a -> Bundle then {
-      a.TEST_ORDER as b -> Bundle then {
+      a.`ASTM_MSG--TEST_ORDER` as b -> Bundle then {
         b then TestOrderToBundle(b, Bundle) "rule_group_1350";
       } "rule_1349";
     } "rule_1348";
@@ -107,7 +107,7 @@ group OToServiceRequest(source O : O, target ServiceRequest : ServiceRequest) {
     } "rule_1395";
   } "rule_1394";
   O -> ServiceRequest then {
-    O.`O--4` as a -> ServiceRequest.code = create('CodeableConcept') as b then {
+    O.`O--4` as a -> ServiceRequest.category = create('CodeableConcept') as b then {
       a.`UniversalTestId--4` as c -> b.coding = create('Coding') as d then {
         c.xmlText as e -> d.code = e "dset_1400";
         O -> d.system = ('http://astm.org/terminology/manufacturer-test-code') as constant754 "const_1401";
@@ -163,7 +163,7 @@ group TestOrderToBundle(source TESTORDER : TEST_ORDER, target Bundle : Bundle) {
   } "rule_1420";
   TESTORDER -> Bundle then {
     TESTORDER.R as a -> Bundle.entry as b then {
-      a -> b.resource = create('http://hapi.fhir.org/baseR4/StructureDefinition/Observation') as c then {
+      a -> b.resource = create('Observation') as c then {
         a then RToObservation(a, c) "rule_group_1427";
       } "rule_1426";
     } "rule_1425";

@@ -18,13 +18,13 @@
     <entry>
         <resource>
             <ServiceRequest>
-                <priority value="routine"/>
-                <code>
+                <category>
                     <coding>
                         <system value="http://astm.org/terminology/manufacturer-test-code"/>
                         <code value="TestTest"/>
                     </coding>
-                </code>
+                </category>
+                <priority value="routine"/>
                 <specimen>
                     <reference value="S22510300055"/>
                 </specimen>

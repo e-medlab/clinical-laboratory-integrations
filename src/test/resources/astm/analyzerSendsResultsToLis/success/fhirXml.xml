@@ -18,13 +18,13 @@
     <entry>
         <resource>
             <ServiceRequest>
-                <priority value="stat"/>
-                <code>
+                <category>
                     <coding>
                         <system value="http://astm.org/terminology/manufacturer-test-code"/>
                         <code value="ALB"/>
                     </coding>
-                </code>
+                </category>
+                <priority value="stat"/>
                 <specimen>
                     <reference value="S22510300055"/>
                 </specimen>

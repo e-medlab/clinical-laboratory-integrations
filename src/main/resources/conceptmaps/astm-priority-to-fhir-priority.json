@@ -1,0 +1,43 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "astm-priority-to-fhir-priority",
+  "url" : "http://taltech.org/astm-mappings/astm-priority-to-fhir-priority",
+  "version" : "1.0.0",
+  "name" : "astm-priority-to-fhir-priority",
+  "status" : "active",
+  "experimental" : true,
+  "sourceUri" : "http://taltech.org/astm-mappings/astmPriorityCode",
+  "targetUri" : "http://taltech.org/astm-mappings/fhirPriorityCode",
+  "group" : [
+    {
+      "source" : "http://taltech.org/astm-mappings/astmPriorityCode",
+      "target" : "http://taltech.org/astm-mappings/fhirPriorityCode",
+      "element" : [
+        {
+          "code" : "R",
+          "target" : [
+            {
+              "code" : "routine",
+              "equivalence" : "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source" : "http://taltech.org/astm-mappings/astmPriorityCode",
+      "target" : "http://taltech.org/astm-mappings/fhirPriorityCode",
+      "element" : [
+        {
+          "code" : "S",
+          "target" : [
+            {
+              "code" : "stat",
+              "equivalence" : "equivalent"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
